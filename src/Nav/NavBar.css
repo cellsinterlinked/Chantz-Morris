@@ -1,0 +1,29 @@
+.fullNavBar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 8% 8% 8% 8% 8% 8% 2rem;
+  padding: 1rem;
+  margin-right: 2rem;
+  padding-top: 2rem;
+  color: white;
+  
+
+}
+
+.fullNavBar li {
+list-style: none;
+text-decoration: none;
+align-self: center;
+justify-self: center;
+font-family: Helvetica Neue;
+}
+
+
+.fullNavBar li:hover{
+color: black;
+}
+
+.fullNavBar h1 {
+  justify-self: start;
+  font-size: 1rem;
+}

@@ -1,0 +1,50 @@
+.pageHead {
+  font-family: Helvetica Neue;
+}
+
+.pageHead h1{
+  font-size: 3rem;
+  font-weight:normal;
+}
+
+.pageHead p{
+  font-size: 1.5rem;
+}
+
+.divider-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 28rem;
+  background-color: rgb(141, 129, 96);
+  transform: skew(0deg, 5deg);
+  z-index: 100;
+  position: absolute;
+  top: 35%;
+  width: 100vw;
+ 
+}
+
+.landingContainer {
+  position: relative;
+}
+
+.spacer {
+  height: 10rem;
+}
+
+.divider-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 28rem;
+  background-color: rgb(141, 129, 96);
+  transform: skew(0deg, 5deg);
+  z-index: 100;
+  position: absolute;
+  top: 97%;
+  width: 100vw;
+ 
+}
