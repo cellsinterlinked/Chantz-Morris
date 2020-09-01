@@ -23,7 +23,22 @@ font-family: Helvetica Neue;
 color: black;
 }
 
+.fullNavBar p {
+color: white;
+list-style: none;
+text-decoration: none;
+align-self: center;
+justify-self: center;
+font-family: Helvetica Neue;
+}
+
+.fullNavBar p:hover{
+  
+color: black;
+}
+
 .fullNavBar h1 {
   justify-self: start;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Merriweather', serif;
 }

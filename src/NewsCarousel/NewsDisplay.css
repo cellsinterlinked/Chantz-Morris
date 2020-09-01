@@ -1,0 +1,67 @@
+.newsDisplay__container {
+  display: grid;
+  grid-template-rows: 15rem 4rem 4rem 1rem;
+  justify-items: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  height: 30rem;
+  width: 20rem;
+  background-color: rgba(27, 27, 27, 0.829);
+  box-shadow: 
+  -2px -2px 2px rgba(255, 255, 255, 0.055),
+  4px 4px 6px rgba(0, 0, 0, 0.9);
+}
+
+.newsImageContainer {
+  margin-top: 2rem;
+  display:flex;
+  justify-self: center;
+  justify-content: center;
+  width: 18rem;
+  height: 14rem;
+}
+
+.newsImageContainer img {
+  justify-self: center;
+  height: 13rem;
+  width: 18rem;
+}
+
+.newsTitle {
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica Neue;
+  
+}
+
+.newsTitle p{
+  font-size: 1.5rem;
+  color: white;
+}
+
+.newsReadMore {
+  color: rgb(173, 173, 173);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Helvetica Neue;
+}
+
+.newsReadMore p{
+  margin-right: .5rem;
+}
+
+.dateContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Helvetica Neue;
+  color: white;
+  font-size: 1rem;
+
+}
+
+.houseDetails p {
+  margin-right:.5rem;
+
+}

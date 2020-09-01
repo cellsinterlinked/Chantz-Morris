@@ -7,10 +7,15 @@ const HouseDisplay = (props) => {
   return(
   <div className="houseDisplay__container">
     <div className="houseImageContainer">
-      <img src={house0} />
+      <img src={props.image} alt="oops"/>
     </div>
     <div className="houseAddress__price">
-      <p> 16 Quarry Rd, San Rafael, Marin $1,735,000</p>
+      <p>{props.address}</p>
+    </div>
+    <div className="houseDetails">
+      <p>{props.beds}</p>
+      <p>{props.baths}</p>
+      <p>{props.squareFeet}</p>
     </div>
     <div className="viewListingContainer">
       <p>VIEW LISTING</p>

@@ -31,3 +31,41 @@
  font-size: 1rem;
  font-family: Helvetica Neue;
 }
+
+.listingTitle {
+ 
+ display: flex;
+ width: 100%;
+ padding: 1rem;
+ padding-top: 15rem;
+ justify-content: center;
+}
+
+.listingTitle p{
+  color: white;
+  font-family: Helvetica Neue;
+  font-size: 2.5rem;
+
+}
+
+.newsSection__title {
+  display: flex;
+  flex-direction: column;
+  transform: skew(0deg, -5deg);
+  font-family: Helvetica Neue;
+  color: white;
+  justify-content: center;
+}
+
+.newsSection__title h1{
+  font-weight: normal;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.newsSection__title p{
+  font-size: 1.5rem;
+  justify-self: center;
+  margin-top:0;
+}

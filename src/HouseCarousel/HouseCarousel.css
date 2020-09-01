@@ -1,9 +1,10 @@
-.carousel__container {
- 
+.houseCarousel__container {
+  position:relative;
   display: flex;
   justify-content: center;
-  padding-top: 25rem;
+  padding-top: 0rem;
   z-index: 100;
+  height: 32rem;
 }
 
 .item__slider {
@@ -29,12 +30,12 @@
 
 #item-slider__goLeft{
   position: absolute;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
-  width: 10%;
-  height:80%;
+  width: 8%;
+  height:30rem;
   left:0;
-  background: none;
+  background: transparent;
   border: none;
   outline: none;
   transition: .5s;
@@ -42,13 +43,22 @@
 
 #item-slider__goRight{
   position: absolute;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
-  width: 10%;
-  height:80%;
+  width: 8%;
+  height:30rem;
   right: 0;
-  background: none;
+  background: transparent;
   border: none;
   outline:none;
   transition: .5s;
+}
+
+.arrow {
+  color: white;
+  /* background-color: white; */
+}
+
+.arrow :hover {
+  color: black;
 }

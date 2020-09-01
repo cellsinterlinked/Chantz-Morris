@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './NavBar.css';
 
 const NavBar = (props) => {
@@ -12,7 +13,9 @@ const NavBar = (props) => {
           Home
         </li>
         <li>
-          For Buyers
+        <NavLink to="/buyers" exact style={{textDecoration:"none"}}>
+          <p>For Buyers</p>
+        </NavLink>
         </li>
         <li>
           For Sellers

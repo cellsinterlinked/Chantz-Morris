@@ -1,0 +1,184 @@
+/* THIS WILL HAVE TO BE GIANT COLUMN FOR MOBILE */
+
+.fullFooter {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 100%;
+  margin-bottom: 0px;
+  z-index: 100;
+  margin-top: 120rem;
+}
+
+.footer-top {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(141, 129, 96);
+}
+
+.footer-columnOne {
+  /* text-align: center; */
+  width: 20rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Helvetica Neue;
+  color: rgb(194, 194, 194);
+}
+
+.footer-name {
+  letter-spacing: .1rem;
+  color: white;
+}
+
+.footer-brokerAddress{
+
+}
+
+.footer-brokerAddress p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-Phone-Email {
+  margin-top: 1rem;
+}
+
+.footer-Phone-Email p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.footer-columnOne p {
+  font-size: 1.2rem;
+}
+
+.footer-columnTwo {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  width: 20rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Helvetica Neue;
+  font-size: 1.2rem;
+  justify-content: center;
+  color: white;
+}
+
+.footer-columnTwo p {
+  /* text-decoration: underline; */
+  border-bottom: 1px solid white;
+  margin-bottom: 0.8rem;
+  margin-top: 0rem;
+  letter-spacing: 1px;
+}
+
+.footer-workWithChantz{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid white;
+  width: 15rem;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-workWithChantz p {
+  text-decoration: none;
+  margin: 0;
+  font-size: 1rem;
+  border-bottom: 0px transparent;
+}
+
+.footer-columnThree {
+  text-align: center;
+  width: 20rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: Helvetica Neue;
+}
+.broker-bit p {
+  margin: 0
+}
+
+.broker-bit{
+margin-top: 1rem;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+align-items: center;
+color: white;
+margin-left: 4rem;
+margin-bottom: 0rem;
+}
+
+
+.footerBroker-icon {
+
+}
+
+.footer-midLine {
+  border-left: 1px solid white;
+  width: 2px;
+  height: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-brokerName {
+  font-size: 2rem;
+  
+}
+
+.footer-bottomLine {
+  border-top: 1px solid white;
+  width: 15rem;
+  margin-left: 2rem;
+  margin-top: .2rem;
+}
+
+.footerIconContainer{
+
+}
+
+.footer-contact-title {
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+
+}
+
+.footerIconContainer {
+  display: inline-block;
+}
+
+.footer-bottom{
+display: flex;
+flex-direction: column;
+justify-content: center;
+ width: 100%;
+ height: 8rem;
+ background-color: rgba(2, 2, 2, 0.925)
+}
+
+.copyright-Container {
+  
+}
+
+.copyright-Container p {
+  color: white;
+  font-family: Helvetica Neue;
+  text-align: center;
+  margin-bottom: 0rem;
+  margin-top: .2rem;
+
+}
+
