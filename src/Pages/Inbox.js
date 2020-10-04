@@ -39,14 +39,19 @@ const Inbox = props => {
 
   const markReadHandler = messageId => {
     console.log("mark read handler: ", readMessages);
+<<<<<<< Updated upstream
     const messages = [messageId, ...readMessages]
     setReadMessages(messages);
+=======
+    setReadMessages(readMessages.push(messageId));
+>>>>>>> Stashed changes
   };
 
   const markUnreadHandler = messageId => {
     console.log("mark Unread handler: ", readMessages);
     setReadMessages(readMessages.filter(message => message !== messageId));
   };
+
 
   return (
     <React.Fragment>
