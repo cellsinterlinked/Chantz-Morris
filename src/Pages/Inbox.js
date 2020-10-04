@@ -39,7 +39,8 @@ const Inbox = props => {
 
   const markReadHandler = messageId => {
     console.log("mark read handler: ", readMessages);
-    // setReadMessages(readMessages.push(messageId));
+    const messages = [messageId, ...readMessages]
+    setReadMessages(messages);
   };
 
   const markUnreadHandler = messageId => {
