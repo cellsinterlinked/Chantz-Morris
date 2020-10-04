@@ -1,0 +1,155 @@
+.aboutTitle {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.aboutTitle h1 {
+  margin: 0;
+  color : rgb(93, 93, 93);
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .aboutTitle h1 {
+    width: 20rem;
+    text-align: center;
+  }
+}
+
+.aboutInfoContainer {
+  margin: auto;
+  max-width: 54rem;
+  min-width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.aboutBox {
+  display: flex;
+  max-width: 25rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  margin: 0;
+  font-size: 1.2rem;
+  overflow: hidden;
+  margin-right: .7rem;
+  margin-left: .7rem;
+  
+}
+
+.aboutBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutCredentials {
+  max-width: 40rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.aboutCredentials p {
+  font-family: Helvetica Neue;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.aboutBlogTitle {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.aboutBlogTitle h1 {
+  margin: 0;
+  color : rgb(93, 93, 93);
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .aboutBlogTitle h1 {
+    width: 20rem;
+    text-align: center;
+  }
+}
+
+.aboutBrokerTitle {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.aboutBrokerTitle h1{
+  margin: 0;
+  color : rgb(93, 93, 93);
+  font-family: Helvetica Neue;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 3.2rem;
+}
+
+.aboutBrokerBox {
+  margin: auto;
+  max-width: 54rem;
+  min-width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.aboutBrokerInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  margin: 0;
+  font-size: 1.2rem;
+  overflow: hidden;
+  margin-right: .7rem;
+  margin-left: .7rem;
+
+}
+
+.aboutBrokerImage {
+  display: flex;
+  max-width: 25rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  margin: 0;
+  font-size: 1.2rem;
+  overflow: hidden;
+  margin-right: .7rem;
+  margin-left: .7rem;
+
+}
+
+.aboutBrokerImage img {
+  max-width: 100%;
+  height: auto;
+}

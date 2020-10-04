@@ -1,0 +1,13 @@
+.errorButton {
+  height: 2.5rem;
+  width: 8rem;
+  background-color: rgba(0, 0, 0, 0.822);
+  box-shadow: none;
+  border: none;
+  color: white;
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}

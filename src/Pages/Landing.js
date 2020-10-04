@@ -25,11 +25,11 @@ const introStyle = {
 
 const Landing = props => {
   return (
-    <React.Fragment style={{position: "relative"}}>
+    <React.Fragment>
     <div className="landingContainer">
       <Parallax bgImage={image4} strength={500}>
         <div className="image-cover">
-          <div style={{ height: 800 }}>
+          <div style={{ height: 650 }}>
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>Bringing Class To Southern Indiana</h1>
@@ -39,9 +39,11 @@ const Landing = props => {
         </div>
       </Parallax>
       <div className="divider-one">
+      <div className="introTitle"><h1>You are all beautiful snowflakes. Your house should be no exception</h1></div>
+      <div className="introInfoContainer">
+      <div className="lineBreak"></div>
         <div className="landing-self-info">
           <p>
-            {" "}
             Such aside, the indeed, soon arm, ages, effectiveness of get
             separated sentinels up instance. Empty beginnings, and downstairs
             get no was royal not don't didn't her, the on pitifully slightly boa
@@ -50,18 +52,21 @@ const Landing = props => {
             them, problem him ticket how this systems principles, universal
             thought, remedies. Might subordinates here, my side it the slogging
             made raising he like to from fundamental hologram that would
-            mathematicians and lively. In gradually the illustrated if, twists
-            to be detailed the contracting a then in as coffee.{" "}
+            mathematicians and lively.
           </p>
         </div>
         <div className="landing-self-picture-container">
           <img className="landing-self-picture" src={image5} />
         </div>
+          <div className="landing-self-info"><p>Meditation gentrify fam, yuccie kickstarter brunch vape. Pitchfork freegan biodiesel bicycle rights. Semiotics flexitarian four loko XOXO raw denim chartreuse. Cray ramps microdosing everyday carry bicycle rights vexillologist. Bitters bushwick schlitz, 3 wolf moon tofu hoodie beard bicycle rights truffaut keffiyeh sartorial. Affogato coloring book glossier humblebrag hella godard pour-over fashion axe leggings tote bag af.</p></div>
+          <div className="landing-self-info"><p>Lomo neutra vape keytar man bun. Pabst fanny pack meggings, gochujang deep v stumptown banjo flexitarian poke hoodie. Jianbing iceland seitan echo park, tacos literally cornhole poke pinterest blue bottle man bun. Intelligentsia affogato freegan quinoa cray. Banjo bicycle rights quinoa, meditation pork belly brooklyn tumeric thundercats adaptogen portland vape art party. Cloud bread four loko ramps woke, la croix artisan poke tbh kale chips cornhole snackwave lo-fi normcore meditation.</p></div>
+          
+        <div className="lineBreak spaceTop"></div>
+        </div>
       </div>
-      <div className="spacer"></div>
       <Parallax bgImage={image3} strength={500}>
         <div className="image-cover">
-          <div style={{ height: 1100 }} className="image-2">
+          <div style={{ height: 850 }} className="image-2">
             <div className="listingTitle">
               <p>ACTIVE LISTINGS</p>
             </div>
@@ -74,7 +79,7 @@ const Landing = props => {
           <h1>Whats Going On</h1>
           <p>In Southern Indiana Real Estate</p>
         </div>
-        <div className="lineBreak"></div>
+        <div className="lineBreak" style={{width: "75%"}}></div>
         <NewsCarousel />
       </div>
     </div>

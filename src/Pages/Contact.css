@@ -1,0 +1,225 @@
+
+
+.contactPicAndInfo {
+  display: flex;
+  flex-direction: row;
+  max-width: 60rem;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 3rem;
+  font-family: Helvetica Neue;
+  justify-content: center;
+}
+
+.realtorName__Contact {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.imgContainer__Contact {
+  max-height: 28rem;
+  width: 20rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.profileImg__Contact {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.realtorInfo__Contact{
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.iconInfo__Contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.iconInfo__Contact p {
+  margin: 0;
+  margin-top: 6px;
+}
+
+.contact-basic-text {
+  margin: 0;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.visit__Contact {
+font-weight: normal;
+font-size: 1.5rem;
+margin-top: 2rem;
+}
+
+.brokerInfo__Contact {
+  
+}
+
+.brokerInfo__Contact p {
+  margin: 0;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.contactForm {
+  margin: auto;
+  max-width: 45rem;
+  font-family: Helvetica Neue;
+  margin-bottom: 5rem;
+}
+
+.contactName__Container {
+ 
+}
+
+.contactName__smallBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.fname__Form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: .5rem;
+  font-size: .8rem;
+}
+
+#fname {
+  width: 90%;
+  height: 2rem;
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: .5rem;
+}
+
+#lname {
+  width: 90%;
+  height: 2rem;
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: .5rem;
+}
+
+.lname__Form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: .8rem;
+  margin-bottom: .5rem;
+}
+
+.emailContainer {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+
+#email {
+  justify-self: flex-start;
+  margin-top: .5rem;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: .5rem;
+}
+
+.emailContainer p {
+  margin-left:0 ;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.contactFormPhone__Container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.contactFormPhone__Container p {
+  width: 100%;
+}
+
+.phoneFormBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 10rem;
+  margin-right: 1rem;;
+}
+
+.iHateYou {
+  width: 50rem;
+}
+
+.phone-boxes__Container {
+  display: flex;
+  flex-direction: row;
+}
+
+.phoneFormBox input {
+  height: 2rem;
+  width: 6rem;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+.personalMessage__Container {
+  margin-top: 1.5rem;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+}
+
+.personalMessage__Container p {
+  font-size: 1.1rem;
+  margin: 0;
+  letter-spacing: 1px;
+  
+}
+
+.personalMessage__Container textarea {
+  
+  margin-top: .7rem;
+  width: 100%;
+  height: 10rem;
+  border: 1px solid rgb(216, 216, 216);
+  resize: none;
+
+}
+
+.contactButton__Container {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  
+}
+
+.submitButton {
+  background-color: gray;
+  color: white;
+  letter-spacing: 1px;
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  font-size: 1rem;
+  outline-color: black;
+  cursor: pointer;
+
+}
+
+.contactContents {
+
+}

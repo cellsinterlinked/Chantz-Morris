@@ -3,13 +3,12 @@
   display: flex;
   justify-content: center;
   padding-top: 0rem;
-  z-index: 100;
   height: 32rem;
 }
 
 .item__slider {
   position: relative;
-  width: 66rem;
+ 
   /* change above to make responsive, you idiot */
   height: auto;
   box-sizing: border-box;
@@ -19,6 +18,24 @@
   flex-direction: row;
   align-items:flex-start;
   overflow: hidden;
+}
+
+@media (min-width: 1049px) {
+  .item__slider {
+    width: 66rem;
+  }
+}
+
+@media (max-width: 1048px) {
+  .item__slider {
+    width: 44rem;
+  }
+}
+
+@media (max-width: 702px) {
+  .item__slider {
+    width: 22rem;
+  }
 }
 
 .item__Slide {
@@ -39,6 +56,7 @@
   border: none;
   outline: none;
   transition: .5s;
+  z-index: 200;
 }
 
 #item-slider__goRight{
@@ -52,9 +70,11 @@
   border: none;
   outline:none;
   transition: .5s;
+  z-index: 50;
 }
 
 .arrow {
+  z-index: 50;
   color: white;
   /* background-color: white; */
 }

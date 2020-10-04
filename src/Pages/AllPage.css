@@ -13,16 +13,13 @@
 
 .divider-one {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 28rem;
-  background-color: rgb(141, 129, 96);
-  transform: skew(0deg, 5deg);
-  z-index: 100;
-  position: absolute;
-  top: 35%;
   width: 100vw;
+  flex-wrap: wrap;
+  max-height: 2000rem;
  
 }
 
@@ -40,19 +37,29 @@
   align-items: center;
   justify-content: center;
   min-height: 58rem;
-  background-color: rgb(141, 129, 96);
-  transform: skew(0deg, 5deg);
-  z-index: 100;
-  position: absolute;
-  top: 97%;
+  background-color: rgb(255, 255, 255);
   width: 100vw;
  
 }
 
+
+.firstParagraph {
+  text-indent: 4rem;
+}
+
 .lineBreak {
-  width: 70%;
-  border-top: 1px solid white;
-  transform: skew(0deg, -5deg);
-  margin-top: 2rem;;
-  margin-bottom: 3rem;
+  border-bottom: 1px solid rgb(172, 172, 172);
+  margin-bottom: 5rem;
+  width: 100%
+  
+}
+
+@media (max-width: 860px) {
+  .lineBreak {
+    margin-bottom: 1rem;
+  }
+}
+
+.spaceTop {
+  margin-top: 3rem;
 }

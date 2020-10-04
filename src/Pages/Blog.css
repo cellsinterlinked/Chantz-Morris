@@ -1,0 +1,43 @@
+.blog-list-container {
+  background-color: rgb(255, 255, 255);
+  padding: 1px;
+  margin-top: 0;
+  height: 100%;
+}
+
+.blogTitle {
+  margin-top: 3rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.blogTitle h1 {
+  text-align: center;
+  color : rgb(93, 93, 93);
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  font-weight: normal;
+
+}
+
+.blogInfo {
+  margin: auto;
+  max-width: 54rem;
+  min-width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;;
+}
+
+.blogBlock {
+  display: flex;
+  max-width: 25rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  margin: 0;
+  font-size: 1.2rem;
+  overflow: hidden;
+  margin-right: .7rem;
+  margin-left: .7rem;
+}

@@ -141,7 +141,7 @@ const HouseCarousel = props => {
       <button id="item-slider__goLeft" onClick={goLeft}>
         <FaChevronLeft
           className="arrow"
-          style={{ height: "auto", width: "2.5rem" }}
+          style={{ height: "auto", width: "1.5rem" }}
         />
       </button>
       <div className="item__slider">
@@ -160,7 +160,7 @@ const HouseCarousel = props => {
       <button id="item-slider__goRight" onClick={goRight}>
         <FaChevronRight
           className="arrow"
-          style={{ height: "auto", width: "2.5rem" }}
+          style={{ height: "auto", width: "1.5rem" }}
         />
       </button>
     </div>

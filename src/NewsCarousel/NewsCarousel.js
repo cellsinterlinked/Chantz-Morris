@@ -98,7 +98,7 @@ const NewsCarousel = props => {
 
   return(
     <div className="newsCarousel__container">
-      <button id="news-item-slider__goLeft" onClick={goLeft}><FaChevronLeft className="arrow" style={{height:"auto", width: "2.5rem"}} /></button>
+      <button id="news-item-slider__goLeft" onClick={goLeft}><FaChevronLeft className="arrow" style={{height:"auto", width: "1.5rem", color: "black"}} /></button>
       <div className="item__slider">
       {itemArr.map((item, index) => {
         return(
@@ -113,7 +113,7 @@ const NewsCarousel = props => {
       })}
 
       </div>
-      <button id="news-item-slider__goRight" onClick={goRight}><FaChevronRight className="arrow" style={{height:"auto", width: "2.5rem"}} /></button>
+      <button id="news-item-slider__goRight" onClick={goRight}><FaChevronRight className="arrow" style={{height:"auto", width: "1.5rem", color: "black"}} /></button>
 
     </div>
   )

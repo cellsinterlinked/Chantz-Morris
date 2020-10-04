@@ -1,37 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './NavBar.css';
+import SideDrawer from './SideDrawer';
+import Backdrop from './Backdrop';
+import NavLinks from './NavLinks';
 
 const NavBar = (props) => {
+  const [drawerOpen, setDrawerOpen] = useState(false)
+
+  const openDrawerHandler = () => {
+    setDrawerOpen(true);
+  };
+
+  const closeDrawerHandler = () => {
+    setDrawerOpen(false);
+  }
 
   return (
-    <div className="fullNavBar">
+    <React.Fragment>
+    {drawerOpen && (<Backdrop onClick={closeDrawerHandler}/>)}
+        <SideDrawer show={drawerOpen} onClick={closeDrawerHandler}>
+          <nav className="nav-drawer">
+          <NavLinks />
+          </nav>
+        </SideDrawer>
+    
+    
+    
+    
+    
+        <div className="fullNavBar">
         <h1>
           Chantz Morris
         </h1>
-        <li>
-          Home
-        </li>
-        <li>
-        <NavLink to="/buyers" exact style={{textDecoration:"none"}}>
-          <p>For Buyers</p>
-        </NavLink>
-        </li>
-        <li>
-          For Sellers
-        </li>
-        <li>
-          Blog
-        </li>
-        <li>
-          About Me
-        </li>
-        <li>
-          Contact
-        </li>
-
-
+        <div className="wideNav">
+        <NavLinks />
+        </div>
+      <button className="menu-button" onClick={openDrawerHandler}>
+      <span />
+      <span />
+      <span />
+    </button>
     </div>
+    </React.Fragment>
   )
 }
 

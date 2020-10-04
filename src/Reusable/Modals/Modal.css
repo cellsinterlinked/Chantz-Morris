@@ -1,0 +1,57 @@
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 22vh;
+  left: 5%;
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  /* box-shadow:
+  -2px -2px 1px 0 rgb(87, 86, 86),
+  2px 2px 4px 0 rgb(0, 0, 0); */
+  max-height: 70vh;
+  font-family: Helvetica Neue;
+  color: rgb(58, 58, 58);
+}
+
+.modalFooter {
+  display: flex;
+  justify-items: center;
+}
+
+.modalHeader {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.modalHeader h2 {
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.modalContent {
+ text-align: center;
+ letter-spacing: 1px;
+}
+
+.modal-enter {
+  transform: translateY(-10rem);
+  opacity: 0;
+}
+
+.modal-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.modal-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-exit-active {
+  transform: translateY(-10rem);
+  opacity: 0;
+  transition: all 2000ms;
+}
