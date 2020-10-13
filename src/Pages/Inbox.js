@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Inbox.css";
+import { AuthContext} from '../Context/auth-context';
 import Message from "../Reusable/Message/Message";
 import NavBar from "../Nav/NavBar";
 import Footer from "../Nav/Footer";
@@ -7,8 +8,10 @@ import { IoIosMail } from "react-icons/io";
 import { useHttpClient } from "../Reusable/Hooks/http-hook";
 import ErrorModal from "../Reusable/Modals/ErrorModal";
 import Modal from "../Reusable/Modals/Modal";
+import Auth from "./Auth";
 
 const Inbox = props => {
+  const auth = useContext(AuthContext);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [messages, setMessages] = useState();
   const [readMessages, setReadMessages] = useState([]);
@@ -17,8 +20,14 @@ const Inbox = props => {
     const fetchMessages = async () => {
       try {
         const responseData = await sendRequest(
-          "http://localhost:5000/api/messages"
-        ); //doesnt need method or headers because it is default get
+          "http://localhost:5000/api/messages", 
+          'GET',
+          null,
+          {
+            Authorization: 'Bearer ' + auth.token
+          }
+
+        ); 
 
         setMessages(responseData.allMessages);
       } catch (err) {}
@@ -33,24 +42,40 @@ const Inbox = props => {
     );
   };
 
-  const patchReadHandler = () => {
-    // this will send list of id's to patch.
+  useEffect(() => {
+    console.log(readMessages)
+  }, [readMessages])
+
+
+  // test patch start
+
+  const patchReadHandler = (event) => {
+    event.preventDefault();
+    const idArray = readMessages;
+    try {
+      sendRequest('http://localhost:5000/api/messages', 'PATCH', JSON.stringify({
+        idArray: idArray
+      }),
+       {'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + auth.token
+      }
+      );
+      console.log("patch sent")
+    } catch (err) {}
+    
   };
 
+  //test patch end
+
   const markReadHandler = messageId => {
-    console.log("mark read handler: ", readMessages);
-<<<<<<< Updated upstream
     const messages = [messageId, ...readMessages]
     setReadMessages(messages);
-=======
-    setReadMessages(readMessages.push(messageId));
->>>>>>> Stashed changes
   };
 
   const markUnreadHandler = messageId => {
-    console.log("mark Unread handler: ", readMessages);
     setReadMessages(readMessages.filter(message => message !== messageId));
   };
+
 
 
   return (
@@ -66,7 +91,9 @@ const Inbox = props => {
           <div className="inboxTitle__Container">
             <p id="titleDate">Date:</p>
             <p id="titleName">Name:</p>
-            <button id="titleRead">MARK READ</button>
+            <form onSubmit={patchReadHandler} className="solo_button">
+            <button id="titleRead" type="submit">MARK READ</button>
+            </form>
             <p id="titleDelete">Delete</p>
           </div>
           {!isLoading && messages && (

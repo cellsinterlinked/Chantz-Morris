@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { BsTrashFill } from "react-icons/bs";
 import "./Message.css";
 import Modal from '../Modals/Modal';
@@ -6,8 +6,10 @@ import ErrorModal from '../Modals/ErrorModal';
 import {useHttpClient} from '../../Reusable/Hooks/http-hook';
 import { useHistory } from "react-router-dom";
 import { IoIosRestaurant } from "react-icons/io";
+import { AuthContext } from '../../Context/auth-context'; 
 
 const Message = props => {
+  const auth = useContext(AuthContext);
   const [expanded, setExpanded] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -54,7 +56,11 @@ const Message = props => {
     try {
       await sendRequest(
         `http://localhost:5000/api/messages/${props.messageId}`,
-        "DELETE"
+        "DELETE",
+        null,
+        {
+          Authorization: 'Brearer ' + auth.token
+        }
       );
       props.onDelete(props.messageId);
     } catch (err) {}

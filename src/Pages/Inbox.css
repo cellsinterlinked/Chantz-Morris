@@ -31,7 +31,6 @@
 }
 
 #titleRead {
-  justify-self: end;
   height: 2rem;
   align-self: center;
   color: white;
@@ -39,6 +38,7 @@
   background-color: rgb(95, 95, 95);
   border: none;
   box-shadow: none;
+  justify-self: end;
 }
 
 #titleDate {

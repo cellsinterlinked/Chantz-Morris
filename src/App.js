@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import './App.css';
 import Landing from "./Pages/Landing";
 import ForBuyers from './Pages/ForBuyers';
@@ -11,23 +11,58 @@ import About from './Pages/About';
 import Auth from './Pages/Auth';
 import { AuthContext } from './Context/auth-context';
 
-
-
+let logoutTimer;
 
 const App = () =>  {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [token, setToken] = useState(null);
+  const [tokenExpirationDate, setTokenExpirationDate] = useState()
+  const [userId, setUserId] = useState(null);
 
-  const login = useCallback(() => {
-    setIsLoggedIn(true);
+
+  const login = useCallback((uid, token, expirationDate) => {
+    setToken(token);
+    setUserId(uid);
+    const tokenExpirationDate =
+     expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
+    setTokenExpirationDate(tokenExpirationDate);
+    localStorage.setItem(
+      'userData', 
+      JSON.stringify({userId: uid, token: token, expiration: tokenExpirationDate.toISOString()
+      })
+      )
   }, []);
-
+  
   const logout = useCallback(() => {
-    setIsLoggedIn(false);
+    setToken(null);
+    setTokenExpirationDate(null);
+    setUserId(null);
+    localStorage.removeItem('userData');
   }, [])
+
+  useEffect(() => {
+    if (token && tokenExpirationDate) {
+      const remainingTime = tokenExpirationDate.getTime() - new Date().getTime();
+      logoutTimer = setTimeout(logout, remainingTime)
+    } else {
+      clearTimeout(logoutTimer);
+    }
+  }, [token, logout, tokenExpirationDate])
+  
+  useEffect(() => {
+   const storedData = JSON.parse(localStorage.getItem('userData'))   //like JSON.stringify translates a string to JSON, JSON.parse translages JSON into a javascript data structure 
+   if (
+     storedData && 
+     storedData.token && 
+     new Date(storedData.expiration) > new Date()
+     ) {
+     login(storedData.userId, storedData.token, new Date(storedData.expiration));
+   }
+  }, [login]);
+
 
   let routes;
 
-  if(isLoggedIn) {
+  if(token) {
     routes = (
       <Switch>
       <Route path="/" exact>
@@ -88,7 +123,15 @@ const App = () =>  {
   
   return (
     <div className="App" style={{height: "100vh"}}>
-    <AuthContext.Provider value={{isLoggedIn: isLoggedIn, login: login, logout: logout}}>
+    <AuthContext.Provider 
+      value={{
+        isLoggedIn: !!token,
+        token: token,
+        userId: userId,
+        login: login, 
+        logout: logout
+      }}
+      >
     <Router>
       {routes}
     </Router>

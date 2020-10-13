@@ -24,7 +24,7 @@ const Auth = () => {
   const submitHandler = async event => {
     event.preventDefault()
     try {
-    await sendRequest('http://localhost:5000/api/user/login', 
+    const responseData = await sendRequest('http://localhost:5000/api/user/login', 
         'POST',
          JSON.stringify({
           userName: userName,
@@ -34,7 +34,7 @@ const Auth = () => {
           'Content-Type': 'application/json'
         }
     );
-       auth.login()
+       auth.login(responseData.userId, responseData.token)
        console.log("logged in!")
       } catch (err) {console.log('failed to log in, nerd.')}
       }
