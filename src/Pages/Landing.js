@@ -68,7 +68,7 @@ const Landing = props => {
         <div className="image-cover">
           <div style={{ height: 850 }} className="image-2">
             <div className="listingTitle">
-              <p>ACTIVE LISTINGS</p>
+              <p id="activeListings">ACTIVE LISTINGS</p>
             </div>
             <HouseCarousel />
           </div>

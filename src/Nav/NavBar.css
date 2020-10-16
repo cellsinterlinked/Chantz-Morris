@@ -38,7 +38,9 @@ color: white;
 list-style: none;
 text-decoration: none;
 font-family: Helvetica Neue;
-letter-spacing: 1px;
+letter-spacing: 2px;
+font-weight: normal;
+font-size: .9rem;
 
 }
 
@@ -48,6 +50,15 @@ color: black;
 }
 
 .fullNavBar h1 {
+  color: inherit;
+  font-size: 1.5rem;
+  font-family: 'Merriweather', serif;
+  margin-left: 1rem;
+}
+
+.fullNavBar a {
+  text-decoration: none;
+  color: inherit;
   font-size: 1.5rem;
   font-family: 'Merriweather', serif;
   margin-left: 1rem;

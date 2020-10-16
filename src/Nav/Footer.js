@@ -5,6 +5,7 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {AiFillLinkedin} from 'react-icons/ai';
 import { BsArrowRight } from 'react-icons/bs';
 import {SiRealm} from 'react-icons/si';
+import brokerImg from '../Resources/THE MODGLIN GROUP A Realty Company banner.png';
 import './Footer.css';
 
 const Footer = props => {
@@ -14,41 +15,37 @@ const Footer = props => {
       <div className="footer-columnOne">
         <p className="footer-name">CHANTZ MORRIS</p>
         <div className="footer-brokerAddress">
-        <p>AMBIT</p>
-        <p>555 Hillside Dr.</p> 
-        <p>Duluth, GA 30096</p>
+        <p>THE MODGLIN GROUP</p>
+        <p>432 S. Emerson Ave., Suite 120</p> 
+        <p>Greenwood, IN 46143</p>
         </div>
         <div className="footer-Phone-Email">
-        <p>+1 317 999 3878</p>
+        <p>+1 812 592 7785</p>
         <p>cmorris@ambit.com</p>
         </div>
       </div>
       <div className="footer-columnTwo">
         <div className="footer-workWithChantz">
+          <a href="http://localhost:3000/contact">
           <p>WORK WITH CHANTZ</p>
           <BsArrowRight />
+          </a>
         </div>
-        <p style={{width: "15.5rem"}}>Schedule Free Consultation</p>
-        <p style={{width: "8.3rem"}}>Search Homes</p>
-        <p style={{width: "7.5rem"}}>Recent Sales</p>
+        <a href="http://localhost:3000/contact"style={{width: "15.5rem"}}>Schedule Free Consultation</a>
+        <a href="http://localhost:3000#activeListings"style={{width: "8.3rem"}}>Search Homes</a>
+        <a style={{width: "7.5rem"}}>Recent Sales</a>
       </div>
       <div className="footer-columnThree">
         <div className="broker-bit">
-          <div className="footerBroker-icon">
-            <SiRealm  style={{color: 'white', height: "3rem", width: "3rem"}}/>
-          </div>
-          <div className="footer-midLine"></div>
-          <div className="footer-brokerName">
-            <p>AMBIT</p>
-          </div>
+          <img target="_blank" href="https://www.themodglingroup.com/"src={brokerImg} alt="MODGLIN"/>
         </div>
           <div className="footer-bottomLine"></div>
         <p className="footer-contact-title">STAY IN TOUCH</p>
         <div className="footerIconContainer">
-          <AiOutlineInstagram style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem", color: "white"}} />
-          <AiFillFacebook style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem", color: "white"}} />
-          <AiFillLinkedin style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem", color: "white"}}/>
-          <AiOutlineMail style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem", color: "white"}}/>
+          <AiOutlineInstagram className="contactIcon" style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem"}} />
+          <a href="https://www.facebook.com/chantz.morris.79" target="_blank"><AiFillFacebook className="contactIcon" style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem"}} /></a>
+          <AiFillLinkedin className="contactIcon" style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem"}}/>
+          <a href="mailto:chantzmorris78@gmail.com" target="_blank"><AiOutlineMail className="contactIcon"style={{height: "2rem", width: "2rem", marginLeft:".3rem", marginRight:".3rem"}}/></a>
         </div>
       </div>
 
@@ -56,7 +53,7 @@ const Footer = props => {
     <div className="footer-bottom">
         <div className="copyright-Container">
             <p>© Copyright 2020</p>
-            <p>Chantz Morris, AMBIT, DRE 01894675</p>
+            <p>Chantz Morris, THE MODGLIN GROUP, DRE ?</p>
         </div>
     </div>
   </div>

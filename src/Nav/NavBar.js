@@ -31,7 +31,7 @@ const NavBar = (props) => {
     
         <div className="fullNavBar">
         <h1>
-          Chantz Morris
+          <a href="http://localhost:3000/">Chantz Morris</a>
         </h1>
         <div className="wideNav">
         <NavLinks />

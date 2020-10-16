@@ -10,38 +10,38 @@ const NavLinks = props => {
    <div className="fullNavLinks">
     <li>
         <NavLink to="/" exact style={{textDecoration:"none"}}>
-          <p>Home</p>
+          <p>HOME</p>
         </NavLink>
         </li>
         <li>
         <NavLink to="/buyers" exact style={{textDecoration:"none"}}>
-          <p>For Buyers</p>
+          <p>BUYERS</p>
         </NavLink>
         </li>
         <li>
         <NavLink to="/sellers" exact style={{textDecoration:"none"}}>
-          <p>For Sellers</p>
+          <p>SELLERS</p>
         </NavLink>
         </li>
         <li>
         <NavLink to="/blog" exact style={{textDecoration:"none"}}>
-          <p>Blog</p>
+          <p>BLOG</p>
         </NavLink>
         </li>
         <li>
         <NavLink to="/about" exact style={{textDecoration:"none"}}>
-          <p>About Me</p>
+          <p>ABOUT ME</p>
         </NavLink>
         </li>
         <li>
         <NavLink to="/contact" exact style={{textDecoration:"none"}}>
-          <p>Contact</p>
+          <p>CONTACT</p>
         </NavLink>
         </li>
         {auth.isLoggedIn && (
         <li>
         <NavLink to="/inbox" exact style={{textDecoration:"none"}}>
-          <p>Inbox</p>
+          <p>INBOX</p>
         </NavLink>
         </li>
         )}
