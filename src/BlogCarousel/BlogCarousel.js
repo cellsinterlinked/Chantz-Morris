@@ -1,46 +1,43 @@
-import React, { useState, useEffect } from "react";
-import BlogDisplay from "./BlogDisplay";
+import React, { useState, useEffect } from 'react';
 import './BlogCarousel.css';
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
-import BlockContent from "@sanity/block-content-to-react";
-import imageUrlBuilder from "@sanity/image-url";
-import sanityClient from "../client";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+import BlockContent from '@sanity/block-content-to-react';
+import BlogDisplay from './BlogDisplay';
+import sanityClient from '../client';
 
 
-
-
-
-const BlogCarousel = props => {
-  
+const BlogCarousel = (props) => {
   const blogLength = props.blogs.length - 1;
-  
-  let itemArr = [
+
+  const itemArr = [
     <BlogDisplay
       image={props.blogs[0].mainImage.asset.url}
       title={props.blogs[0].title}
-      date={props.blogs[0].publishedAt.slice(0,10)}
-      children={<BlockContent 
-        blocks={props.blogs[0].body}
-        projectId={sanityClient.clientConfig.projectId}
-        dataset={sanityClient.clientConfig.dataset}
-        className="workBody"
-        />}
-      
+      date={props.blogs[0].publishedAt.slice(0, 10)}
+      children={(
+        <BlockContent
+          blocks={props.blogs[0].body}
+          projectId={sanityClient.clientConfig.projectId}
+          dataset={sanityClient.clientConfig.dataset}
+          className="workBody"
+        />
+)}
+
     />,
     <BlogDisplay
-    image={props.blogs[1].mainImage.asset.url}
-    title={props.blogs[1].title}
-    date={props.blogs[1].publishedAt}
-    details={props.blogs[1].body}
-    
+      image={props.blogs[1].mainImage.asset.url}
+      title={props.blogs[1].title}
+      date={props.blogs[1].publishedAt}
+      details={props.blogs[1].body}
+
     />,
     <BlogDisplay
-    image={props.blogs[2].mainImage.asset.url}
-    title={props.blogs[2].title}
-    date={props.blogs[2].publishedAt}
-    details={props.blogs[2].body}
-    
+      image={props.blogs[2].mainImage.asset.url}
+      title={props.blogs[2].title}
+      date={props.blogs[2].publishedAt}
+      details={props.blogs[2].body}
+
     />,
     // <BlogDisplay
     //   image={dummyHouses[3].image}
@@ -89,26 +86,24 @@ const BlogCarousel = props => {
       <button id="item-slider__goLeft" onClick={goLeft}>
         <FaChevronLeft
           className="arrow"
-          style={{ height: "auto", width: "1.5rem" }}
+          style={{ height: 'auto', width: '1.5rem' }}
         />
       </button>
       <div className="item__slider">
-        {itemArr.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="item__Slide"
-              style={{ transform: `translateX(${x}%)` }}
-            >
-              {item}
-            </div>
-          );
-        })}
+        {itemArr.map((item, index) => (
+          <div
+            key={index}
+            className="item__Slide"
+            style={{ transform: `translateX(${x}%)` }}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <button id="item-slider__goRight" onClick={goRight}>
         <FaChevronRight
           className="arrow"
-          style={{ height: "auto", width: "1.5rem" }}
+          style={{ height: 'auto', width: '1.5rem' }}
         />
       </button>
     </div>
