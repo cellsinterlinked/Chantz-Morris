@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Parallax } from 'react-parallax';
+import { Link } from 'react-router-dom';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import { Parallax } from 'react-parallax';
 import Blogimg from '../Resources/blog.jpg';
 import Relationshipimg from '../Resources/relationshipblog.jpg';
 import Restaurant from '../Resources/restaurantblog.jpg';
@@ -12,8 +13,7 @@ import './AllPage.css';
 import './Blog.css';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import sanityClient from '../client.js';
-import { Link } from 'react-router-dom';
-import post from '../../src/chantzmorris/schemas/post';
+import post from "../chantzmorris/schemas/post";
 
 const introStyle = {
   left: '50%',
@@ -102,7 +102,7 @@ const Blog = (props) => {
         {blogs &&
           blogs.map((blog, index) => (
             <Link
-              to={'/blog/' + blog.slug.current}
+              to={`/blog/${  blog.slug.current}`}
               key={blog.slug.current}
               className="blogPreviewBox"
             >

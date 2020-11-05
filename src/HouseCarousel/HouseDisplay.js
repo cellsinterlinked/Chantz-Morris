@@ -1,7 +1,7 @@
 import React from 'react';
 import './HouseDisplay.css';
-import house0 from '../Resources/house0.jpg';
 import { BsArrowRight } from 'react-icons/bs';
+import house0 from '../Resources/house0.jpg';
 
 const HouseDisplay = (props) => {
   return (

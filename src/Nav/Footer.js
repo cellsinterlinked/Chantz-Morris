@@ -1,8 +1,8 @@
 import React from 'react';
-import { AiOutlineInstagram } from 'react-icons/ai';
-import { AiFillFacebook } from 'react-icons/ai';
-import { AiOutlineMail } from 'react-icons/ai';
-import { AiFillLinkedin } from 'react-icons/ai';
+import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
+
+
+
 import { BsArrowRight } from 'react-icons/bs';
 import { SiRealm } from 'react-icons/si';
 import brokerImg from '../Resources/THE MODGLIN GROUP A Realty Company banner.png';
@@ -51,7 +51,7 @@ const Footer = (props) => {
               alt="MODGLIN"
             />
           </div>
-          <div className="footer-bottomLine"></div>
+          <div className="footer-bottomLine" />
           <p className="footer-contact-title">STAY IN TOUCH</p>
           <div className="footerIconContainer">
             <AiOutlineInstagram

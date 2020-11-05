@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { FaChevronLeft , FaChevronRight } from 'react-icons/fa';
+
 import NewsDisplay from './NewsDisplay';
-import { FaChevronLeft } from 'react-icons/fa';
-import { FaChevronRight } from 'react-icons/fa';
 import './NewsCarousel.css';
 import news0 from '../Resources/news0.jpg';
 import news1 from '../Resources/news1.jpg';
@@ -50,7 +50,7 @@ const dummyStories = [
 ];
 
 const NewsCarousel = (props) => {
-  let itemArr = [
+  const itemArr = [
     <NewsDisplay
       image={dummyStories[0].image}
       title={dummyStories[0].title}

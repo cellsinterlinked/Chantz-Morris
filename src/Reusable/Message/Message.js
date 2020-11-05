@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { BsTrashFill } from 'react-icons/bs';
 import './Message.css';
-import Modal from '../Modals/Modal';
-import ErrorModal from '../Modals/ErrorModal';
-import { useHttpClient } from '../../Reusable/Hooks/http-hook';
 import { useHistory } from 'react-router-dom';
 import { IoIosRestaurant } from 'react-icons/io';
+import Modal from '../Modals/Modal';
+import ErrorModal from '../Modals/ErrorModal';
+import { useHttpClient } from "../Hooks/http-hook";
 import { AuthContext } from '../../Context/auth-context';
 
 const Message = (props) => {
@@ -50,7 +50,7 @@ const Message = (props) => {
         'DELETE',
         null,
         {
-          Authorization: 'Brearer ' + auth.token,
+          Authorization: `Brearer ${  auth.token}`,
         }
       );
       props.onDelete(props.messageId);
@@ -58,7 +58,7 @@ const Message = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showConfirmModal}
@@ -66,12 +66,12 @@ const Message = (props) => {
         header="Are you sure?"
         footerClass="deleteFooter"
         footer={
-          <React.Fragment>
+          <>
             <button onClick={cancelDeleteHandler}>Cancel</button>
             <button onClick={confirmDeleteHandler}>Delete</button>
-          </React.Fragment>
+          </>
         }
-      ></Modal>
+       />
       <div
         className={
           props.message.read || isRead === true
@@ -80,7 +80,7 @@ const Message = (props) => {
         }
       >
         <div className="messageDetails">
-          <div className="messageClickCover" onClick={messageExpand}></div>
+          <div className="messageClickCover" onClick={messageExpand} />
           <p id="messageDate">{props.date}</p>
           <p id="messageName">{`${props.firstName} ${props.lastName}`}</p>
           {props.read === false && (
@@ -88,7 +88,7 @@ const Message = (props) => {
               type="checkbox"
               onChange={handleCheckboxChange}
               checked={isRead}
-            ></input>
+             />
           )}
           <BsTrashFill
             id="messageTrashIcon"
@@ -106,10 +106,10 @@ const Message = (props) => {
           </div>
           <p id="messagePhone">{props.phone}</p>
           <p id="messageEmail">{props.email}</p>
-          <div></div>
+          <div />
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

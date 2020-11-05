@@ -2,10 +2,10 @@ import React from 'react';
 import './ForSellers.css';
 import './Landing.css';
 import './AllPage.css';
+import { Parallax } from 'react-parallax';
 import HouseFront from '../Resources/houseFront.jpg';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import { Parallax } from 'react-parallax';
 import BackYard from '../Resources/backYard.jpg';
 import SellerInfographic from '../Resources/sellerInfographic.jpg';
 
@@ -201,8 +201,8 @@ const ForSellers = (props) => {
           </p>
         </div>
       </div>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <Footer />
     </div>
   );

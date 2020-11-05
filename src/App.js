@@ -1,13 +1,13 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import './App.css';
-import Landing from './Pages/Landing';
-import ForBuyers from './Pages/ForBuyers';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
 } from 'react-router-dom';
+import Landing from './Pages/Landing';
+import ForBuyers from './Pages/ForBuyers';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
 import Inbox from './Pages/Inbox';
@@ -34,7 +34,7 @@ const App = () => {
       'userData',
       JSON.stringify({
         userId: uid,
-        token: token,
+        token,
         expiration: tokenExpirationDate.toISOString(),
       })
     );
@@ -58,7 +58,7 @@ const App = () => {
   }, [token, logout, tokenExpirationDate]);
 
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('userData')); //like JSON.stringify translates a string to JSON, JSON.parse translages JSON into a javascript data structure
+    const storedData = JSON.parse(localStorage.getItem('userData')); // like JSON.stringify translates a string to JSON, JSON.parse translages JSON into a javascript data structure
     if (
       storedData &&
       storedData.token &&
@@ -138,10 +138,10 @@ const App = () => {
       <AuthContext.Provider
         value={{
           isLoggedIn: !!token,
-          token: token,
-          userId: userId,
-          login: login,
-          logout: logout,
+          token,
+          userId,
+          login,
+          logout,
         }}
       >
         <Router>{routes}</Router>

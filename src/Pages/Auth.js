@@ -25,8 +25,8 @@ const Auth = () => {
         'http://localhost:5000/api/user/login',
         'POST',
         JSON.stringify({
-          userName: userName,
-          password: password,
+          userName,
+          password,
         }),
         {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const Auth = () => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <ErrorModal error={error} onClear={clearError} />
       <div className="authPage">
         <div className="authContainer">
@@ -55,7 +55,7 @@ const Auth = () => {
                 name="user"
                 onChange={userNameController}
                 value={userName.value}
-              ></input>
+               />
             </div>
             <div className="passwordInput">
               <input
@@ -64,7 +64,7 @@ const Auth = () => {
                 name="password"
                 onChange={passwordController}
                 value={password.value}
-              ></input>
+               />
             </div>
             <div className="authSubmit">
               <button type="submit">Submit</button>
@@ -72,7 +72,7 @@ const Auth = () => {
           </form>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       {drawerOpen && <Backdrop onClick={closeDrawerHandler} />}
       <SideDrawer show={drawerOpen} onClick={closeDrawerHandler}>
         <nav className="nav-drawer">
@@ -38,7 +38,7 @@ const NavBar = (props) => {
           <span />
         </button>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

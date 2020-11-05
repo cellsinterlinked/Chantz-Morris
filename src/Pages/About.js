@@ -1,13 +1,14 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import { Parallax } from 'react-parallax';
 import AboutHead from '../Resources/aboutHead.jpg';
 import './About.css';
 import AboutInfo from '../Resources/chantzAboutFinal.JPG';
 import BarnRural from '../Resources/BarnRural.jpg';
 import Muffins from '../Resources/Muffins.jpg';
 import BrokerPic from '../Resources/brokerPic.jpg';
+
 const introStyle = {
   left: '50%',
   top: '50%',
@@ -29,7 +30,7 @@ const About = (props) => {
         <div className="image-cover">
           <div style={{ height: 400 }}>
             <NavBar />
-            <div style={introStyle} className="pageHead"></div>
+            <div style={introStyle} className="pageHead" />
           </div>
         </div>
       </Parallax>
@@ -60,7 +61,7 @@ const About = (props) => {
           </p>
         </div>
         <div className="aboutBox">
-          <img src={AboutInfo} alt="me"></img>
+          <img src={AboutInfo} alt="me" />
         </div>
         <div className="aboutBox">
           <p>
@@ -130,10 +131,10 @@ const About = (props) => {
           </p>
         </div>
         <div className="aboutBox">
-          <img src={BarnRural} alt="barn"></img>
+          <img src={BarnRural} alt="barn" />
         </div>
         <div className="aboutBox">
-          <img src={Muffins} alt="muffins"></img>
+          <img src={Muffins} alt="muffins" />
         </div>
         <div className="aboutBox">
           <p>

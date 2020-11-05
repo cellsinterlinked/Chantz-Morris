@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewsDisplay.css';
-import house0 from '../Resources/house0.jpg';
 import { BsArrowRight } from 'react-icons/bs';
+import house0 from '../Resources/house0.jpg';
 
 const NewsDisplay = (props) => {
   return (

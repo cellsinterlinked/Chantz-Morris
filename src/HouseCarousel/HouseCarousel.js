@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaChevronLeft , FaChevronRight } from 'react-icons/fa';
+
 import HouseDisplay from './HouseDisplay';
-import { FaChevronLeft } from 'react-icons/fa';
-import { FaChevronRight } from 'react-icons/fa';
 import './HouseCarousel.css';
 import House0 from '../Resources/house0.jpg';
 import House1 from '../Resources/house1.jpg';
@@ -73,7 +73,7 @@ const dummyHouses = [
 ];
 
 const HouseCarousel = (props) => {
-  let itemArr = [
+  const itemArr = [
     <HouseDisplay
       image={props.blogs[0].mainImage.asset.url}
       address={dummyHouses[0].address}

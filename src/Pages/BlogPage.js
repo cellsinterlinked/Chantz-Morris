@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import sanityClient from '../client';
+import { NavLink , useParams } from 'react-router-dom';
+
 import BlockContent from '@sanity/block-content-to-react';
 import imageUrlBuilder from '@sanity/image-url';
 import './Landing.css';
 import './AllPage.css';
 import './BlogPage.css';
-import NavBar from '../Nav/NavBar';
-import Footer from '../Nav/Footer';
 import { Parallax } from 'react-parallax';
-import { IoIosArrowForward } from 'react-icons/io';
-import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward , IoIosArrowBack } from 'react-icons/io';
+
+import Footer from '../Nav/Footer';
+import NavBar from '../Nav/NavBar';
+import sanityClient from '../client';
 
 const introStyle = {
   left: '50%',
@@ -97,28 +97,28 @@ const BlogPage = (props) => {
   // }
 
   const dateFunc = () => {
-    let date = blogData.publishedAt.slice(0, 10);
+    const date = blogData.publishedAt.slice(0, 10);
 
-    let blogDate = new Date(date);
-    let nowDate = new Date();
-    let diff = nowDate.getTime() - blogDate.getTime();
-    let msInDay = 1000 * 3600 * 24;
-    let total = diff / msInDay;
-    let days = Math.floor(total);
+    const blogDate = new Date(date);
+    const nowDate = new Date();
+    const diff = nowDate.getTime() - blogDate.getTime();
+    const msInDay = 1000 * 3600 * 24;
+    const total = diff / msInDay;
+    const days = Math.floor(total);
     return days;
   };
 
   const showNextBlog = () => {
     // returns the name of the next blog to append to next blog url
-    const isCurrent = (element) => element.slug === slug; //was =
+    const isCurrent = (element) => element.slug === slug; // was =
     const blogNum = blogList.findIndex(isCurrent);
     if (blogNum !== blogList.length - 1) {
       const nextBlog = blogList[blogNum + 1].slug.current;
       console.log(nextBlog);
       return nextBlog;
-    } else {
+    } 
       console.log('youre already at the end');
-    }
+    
   };
 
   const showPrevBlog = () => {
@@ -127,9 +127,9 @@ const BlogPage = (props) => {
     const blogNum = blogList.findIndex(isCurrent);
     if (blogNum !== 0) {
       return blogList[blogNum - 1].slug.current;
-    } else {
+    } 
       console.log('youre at zero bro!');
-    }
+    
   };
 
   if (!blogData) return <div>Loading...</div>;
@@ -153,7 +153,7 @@ const BlogPage = (props) => {
               <img src={urlFor(blogData.authorImage).url()} alt="" />
             </div>
             <h4>{blogData.name}</h4>
-            <p>{dateFunc() + ' ' + 'days ago'}</p>
+            <p>{`${dateFunc()  } ` + `days ago`}</p>
           </div>
           <BlockContent
             blocks={blogData.body}

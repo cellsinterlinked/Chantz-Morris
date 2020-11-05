@@ -1,7 +1,7 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import { Parallax } from 'react-parallax';
 import Cozy from '../Resources/cozy2.jpg';
 import './Landing.css';
 import './AllPage.css';
@@ -14,6 +14,7 @@ import Afford from '../Resources/Buyers tab_ how much can I afford.jpg';
 import Approved from '../Resources/Buyers_tab approved.png';
 import Closing from '../Resources/Buyers tab_closing.jpg';
 import Thinking from '../Resources/Buyers tab_thinking of buying.jpg';
+
 const introStyle = {
   left: '50%',
   top: '50%',
@@ -272,7 +273,7 @@ const ForBuyers = (props) => {
           </div>
         </div>
       </div>
-      <div className="pageBreak"></div>
+      <div className="pageBreak" />
       <Footer />
     </div>
   );

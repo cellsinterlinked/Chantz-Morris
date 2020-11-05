@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Inbox.css';
+import { IoIosMail } from 'react-icons/io';
 import { AuthContext } from '../Context/auth-context';
 import Message from '../Reusable/Message/Message';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import { IoIosMail } from 'react-icons/io';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
@@ -24,7 +24,7 @@ const Inbox = (props) => {
           'GET',
           null,
           {
-            Authorization: 'Bearer ' + auth.token,
+            Authorization: `Bearer ${  auth.token}`,
           }
         );
 
@@ -55,18 +55,18 @@ const Inbox = (props) => {
         'http://localhost:5000/api/messages',
         'PATCH',
         JSON.stringify({
-          idArray: idArray,
+          idArray,
         }),
         {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + auth.token,
+          Authorization: `Bearer ${  auth.token}`,
         }
       );
       console.log('patch sent');
     } catch (err) {}
   };
 
-  //test patch end
+  // test patch end
 
   const markReadHandler = (messageId) => {
     const messages = [messageId, ...readMessages];
@@ -78,7 +78,7 @@ const Inbox = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <div className="inboxPageContainer">
         <NavBar />
         <div className="inbox__Container">
@@ -120,7 +120,7 @@ const Inbox = (props) => {
         </div>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 

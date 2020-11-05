@@ -3,10 +3,10 @@ import { Parallax } from 'react-parallax';
 import './Contact.css';
 import './AllPage.css';
 import './Landing.css';
-import Contactimg from '../Resources/professional.jpg';
-import NavBar from '../Nav/NavBar';
 import { FiPhone } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
+import Contactimg from '../Resources/professional.jpg';
+import NavBar from '../Nav/NavBar';
 import Profile from '../Resources/Chantz Cut out.png';
 import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
@@ -63,15 +63,15 @@ const Contact = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    let today = new Date();
-    let date =
-      today.getFullYear() +
-      '-' +
-      (today.getMonth() + 1) +
-      '-' +
-      today.getDate();
-    let time = today.getHours() + ':' + today.getMinutes();
-    let total = date + ' ' + time;
+    const today = new Date();
+    const date =
+      `${today.getFullYear() 
+      }-${ 
+      today.getMonth() + 1 
+      }-${ 
+      today.getDate()}`;
+    const time = `${today.getHours()  }:${  today.getMinutes()}`;
+    const total = `${date  } ${  time}`;
     console.log(total);
     const phone = `${phone1}-${phone2}-${phone3}`;
     try {
@@ -79,22 +79,22 @@ const Contact = (props) => {
         'http://localhost:5000/api/messages',
         'POST',
         JSON.stringify({
-          fName: fName,
-          lName: lName,
-          email: email,
-          phone: phone,
+          fName,
+          lName,
+          email,
+          phone,
           content: message,
           date: total,
         }),
         { 'Content-Type': 'application/json' }
       );
       console.log('success! I think...');
-      //redirect user to a different page, cause pop up/rerender
+      // redirect user to a different page, cause pop up/rerender
     } catch (err) {}
   };
 
   return (
-    <React.Fragment>
+    <>
       <ErrorModal error={error} onClear={clearError} />
       <div className="contactContainer">
         <Parallax bgImage={Contactimg} strength={500}>
@@ -151,7 +151,7 @@ const Contact = (props) => {
                   name="fname"
                   onChange={fNameController}
                   value={message.firstName}
-                ></input>
+                 />
                 <label htmlFor="fname">First Name</label>
               </div>
               <div className="lname__Form">
@@ -161,7 +161,7 @@ const Contact = (props) => {
                   name="lname"
                   onChange={lNameController}
                   value={message.lastName}
-                ></input>
+                 />
                 <label htmlFor="lname">Last Name</label>
               </div>
             </div>
@@ -174,7 +174,7 @@ const Contact = (props) => {
                   name="email"
                   onChange={emailController}
                   value={message.email}
-                ></input>
+                 />
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Contact = (props) => {
                   name="fnumber"
                   onChange={oneController}
                   value={message.phone1}
-                ></input>
+                 />
                 <label htmlFor="fnumber">###</label>
               </div>
               <div className="phoneFormBox">
@@ -200,7 +200,7 @@ const Contact = (props) => {
                   name="snumber"
                   onChange={twoController}
                   value={message.phone2}
-                ></input>
+                 />
                 <label htmlFor="snumber">###</label>
               </div>
               <div className="phoneFormBox">
@@ -210,7 +210,7 @@ const Contact = (props) => {
                   name="tnumber"
                   onChange={threeController}
                   value={message.phone3}
-                ></input>
+                 />
                 <label htmlFor="tnumber">####</label>
               </div>
             </div>
@@ -222,7 +222,7 @@ const Contact = (props) => {
               name="message"
               onChange={commentController}
               value={message.comment}
-            ></textarea>
+             />
           </div>
           <div className="contactButton__Container">
             <button className="submitButton" type="submit">
@@ -232,7 +232,7 @@ const Contact = (props) => {
         </form>
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
