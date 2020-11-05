@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink , useParams, useHistory } from 'react-router-dom';
+import { NavLink, useParams, useHistory } from 'react-router-dom';
 
 import BlockContent from '@sanity/block-content-to-react';
 import imageUrlBuilder from '@sanity/image-url';
@@ -7,7 +7,7 @@ import './Landing.css';
 import './AllPage.css';
 import './BlogPage.css';
 import { Parallax } from 'react-parallax';
-import { IoIosArrowForward , IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 import Footer from '../Nav/Footer';
 import NavBar from '../Nav/NavBar';
@@ -28,7 +28,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-const BlogPage = (props) =>  {
+const BlogPage = (props) => {
   const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
   const [blogList, setBlogList] = useState([]);
@@ -55,7 +55,9 @@ const BlogPage = (props) =>  {
         "authorImage": author->image
       }`
       )
-      .then((data) => setBlogData(data[0]))
+      .then((data) => {
+        setBlogData(data[0]);
+      })
       .catch(console.error);
   }, [slug]);
 
@@ -75,28 +77,32 @@ const BlogPage = (props) =>  {
           }
         }`
       )
-      .then(
-        (data) => setBlogList(data)
-        // thisFunction()
-      )
+      .then((data) => setBlogList(data))
       .catch(console.error);
-  }, []);
+  }, [slug]);
 
-  
-  
   useEffect(() => {
-    const thisFunction = () => {                            // same as below, different method
-      const isCurrent = (element) => element.slug === slug
-      const currentIndex = blogList.findIndex(isCurrent)
-    return currentIndex;
-  }
-    setBlogIndex(thisFunction())
-    console.log(blogIndex)
-  },[blogList, slug])
+    let target;
+    let currentIndex = 0;
+    const isCurrent = (element) => {
+      const blogSlugTitles = blogList.map((post) => post.slug.current);
 
+      const currentBlog = blogList.filter(
+        (post) => post.slug.current === element.slug.current
+      );
 
+      const currentBlogTitle = currentBlog[0].slug.current;
+      const location = blogSlugTitles.indexOf(currentBlogTitle);
 
-   
+      currentIndex = location;
+    };
+
+    if (blogData !== null) {
+      target = isCurrent(blogData);
+    }
+
+    setBlogIndex(currentIndex);
+  }, [blogList, slug]);
 
   // const tryFunc = () => {   // trying to get a blog index to tell whether it is the first or last and base forward and backward buttons on that
   //   const isBlog = (element) => element.slug = slug
@@ -117,31 +123,22 @@ const BlogPage = (props) =>  {
     return days;
   };
 
-  const showNextBlog = () => {
-    // returns the name of the next blog to append to next blog url
-    const isCurrent = (element) => element.slug === slug; // was =
-    const blogNum = blogList.findIndex(isCurrent);
-    if (blogNum !== blogList.length - 1) {
-      const nextBlog = blogList[blogNum + 1].slug.current;
-      console.log(nextBlog);
-      return nextBlog;
-    } 
-      console.log('youre already at the end');
-    
-  };
-
-  const showPrevBlog = () => {
-    // returns the nane of the previouw blog to append to the previous blog url
-    const isCurrent = (element) => element.slug === slug; // was =
-    const blogNum = blogList.findIndex(isCurrent);
-    if (blogNum !== 0) {
-      return blogList[blogNum - 1].slug.current;
-    } 
-      console.log('youre at zero bro!');
-    
-  };
-
   if (!blogData) return <div>Loading...</div>;
+
+  const generateURL = () => {
+    let targetIndex;
+
+    if (blogIndex + 1 > blogList.length - 1) {
+      targetIndex = 0;
+    } else {
+      targetIndex = blogIndex + 1;
+    }
+
+    if (blogList.length > 0) {
+      const title = blogList[targetIndex].slug.current;
+      return `http://localhost:3000/blog/${title}`;
+    }
+  };
 
   return (
     <div className="blogPageContainer">
@@ -162,7 +159,7 @@ const BlogPage = (props) =>  {
               <img src={urlFor(blogData.authorImage).url()} alt="" />
             </div>
             <h4>{blogData.name}</h4>
-            <p>{`${dateFunc()  } ` + `days ago`}</p>
+            <p>{`${dateFunc()} ` + `days ago`}</p>
           </div>
           <BlockContent
             blocks={blogData.body}
@@ -180,7 +177,7 @@ const BlogPage = (props) =>  {
             </div>
 
             <div className="nextButtonContainer">
-              <a href="http://localhost:3000/">
+              <a href={generateURL()}>
                 <p>Next Blog</p>
                 <IoIosArrowForward className="arrowed" />
               </a>
@@ -189,9 +186,7 @@ const BlogPage = (props) =>  {
         </div>
       </div>
 
-      <button style={{ height: '3rem', width: '8rem' }} onClick={showNextBlog}>
-        Fuck You
-      </button>
+      <button style={{ height: '3rem', width: '8rem' }}>Fuck You</button>
 
       <Footer />
     </div>
