@@ -1,25 +1,25 @@
-import React from "react";
-import "./ForSellers.css";
-import "./Landing.css";
-import "./AllPage.css";
-import HouseFront from "../Resources/houseFront.jpg";
-import NavBar from "../Nav/NavBar";
-import Footer from "../Nav/Footer";
-import { Parallax } from "react-parallax";
-import BackYard from "../Resources/backYard.jpg";
-import SellerInfographic from "../Resources/sellerInfographic.jpg";
+import React from 'react';
+import './ForSellers.css';
+import './Landing.css';
+import './AllPage.css';
+import HouseFront from '../Resources/houseFront.jpg';
+import NavBar from '../Nav/NavBar';
+import Footer from '../Nav/Footer';
+import { Parallax } from 'react-parallax';
+import BackYard from '../Resources/backYard.jpg';
+import SellerInfographic from '../Resources/sellerInfographic.jpg';
 
 const introStyle = {
-  left: "50%",
-  top: "50%",
-  position: "absolute",
-  transform: "translate(-50%, -50%)",
-  color: "white",
-  maxWidth: "40rem",
-  textAlign: "center"
+  left: '50%',
+  top: '50%',
+  position: 'absolute',
+  transform: 'translate(-50%, -50%)',
+  color: 'white',
+  maxWidth: '40rem',
+  textAlign: 'center',
 };
 
-const ForSellers = props => {
+const ForSellers = (props) => {
   return (
     <div className="sellers-Container">
       <Parallax bgImage={HouseFront} strength={500}>

@@ -2,9 +2,8 @@
   position: relative;
   width: 100%;
   border-bottom: 1px solid rgb(134, 134, 134);
-  background: rgba(112, 112, 112, 0.116)
+  background: rgba(112, 112, 112, 0.116);
 }
-
 
 .message__Container__unread {
   position: relative;
@@ -18,11 +17,10 @@
   box-shadow: 2px 2px 3px black;
 }
 .messageDetails {
-  display:grid;
+  display: grid;
   grid-template-columns: 20% 20% 40% 20%;
   min-height: 2rem;
   align-items: center;
-
 }
 
 #messageDate {
@@ -31,14 +29,13 @@
 }
 
 #messageName {
-  margin: 0
+  margin: 0;
 }
 
 .messageDetails input {
   margin: 0;
   justify-self: end;
   margin-right: 2.2rem;
-
 }
 
 #messageTrashIcon {
@@ -49,18 +46,17 @@
 }
 
 .messageContent__Large {
-  padding: .5rem;
+  padding: 0.5rem;
   opacity: 1;
   transition: all 1s ease;
 }
 
 .messageContent__Small {
-opacity: 0;
-height: 0;
-overflow-y: hidden;
-transition: all 1s ease;
+  opacity: 0;
+  height: 0;
+  overflow-y: hidden;
+  transition: all 1s ease;
 }
-
 
 .messageClickCover {
   position: absolute;

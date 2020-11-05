@@ -10,10 +10,9 @@
   max-width: 60rem;
   justify-content: space-around;
   background-color: transparent;
-  
-  margin: auto;
-  margin-top: 2rem;;
 
+  margin: auto;
+  margin-top: 2rem;
 }
 
 @media (max-width: 389px) {
@@ -31,11 +30,10 @@
 
 .blogTitle h1 {
   text-align: center;
-  color : rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;
-
 }
 
 .blogInfo {
@@ -45,7 +43,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;;
+  justify-content: center;
 }
 
 .blogBlock {
@@ -56,8 +54,8 @@
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: .7rem;
-  margin-left: .7rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .blogPreviewBox {
@@ -89,8 +87,6 @@
   background-color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: Helvetica Neue;
-  
-  
 }
 
 .titlePreviewContainer {
@@ -98,10 +94,9 @@
   width: 100%;
   font-family: Helvetica Neue;
   letter-spacing: 1px;
-
 }
 
-.titlePreviewContainer h2{
+.titlePreviewContainer h2 {
   margin-top: 0;
   text-decoration: none;
   margin-left: 1rem;
@@ -117,7 +112,7 @@
 .descriptionPreviewContainer p {
   text-decoration: none;
   color: rgb(26, 26, 26);
-  margin:0;
+  margin: 0;
 }
 
 .publishedPreviewContainer {
@@ -131,5 +126,3 @@
   color: rgb(26, 26, 26);
   margin: 0;
 }
-
-

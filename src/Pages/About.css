@@ -1,6 +1,6 @@
 .aboutTitle {
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -10,7 +10,7 @@
 
 .aboutTitle h1 {
   margin: 0;
-  color : rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;
@@ -42,9 +42,8 @@
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: .7rem;
-  margin-left: .7rem;
-  
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .aboutBox img {
@@ -54,7 +53,7 @@
 
 .aboutCredentials {
   max-width: 40rem;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -70,7 +69,7 @@
 
 .aboutBlogTitle {
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -80,7 +79,7 @@
 
 .aboutBlogTitle h1 {
   margin: 0;
-  color : rgb(93, 93, 93);
+  color: rgb(93, 93, 93);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;
@@ -95,7 +94,7 @@
 
 .aboutBrokerTitle {
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -103,9 +102,9 @@
   margin-bottom: 3rem;
 }
 
-.aboutBrokerTitle h1{
+.aboutBrokerTitle h1 {
   margin: 0;
-  color : rgb(93, 93, 93);
+  color: rgb(93, 93, 93);
   font-family: Helvetica Neue;
   letter-spacing: 2px;
   font-weight: normal;
@@ -132,9 +131,8 @@
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: .7rem;
-  margin-left: .7rem;
-
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .aboutBrokerImage {
@@ -145,10 +143,8 @@
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: .7rem;
-  margin-left: .7rem;
-  
-
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .aboutBrokerImage img {

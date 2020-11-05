@@ -2,12 +2,12 @@
   font-family: Helvetica Neue;
 }
 
-.pageHead h1{
+.pageHead h1 {
   font-size: 3rem;
-  font-weight:normal;
+  font-weight: normal;
 }
 
-.pageHead p{
+.pageHead p {
   font-size: 1.5rem;
 }
 
@@ -20,7 +20,6 @@
   width: 100vw;
   flex-wrap: wrap;
   max-height: 2000rem;
- 
 }
 
 .landingContainer {
@@ -39,9 +38,7 @@
   min-height: 58rem;
   background-color: rgb(255, 255, 255);
   width: 100vw;
- 
 }
-
 
 .firstParagraph {
   text-indent: 4rem;
@@ -50,8 +47,7 @@
 .lineBreak {
   border-bottom: 1px solid rgb(172, 172, 172);
   margin-bottom: 5rem;
-  width: 100%
-  
+  width: 100%;
 }
 
 @media (max-width: 860px) {

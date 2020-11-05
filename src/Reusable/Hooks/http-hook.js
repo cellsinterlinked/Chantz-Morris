@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 
-
 export const useHttpClient = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
@@ -8,46 +7,50 @@ export const useHttpClient = () => {
   const activeHttpRequests = useRef([]);
 
   const sendRequest = useCallback(
-    async (url, method = "GET", body = null, headers = {}) => {
-    setIsLoading(true);
-    const httpAbortCtrl = new AbortController();
-    activeHttpRequests.current.push(httpAbortCtrl);
+    async (url, method = 'GET', body = null, headers = {}) => {
+      setIsLoading(true);
+      const httpAbortCtrl = new AbortController();
+      activeHttpRequests.current.push(httpAbortCtrl);
 
-    try {
-    const response = await fetch(url, {
-      method,
-      body,
-      headers,
-      signal: httpAbortCtrl.signal
-    });
+      try {
+        const response = await fetch(url, {
+          method,
+          body,
+          headers,
+          signal: httpAbortCtrl.signal,
+        });
 
-    const responseData = await response.json();
+        const responseData = await response.json();
 
-    activeHttpRequests.current = activeHttpRequests.current.filter( //keeps all controllers besides the one in the request above
-      reqCtrl => reqCtrl !== httpAbortCtrl)
+        activeHttpRequests.current = activeHttpRequests.current.filter(
+          //keeps all controllers besides the one in the request above
+          (reqCtrl) => reqCtrl !== httpAbortCtrl
+        );
 
-    if (!response.ok) {
-      throw new Error(responseData.message);
-    }
+        if (!response.ok) {
+          throw new Error(responseData.message);
+        }
 
-    setIsLoading(false)
-    return responseData;
-  } catch (err) {
-    setError(err.message);
-    setIsLoading(false);
-    throw err;
-  }
-},[]);
+        setIsLoading(false);
+        return responseData;
+      } catch (err) {
+        setError(err.message);
+        setIsLoading(false);
+        throw err;
+      }
+    },
+    []
+  );
 
   const clearError = () => {
     setError(null);
-  }
+  };
 
-  useEffect(() => {                 // we never continue with a component that is on its way out
-    return() => {
-      activeHttpRequests.current.forEach(abortCtrl => abortCtrl.abort());
-    }
+  useEffect(() => {
+    // we never continue with a component that is on its way out
+    return () => {
+      activeHttpRequests.current.forEach((abortCtrl) => abortCtrl.abort());
+    };
   }, []);
   return { isLoading, error, sendRequest, clearError };
-}
-
+};

@@ -1,4 +1,4 @@
-.author-pic-container{
+.author-pic-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,6 @@
   height: 3rem;
   border-radius: 50%;
   margin-right: 1rem;
-
 }
 
 .author-pic-container img {
@@ -15,7 +14,6 @@
   width: auto;
   overflow: hidden;
 }
-
 
 .author-blog {
   margin-top: 1rem;
@@ -37,7 +35,6 @@
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
-  
 }
 
 .blogBodyContainer {
@@ -47,25 +44,25 @@
 
 .directButtonContainer {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.directButtonContainer p{
+.directButtonContainer p {
   font-size: 1.3rem;
   color: rgb(114, 114, 114);
 }
 
-.nextButtonContainer a{
+.nextButtonContainer a {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
 }
 
-.prevButtonContainer a{
+.prevButtonContainer a {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
 }
 
 .arrowed {
@@ -79,6 +76,6 @@
   color: rgb(47, 47, 47);
 }
 
-.workBody h4{
+.workBody h4 {
   font-size: 1.4rem;
 }

@@ -1,30 +1,30 @@
-import React from "react";
-import NavBar from "../Nav/NavBar";
-import Footer from "../Nav/Footer";
-import { Parallax } from "react-parallax";
-import Cozy from "../Resources/cozy2.jpg";
-import "./Landing.css";
-import "./AllPage.css";
-import "./ForBuyers.css";
-import Test from "../Resources/house0.jpg";
-import TinyHouse from "../Resources/tinyHouse.jpg";
-import Infographic from "../Resources/Preview.jpg";
+import React from 'react';
+import NavBar from '../Nav/NavBar';
+import Footer from '../Nav/Footer';
+import { Parallax } from 'react-parallax';
+import Cozy from '../Resources/cozy2.jpg';
+import './Landing.css';
+import './AllPage.css';
+import './ForBuyers.css';
+import Test from '../Resources/house0.jpg';
+import TinyHouse from '../Resources/tinyHouse.jpg';
+import Infographic from '../Resources/Preview.jpg';
 import homeList from '../Resources/home.pdf';
 import Afford from '../Resources/Buyers tab_ how much can I afford.jpg';
 import Approved from '../Resources/Buyers_tab approved.png';
 import Closing from '../Resources/Buyers tab_closing.jpg';
 import Thinking from '../Resources/Buyers tab_thinking of buying.jpg';
 const introStyle = {
-  left: "50%",
-  top: "50%",
-  position: "absolute",
-  transform: "translate(-50%, -50%)",
-  color: "white",
-  maxWidth: "40rem",
-  textAlign: "center"
+  left: '50%',
+  top: '50%',
+  position: 'absolute',
+  transform: 'translate(-50%, -50%)',
+  color: 'white',
+  maxWidth: '40rem',
+  textAlign: 'center',
 };
 
-const ForBuyers = props => {
+const ForBuyers = (props) => {
   return (
     <div className="buyers-Container">
       <Parallax bgImage={Cozy} strength={600}>
@@ -52,8 +52,7 @@ const ForBuyers = props => {
             well-informed decisions.
           </p>
         </div>
-       
-        
+
         <div className="buyerLinkBox">
           <a href="#step1">Step 1: Where it Begins</a>
           <a href="#step2">Step 2: How Much House Can You Afford?</a>
@@ -64,9 +63,6 @@ const ForBuyers = props => {
           <a href="#step7">Step 7:Select Your Loan/ Appraisal</a>
           <a href="#step8">Step 8: Closing Time</a>
         </div>
-          
-    
-
 
         <div className="buyerParagraphHead">
           <p id="step1">Where It Begins</p>
@@ -96,9 +92,8 @@ const ForBuyers = props => {
             is available to all and can be found here.
           </p>
           <div className="resourceBoxImage">
-          <img src={Afford} alt="" />
+            <img src={Afford} alt="" />
           </div>
-
         </div>
         <div className="buyerParagraphHead">
           <p id="step3">Getting Pre-Approved By A Lender</p>
@@ -117,27 +112,75 @@ const ForBuyers = props => {
         </div>
         <div className="buyerLinkBox">
           <h1>Jennings County</h1>
-          <a target="_blank" href="https://www.bankatfirst.com/content/first-financial-bank/home.html?utm_source=yext&amp;utm_medium=locallisting&amp;utm_campaign=listing_all">First Financial Bank</a>
-          <a target="_blank" href="https://www.oldnational.com/bank-branch/1420-n-state-st-north-vernon-indiana">Old National Bank</a>
-          <a target="_blank" href="https://www.marinerfinance.com/locations/indiana/mariner-finance-location-in-north-vernon-in/?utm_source=google&amp;utm_medium=gmb_directories&amp;utm_campaign=directories">Mariner Finance </a>
+          <a
+            target="_blank"
+            href="https://www.bankatfirst.com/content/first-financial-bank/home.html?utm_source=yext&amp;utm_medium=locallisting&amp;utm_campaign=listing_all"
+          >
+            First Financial Bank
+          </a>
+          <a
+            target="_blank"
+            href="https://www.oldnational.com/bank-branch/1420-n-state-st-north-vernon-indiana"
+          >
+            Old National Bank
+          </a>
+          <a
+            target="_blank"
+            href="https://www.marinerfinance.com/locations/indiana/mariner-finance-location-in-north-vernon-in/?utm_source=google&amp;utm_medium=gmb_directories&amp;utm_campaign=directories"
+          >
+            Mariner Finance{' '}
+          </a>
           <h1>Jefferson County</h1>
-          <a target="_blank" href="https://genevafi.com/rising-sun-branch">Geneva Financial</a>
-          <a target="_blank" href="https://www.centra.org/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=madison&amp;y_source=1_MTU1NDU1NDgtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Centra Credit Union </a>
-          <a target="_blank" href="https://germanamerican.com/locations/IN/Madison/430-clifty-drive/">German American Bank </a>
+          <a target="_blank" href="https://genevafi.com/rising-sun-branch">
+            Geneva Financial
+          </a>
+          <a
+            target="_blank"
+            href="https://www.centra.org/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=madison&amp;y_source=1_MTU1NDU1NDgtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl"
+          >
+            Centra Credit Union{' '}
+          </a>
+          <a
+            target="_blank"
+            href="https://germanamerican.com/locations/IN/Madison/430-clifty-drive/"
+          >
+            German American Bank{' '}
+          </a>
           <h1>Jackson County</h1>
-          <a target="_blank" href="https://www.bawfg.com/branch-list/">Bailey & Wood Mortgage Lender</a>
-          <a target="_blank" href="https://integritymtgs.com/seymour-in-loan-officers/">Integrity Mortgage Group</a>
-          <a target="_blank" href="https://www.jcbank.com/">Jackson County Bank</a>
+          <a target="_blank" href="https://www.bawfg.com/branch-list/">
+            Bailey & Wood Mortgage Lender
+          </a>
+          <a
+            target="_blank"
+            href="https://integritymtgs.com/seymour-in-loan-officers/"
+          >
+            Integrity Mortgage Group
+          </a>
+          <a target="_blank" href="https://www.jcbank.com/">
+            Jackson County Bank
+          </a>
           <h1>Bartholemew County</h1>
-          <a target="_blank" href="https://www.bawfg.com/branch-list/">Bailey & Wood Mortgage Lender</a>
-          <a target="_blank" href="https://www.hallmarkhomemortgage.com/meet-our-team/columbus-in">Hallmark Home Mortgage</a>
-          <a target="_blank" href="https://www.ruoff.com/lending-centers/columbus">Ruoff Mortgage</a>
+          <a target="_blank" href="https://www.bawfg.com/branch-list/">
+            Bailey & Wood Mortgage Lender
+          </a>
+          <a
+            target="_blank"
+            href="https://www.hallmarkhomemortgage.com/meet-our-team/columbus-in"
+          >
+            Hallmark Home Mortgage
+          </a>
+          <a
+            target="_blank"
+            href="https://www.ruoff.com/lending-centers/columbus"
+          >
+            Ruoff Mortgage
+          </a>
         </div>
-          <div className="buyerResourceBox">
+        <div className="buyerResourceBox">
           <div className="resourceBoxImage">
-          <img src={Approved} alt="" />
+            <img src={Approved} alt="" />
           </div>
-          </div>
+        </div>
         <div className="buyerParagraphHead">
           <p id="step4">Choosing A Home</p>
         </div>
@@ -153,8 +196,11 @@ const ForBuyers = props => {
           </p>
           <br />
           <p>
-            Download the <a href={homeList} download>“Homebuying Wishlist”</a> to help narrow down exactly what
-            you’re searching for.{" "}
+            Download the{' '}
+            <a href={homeList} download>
+              “Homebuying Wishlist”
+            </a>{' '}
+            to help narrow down exactly what you’re searching for.{' '}
           </p>
         </div>
         <div className="buyerParagraphHead">
@@ -219,14 +265,14 @@ const ForBuyers = props => {
             when you will review and sign all loan documents for your new home.
             Some of the costs you may need to provide are closing costs, a down
             payment, prepaid interest, insurance, and taxes. This is also when
-            your lender will distribute funds to the closing agent.{" "}
+            your lender will distribute funds to the closing agent.{' '}
           </p>
           <div className="resourceBoxImage">
-          <img src={Closing} alt="" />
+            <img src={Closing} alt="" />
           </div>
         </div>
       </div>
-       <div className="pageBreak"></div>
+      <div className="pageBreak"></div>
       <Footer />
     </div>
   );

@@ -26,8 +26,6 @@
   color: rgb(194, 194, 194);
 }
 
-
-
 .footer-name {
   letter-spacing: 0.1rem;
   color: white;
@@ -93,7 +91,6 @@
   justify-content: center;
   height: 3rem;
   margin-bottom: 1.5rem;
-  
 }
 
 .footer-workWithChantz:hover {
@@ -109,7 +106,6 @@
   border-bottom: 0px transparent;
   color: inherit;
   margin: none;
-  
 }
 
 .footer-workWithChantz a:hover {
@@ -238,21 +234,19 @@
 
 @media (max-width: 818px) {
   .footer-columnOne {
-    text-align: center
+    text-align: center;
   }
 }
 
 @media (max-width: 818px) {
-  .footer-columnTwo p{
-   margin: auto;
-   margin-bottom: .5rem;
-  
+  .footer-columnTwo p {
+    margin: auto;
+    margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 818px) {
   .footer-workWithChantz p {
-    margin-bottom: .9rem;
+    margin-bottom: 0.9rem;
   }
 }
-

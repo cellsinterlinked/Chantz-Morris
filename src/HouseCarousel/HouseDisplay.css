@@ -7,14 +7,13 @@
   height: 30rem;
   width: 20rem;
   background-color: rgba(27, 27, 27, 0.863);
-  box-shadow: 
-  -2px -2px 2px rgba(255, 255, 255, 0.055),
-  3px 3px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.055),
+    3px 3px 4px rgba(0, 0, 0, 0.9);
 }
 
 .houseImageContainer {
   margin-top: 2rem;
-  display:flex;
+  display: flex;
   justify-self: center;
   justify-content: center;
   width: 18rem;
@@ -31,10 +30,9 @@
   padding: 0;
   text-align: center;
   font-family: Helvetica Neue;
-  
 }
 
-.houseAddress__price p{
+.houseAddress__price p {
   font-size: 1.5rem;
   color: white;
 }
@@ -47,8 +45,8 @@
   font-family: Helvetica Neue;
 }
 
-.viewListingContainer p{
-  margin-right: .5rem;
+.viewListingContainer p {
+  margin-right: 0.5rem;
 }
 
 .houseDetails {
@@ -58,10 +56,8 @@
   font-family: Helvetica Neue;
   color: white;
   font-size: 1rem;
-
 }
 
 .houseDetails p {
-  margin-right:.5rem;
-
+  margin-right: 0.5rem;
 }

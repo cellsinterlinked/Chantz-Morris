@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import sanityClient from "../client";
-import BlockContent from "@sanity/block-content-to-react";
-import imageUrlBuilder from "@sanity/image-url";
-import "./Landing.css";
-import "./AllPage.css";
-import "./BlogPage.css";
-import NavBar from "../Nav/NavBar";
-import Footer from "../Nav/Footer";
-import { Parallax } from "react-parallax";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import sanityClient from '../client';
+import BlockContent from '@sanity/block-content-to-react';
+import imageUrlBuilder from '@sanity/image-url';
+import './Landing.css';
+import './AllPage.css';
+import './BlogPage.css';
+import NavBar from '../Nav/NavBar';
+import Footer from '../Nav/Footer';
+import { Parallax } from 'react-parallax';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack } from 'react-icons/io';
 
 const introStyle = {
-  left: "50%",
-  top: "50%",
-  position: "absolute",
-  transform: "translate(-50%, -50%)",
-  color: "white",
-  maxWidth: "40rem",
-  textAlign: "center"
+  left: '50%',
+  top: '50%',
+  position: 'absolute',
+  transform: 'translate(-50%, -50%)',
+  color: 'white',
+  maxWidth: '40rem',
+  textAlign: 'center',
 };
 
 const builder = imageUrlBuilder(sanityClient);
@@ -28,7 +28,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-const BlogPage = props => {
+const BlogPage = (props) => {
   const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
   const [blogList, setBlogList] = useState(null);
@@ -55,7 +55,7 @@ const BlogPage = props => {
         "authorImage": author->image
       }`
       )
-      .then(data => setBlogData(data[0]))
+      .then((data) => setBlogData(data[0]))
       .catch(console.error);
   }, [slug]);
 
@@ -76,7 +76,7 @@ const BlogPage = props => {
         }`
       )
       .then(
-        data => setBlogList(data)
+        (data) => setBlogList(data)
         // thisFunction()
       )
       .catch(console.error);
@@ -110,25 +110,25 @@ const BlogPage = props => {
 
   const showNextBlog = () => {
     // returns the name of the next blog to append to next blog url
-    const isCurrent = element => element.slug === slug; //was =
+    const isCurrent = (element) => element.slug === slug; //was =
     const blogNum = blogList.findIndex(isCurrent);
     if (blogNum !== blogList.length - 1) {
       const nextBlog = blogList[blogNum + 1].slug.current;
       console.log(nextBlog);
       return nextBlog;
     } else {
-      console.log("youre already at the end");
+      console.log('youre already at the end');
     }
   };
 
   const showPrevBlog = () => {
     // returns the nane of the previouw blog to append to the previous blog url
-    const isCurrent = element => element.slug === slug; // was =
+    const isCurrent = (element) => element.slug === slug; // was =
     const blogNum = blogList.findIndex(isCurrent);
     if (blogNum !== 0) {
       return blogList[blogNum - 1].slug.current;
     } else {
-      console.log("youre at zero bro!");
+      console.log('youre at zero bro!');
     }
   };
 
@@ -153,7 +153,7 @@ const BlogPage = props => {
               <img src={urlFor(blogData.authorImage).url()} alt="" />
             </div>
             <h4>{blogData.name}</h4>
-            <p>{dateFunc() + " " + "days ago"}</p>
+            <p>{dateFunc() + ' ' + 'days ago'}</p>
           </div>
           <BlockContent
             blocks={blogData.body}
@@ -180,7 +180,7 @@ const BlogPage = props => {
         </div>
       </div>
 
-      <button style={{ height: "3rem", width: "8rem" }} onClick={showNextBlog}>
+      <button style={{ height: '3rem', width: '8rem' }} onClick={showNextBlog}>
         Fuck You
       </button>
 

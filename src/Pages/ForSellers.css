@@ -1,21 +1,19 @@
 .sellerTitle {
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 1rem;
-
 }
 
 .sellerTitle h1 {
   margin: 0;
-  color : rgb(93, 93, 93);
+  color: rgb(93, 93, 93);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;
-
 }
 
 @media (max-width: 600px) {
@@ -32,9 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;;
- 
-
+  justify-content: center;
 }
 
 .sellerResourceBox {
@@ -46,8 +42,8 @@
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: .7rem;
-  margin-left: .7rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .sellerResourceBox img {
@@ -63,10 +59,8 @@
   overflow: hidden;
 }
 
-.sellerInfographicContainer img{
+.sellerInfographicContainer img {
   max-width: 100%;
-  
-
 }
 
 .sellerLinkBox {
@@ -98,17 +92,15 @@
   font-family: Helvetica Neue;
   margin-bottom: 4px;
   font-size: 1.2rem;
-
 }
 
 .sellerLinkBox a:hover {
   color: rgb(0, 27, 148);
-  
 }
 
 .sellerParagraphHead {
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -117,7 +109,7 @@
 
 .sellerParagraphHead p {
   margin: 0;
-  color : rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;

@@ -6,7 +6,6 @@ import BlockContent from '@sanity/block-content-to-react';
 import BlogDisplay from './BlogDisplay';
 import sanityClient from '../client';
 
-
 const BlogCarousel = (props) => {
   const blogLength = props.blogs.length - 1;
 
@@ -15,29 +14,26 @@ const BlogCarousel = (props) => {
       image={props.blogs[0].mainImage.asset.url}
       title={props.blogs[0].title}
       date={props.blogs[0].publishedAt.slice(0, 10)}
-      children={(
+      children={
         <BlockContent
           blocks={props.blogs[0].body}
           projectId={sanityClient.clientConfig.projectId}
           dataset={sanityClient.clientConfig.dataset}
           className="workBody"
         />
-)}
-
+      }
     />,
     <BlogDisplay
       image={props.blogs[1].mainImage.asset.url}
       title={props.blogs[1].title}
       date={props.blogs[1].publishedAt}
       details={props.blogs[1].body}
-
     />,
     <BlogDisplay
       image={props.blogs[2].mainImage.asset.url}
       title={props.blogs[2].title}
       date={props.blogs[2].publishedAt}
       details={props.blogs[2].body}
-
     />,
     // <BlogDisplay
     //   image={dummyHouses[3].image}
