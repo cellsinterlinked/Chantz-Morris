@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink , useParams } from 'react-router-dom';
+import { NavLink , useParams, useHistory } from 'react-router-dom';
 
 import BlockContent from '@sanity/block-content-to-react';
 import imageUrlBuilder from '@sanity/image-url';
@@ -28,10 +28,10 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-const BlogPage = (props) => {
+const BlogPage = (props) =>  {
   const [blogData, setBlogData] = useState(null);
   const { slug } = useParams();
-  const [blogList, setBlogList] = useState(null);
+  const [blogList, setBlogList] = useState([]);
   const [blogIndex, setBlogIndex] = useState(0);
   //  const [nextBlogUrl, setNextBlogUrl] = useState()
   //  const [lastBlogUrl, setLastBlog] = useState();
@@ -82,12 +82,21 @@ const BlogPage = (props) => {
       .catch(console.error);
   }, []);
 
-  //  const thisFunction = () => {                            // same as below, different method
-  //   const isCurrent = (element) => element.slug === slug
-  //   const currentIndex = blogList.findIndex(isCurrent)
-  //   setBlogIndex(currentIndex + 1)
-  //   console.log(blogIndex)
-  // }
+  
+  
+  useEffect(() => {
+    const thisFunction = () => {                            // same as below, different method
+      const isCurrent = (element) => element.slug === slug
+      const currentIndex = blogList.findIndex(isCurrent)
+    return currentIndex;
+  }
+    setBlogIndex(thisFunction())
+    console.log(blogIndex)
+  },[blogList, slug])
+
+
+
+   
 
   // const tryFunc = () => {   // trying to get a blog index to tell whether it is the first or last and base forward and backward buttons on that
   //   const isBlog = (element) => element.slug = slug
@@ -171,7 +180,7 @@ const BlogPage = (props) => {
             </div>
 
             <div className="nextButtonContainer">
-              <a href="">
+              <a href="http://localhost:3000/">
                 <p>Next Blog</p>
                 <IoIosArrowForward className="arrowed" />
               </a>
