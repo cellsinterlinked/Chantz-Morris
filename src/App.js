@@ -9,6 +9,7 @@ import Inbox from './Pages/Inbox';
 import ForSellers from './Pages/ForSellers';
 import About from './Pages/About';
 import Auth from './Pages/Auth';
+import BlogPage from './Pages/BlogPage';
 import { AuthContext } from './Context/auth-context';
 
 let logoutTimer;
@@ -112,6 +113,9 @@ const App = () =>  {
       </Route>
       <Route path="/login" exact>
       <Auth />
+      </Route>
+      <Route path="/blog/:slug" exact>
+      <BlogPage />
       </Route>
       <Redirect to="/" />
       </Switch>

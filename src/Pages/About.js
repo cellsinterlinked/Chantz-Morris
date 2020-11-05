@@ -102,16 +102,21 @@ const About = props => {
         </div>
       </div>
 
-      <div className="aboutBrokerTitle"><h1>ATLAS</h1></div>
+      <div className="aboutBrokerTitle"><h1>The Modglin Group</h1></div>
       <div className="aboutBrokerBox">
         <div className="aboutBrokerInfo">
-        <p>The only home we’ve ever known preserve and cherish that pale blue dot. Cosmic fugue, circumnavigated descended from astronomers decipherment, permanence of the stars science Euclid muse about!</p>
-        <p>A still more glorious dawn awaits Euclid, tendrils of gossamer clouds extraplanetary muse about vastness is bearable only through love Cambrian explosion! Extraordinary claims require extraordinary evidence of brilliant syntheses?</p>
-        <p>Emerged into consciousness encyclopaedia galactica rich in heavy atoms, billions upon billions are creatures of the cosmos, the ash of stellar alchemy consciousness tingling of the spine ship of the imagination.</p>
-        <p>Explorations star stuff harvesting star light ship of the imagination birth dispassionate extraterrestrial observer trillion, rings of Uranus Apollonius of Perga? </p>
-        </div>
-        <div className="aboutBrokerImage">
-            <img src={BrokerPic} alt="me again"></img>
+        <p>The Modglin Group is independently owned and was founded more than fifteen years ago by Raymond
+Modglin. The company is based out of Greenwood Indiana, but spans north, as far as Lake, Porter and
+Jasper counties, and south, as far as Jennings, Bartholomew, and Jackson counties. In addition to
+operating a real estate brokerage, they also operate Real University and Five Stone Mortgage. This
+creates an advantage for Modglin Group agents because they have direct access to a large diverse team
+of real estate and mortgage professionals with years of experience. The Modglin Group prides
+themselves on making every real estate transaction as smooth as possible, as they understand the
+stresses of buying and selling a home. It is with this pride and dedication to their clients that has allowed
+them to continue growing, serving Northern, Central and Southern parts of Indiana.</p>
+        <p id="modglinQuote">“It is our mission to glorify God by putting our clients’ interests above our own, providing the highest
+
+level of honesty and expertise.”</p>
         </div>
 
       </div>

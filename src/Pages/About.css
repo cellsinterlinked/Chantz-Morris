@@ -126,7 +126,7 @@
 .aboutBrokerInfo {
   display: flex;
   flex-direction: column;
-  max-width: 25rem;
+  max-width: 54rem;
   min-width: 20rem;
   font-family: Helvetica Neue;
   margin: 0;
@@ -155,4 +155,9 @@
   max-width: 100%;
   height: auto;
   padding-top: 2rem;
+}
+
+#modglinQuote {
+  text-align: center;
+  font-style: italic;
 }

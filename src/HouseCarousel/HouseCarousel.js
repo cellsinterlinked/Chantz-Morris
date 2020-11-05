@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HouseDisplay from "./HouseDisplay";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
@@ -11,6 +11,7 @@ import House4 from "../Resources/house4.jpg";
 import House5 from "../Resources/house5.jpg";
 import House6 from "../Resources/house6.jpg";
 import House7 from "../Resources/house7.jpg";
+import sanityClient from "../client.js";
 
 const dummyHouses = [
   {
@@ -72,9 +73,11 @@ const dummyHouses = [
 ];
 
 const HouseCarousel = props => {
+  
+  
   let itemArr = [
     <HouseDisplay
-      image={dummyHouses[0].image}
+      image={props.blogs[0].mainImage.asset.url}
       address={dummyHouses[0].address}
       beds={dummyHouses[0].beds}
       baths={dummyHouses[0].baths}

@@ -1,8 +1,26 @@
+.blog-container {
+  background-color: rgb(245, 245, 245);
+}
+
 .blog-list-container {
-  background-color: rgb(255, 255, 255);
-  padding: 1px;
-  margin-top: 0;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  max-width: 60rem;
+  justify-content: space-around;
+  background-color: transparent;
+  
+  margin: auto;
+  margin-top: 2rem;;
+
+}
+
+@media (max-width: 389px) {
+  .blog-list-container {
+    justify-items: center;
+    flex-direction: row;
+  }
 }
 
 .blogTitle {
@@ -13,7 +31,7 @@
 
 .blogTitle h1 {
   text-align: center;
-  color : rgb(93, 93, 93);
+  color : rgb(34, 34, 34);
   font-family: Helvetica Neue;
   letter-spacing: 1px;
   font-weight: normal;
@@ -41,3 +59,77 @@
   margin-right: .7rem;
   margin-left: .7rem;
 }
+
+.blogPreviewBox {
+  width: 22rem;
+  box-shadow: 4px 4px 6px rgba(37, 37, 37, 0.527);
+  margin-bottom: 2rem;
+  background-color: white;
+  text-decoration: none;
+}
+
+.blogPreviewImageContainer {
+  display: flex;
+  width: 100%;
+  height: 16rem;
+  overflow: hidden;
+  align-items: center;
+}
+
+.blogPreviewImage {
+  margin: auto;
+  max-width: 22rem;
+  height: auto;
+}
+
+.innerPreviewBox {
+  padding-top: 1rem;
+  margin-top: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: Helvetica Neue;
+  
+  
+}
+
+.titlePreviewContainer {
+  margin-top: 0rem;
+  width: 100%;
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+
+}
+
+.titlePreviewContainer h2{
+  margin-top: 0;
+  text-decoration: none;
+  margin-left: 1rem;
+  color: rgb(70, 70, 70);
+  margin-bottom: 3px;
+}
+
+.descriptionPreviewContainer {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.descriptionPreviewContainer p {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin:0;
+}
+
+.publishedPreviewContainer {
+  margin-left: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.publishedPreviewContainer p {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  margin: 0;
+}
+
+

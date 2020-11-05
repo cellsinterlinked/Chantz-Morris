@@ -1,0 +1,84 @@
+.blogCarousel__container {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 0rem;
+  height: 32rem;
+}
+
+.item__slider {
+  position: relative;
+ 
+  /* change above to make responsive, you idiot */
+  height: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  overflow: hidden;
+}
+
+@media (min-width: 1049px) {
+  .item__slider {
+    width: 66rem;
+  }
+}
+
+@media (max-width: 1048px) {
+  .item__slider {
+    width: 44rem;
+  }
+}
+
+@media (max-width: 702px) {
+  .item__slider {
+    width: 22rem;
+  }
+}
+
+.item__Slide {
+
+  transition: .5s;
+ 
+  padding: -2rem;
+}
+
+#item-slider__goLeft{
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  width: 8%;
+  height:30rem;
+  left:0;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: .5s;
+  z-index: 200;
+}
+
+#item-slider__goRight{
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  width: 8%;
+  height:30rem;
+  right: 0;
+  background: transparent;
+  border: none;
+  outline:none;
+  transition: .5s;
+  z-index: 50;
+}
+
+.arrow {
+  z-index: 50;
+  color: white;
+  /* background-color: white; */
+}
+
+.arrow :hover {
+  color: black;
+}

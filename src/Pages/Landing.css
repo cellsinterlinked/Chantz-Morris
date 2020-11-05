@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   max-width: 25rem;
-  height: 15rem;
+  height: auto;
   /* transform: skew(0deg, -5deg); */
  
   margin-left: 1rem;
@@ -18,8 +18,9 @@
 }
 
 .landing-self-picture {
+  width: 100%;
   height: auto;
-  max-width: 25rem;
+  
 }
 
 @media (max-width: 860px) {
@@ -37,7 +38,7 @@
 
 .landing-self-info {
  
- max-height: 25rem;
+
  max-width: 25rem;
  min-width: 20rem;
  margin-left: 1rem;
@@ -129,4 +130,17 @@
   .introInfoContainer {
     max-width: 100%;
   }
+}
+
+#chantzQuote {
+  font-style: italic;
+  font-family: Helvetica Neue;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+#chantzSig {
+  font-style: italic;
+  font-family: Helvetica Neue;
+  text-align: center;
 }

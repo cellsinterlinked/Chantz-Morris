@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import image1 from "../Resources/field.jpeg";
 import image2 from "../Resources/town1.jpeg";
 import image3 from "../Resources/RailRoad.jpg";
-import image4 from "../Resources/houseSunset.jpg";
-import image5 from "../Resources/professional.jpg";
+import image4 from "../Resources/Top_Front Page_Family.jpg"
+import image5 from "../Resources/Chantz_PUP PUP (2).JPG";
 import { Parallax } from "react-parallax";
 import NavBar from "../Nav/NavBar";
 import HouseDisplay from "../HouseCarousel/HouseDisplay";
@@ -12,6 +12,8 @@ import "./Landing.css";
 import "./AllPage.css";
 import NewsCarousel from "../NewsCarousel/NewsCarousel";
 import Footer from "../Nav/Footer";
+import sanityClient from "../client.js";
+import BlogCarousel from "../BlogCarousel/BlogCarousel";
 
 const introStyle = {
   left: "50%",
@@ -24,6 +26,32 @@ const introStyle = {
 };
 
 const Landing = props => {
+  const [blogs, setBlogs] = useState()
+
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+            title,
+            slug,
+            description,
+            publishedAt,
+            body,
+            mainImage{
+              asset->{
+                _id,
+                url
+              }
+            }
+          }`
+      )
+      .then((data) => setBlogs(data))
+      .catch(console.error);
+  
+  }, []);
+
+
   return (
     <React.Fragment>
     <div className="landingContainer">
@@ -32,34 +60,29 @@ const Landing = props => {
           <div style={{ height: 650 }}>
             <NavBar />
             <div style={introStyle} className="pageHead">
-              <h1>Bringing Class To Southern Indiana</h1>
-              <p> The Dirty-Vern + More Desirable Surrounding Counties</p>
+              <h1>Home is Where the Family's at</h1>
+              <p></p>
             </div>
           </div>
         </div>
       </Parallax>
       <div className="divider-one">
-      <div className="introTitle"><h1>You are all beautiful snowflakes. Your house should be no exception</h1></div>
+      <div className="introTitle"><h1>Something Profound About a Personalized Home Buying Experience</h1></div>
       <div className="introInfoContainer">
       <div className="lineBreak"></div>
         <div className="landing-self-info">
           <p>
-            Such aside, the indeed, soon arm, ages, effectiveness of get
-            separated sentinels up instance. Empty beginnings, and downstairs
-            get no was royal not don't didn't her, the on pitifully slightly boa
-            presentations. Are last for planning even better a very follow
-            concept searched of our there from cheerful, no pass violin, those
-            them, problem him ticket how this systems principles, universal
-            thought, remedies. Might subordinates here, my side it the slogging
-            made raising he like to from fundamental hologram that would
-            mathematicians and lively.
+          It has become Chantz’s mission to educate and guide community members of Jennings County and
+surrounding areas through their home buying and selling experiences. Through the love of his
+community, education, drive to succeed, and access to a diverse team of real estate professionals, he is
+confident in his ability to lead others in their quest to achieve their real estate goals.
           </p>
+          <p id="chantzQuote">“If you’re not happy. I’m not happy. It’s simple, let’s both be happy. “</p>
+          <p id="chantzSig">-Chantz Morris</p>
         </div>
         <div className="landing-self-picture-container">
           <img className="landing-self-picture" src={image5} />
         </div>
-          <div className="landing-self-info"><p>Meditation gentrify fam, yuccie kickstarter brunch vape. Pitchfork freegan biodiesel bicycle rights. Semiotics flexitarian four loko XOXO raw denim chartreuse. Cray ramps microdosing everyday carry bicycle rights vexillologist. Bitters bushwick schlitz, 3 wolf moon tofu hoodie beard bicycle rights truffaut keffiyeh sartorial. Affogato coloring book glossier humblebrag hella godard pour-over fashion axe leggings tote bag af.</p></div>
-          <div className="landing-self-info"><p>Lomo neutra vape keytar man bun. Pabst fanny pack meggings, gochujang deep v stumptown banjo flexitarian poke hoodie. Jianbing iceland seitan echo park, tacos literally cornhole poke pinterest blue bottle man bun. Intelligentsia affogato freegan quinoa cray. Banjo bicycle rights quinoa, meditation pork belly brooklyn tumeric thundercats adaptogen portland vape art party. Cloud bread four loko ramps woke, la croix artisan poke tbh kale chips cornhole snackwave lo-fi normcore meditation.</p></div>
           
         <div className="lineBreak spaceTop"></div>
         </div>
@@ -68,9 +91,10 @@ const Landing = props => {
         <div className="image-cover">
           <div style={{ height: 850 }} className="image-2">
             <div className="listingTitle">
-              <p id="activeListings">ACTIVE LISTINGS</p>
+              <p id="activeListings">Recent Blogs</p>
             </div>
-            <HouseCarousel />
+            { blogs ?
+            <BlogCarousel blogs={blogs} /> : <div><h2>Loading...</h2></div>}
           </div>
         </div>
       </Parallax>

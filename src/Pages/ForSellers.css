@@ -5,7 +5,7 @@
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 
 }
 
@@ -39,7 +39,8 @@
 
 .sellerResourceBox {
   display: flex;
-  max-width: 25rem;
+  flex-direction: column;
+  max-width: 43rem;
   min-width: 20rem;
   font-family: Helvetica Neue;
   margin: 0;
@@ -66,4 +67,61 @@
   max-width: 100%;
   
 
+}
+
+.sellerLinkBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 43rem;
+  min-width: 18rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.sellerLinkBox h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: rgb(71, 71, 71);
+}
+
+.sellerLinkBox a {
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  font-family: Helvetica Neue;
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+
+}
+
+.sellerLinkBox a:hover {
+  color: rgb(0, 27, 148);
+  
+}
+
+.sellerParagraphHead {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.sellerParagraphHead p {
+  margin: 0;
+  color : rgb(0, 0, 0);
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
 }

@@ -7,7 +7,7 @@ import Contactimg from "../Resources/professional.jpg";
 import NavBar from "../Nav/NavBar";
 import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
-import Profile from "../Resources/profile.jpg";
+import Profile from "../Resources/Chantz Cut out.png";
 import Footer from "../Nav/Footer";
 import { useHttpClient} from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
@@ -132,9 +132,9 @@ const Contact = props => {
       </div>
       <form className="contactForm" onSubmit={submitHandler}>
         <p>
-          If you have any questions about the south eastern indiana real estate
-          market, I would love to hear from you. Send me a message below with
-          your name and contact info. I look forward to chatting.
+        If you not sure how to take the first step in a new home search, not sure which tactics to use to sell your
+house, or just have a random question about real estate, call, email, text me anytime. I’m here for you
+24/7!
         </p>
         <div className="contactName__Container">
           <p style={{ letterSpacing: "1px" }}>Name *</p>

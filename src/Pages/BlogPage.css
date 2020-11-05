@@ -1,0 +1,84 @@
+.author-pic-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+
+}
+
+.author-pic-container img {
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+
+.author-blog {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 35rem;
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+}
+
+.author-blog h4 {
+  margin-right: 2rem;
+}
+
+.bodyParent {
+  width: 90%;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+}
+
+.blogBodyContainer {
+  margin: auto;
+  max-width: 35rem;
+}
+
+.directButtonContainer {
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.directButtonContainer p{
+  font-size: 1.3rem;
+  color: rgb(114, 114, 114);
+}
+
+.nextButtonContainer a{
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.prevButtonContainer a{
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.arrowed {
+  color: rgb(114, 114, 114);
+}
+
+.workBody {
+  font-family: Helvetica Neue;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(47, 47, 47);
+}
+
+.workBody h4{
+  font-size: 1.4rem;
+}

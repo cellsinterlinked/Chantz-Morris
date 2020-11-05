@@ -10,7 +10,10 @@ import Test from "../Resources/house0.jpg";
 import TinyHouse from "../Resources/tinyHouse.jpg";
 import Infographic from "../Resources/Preview.jpg";
 import homeList from '../Resources/home.pdf';
-
+import Afford from '../Resources/Buyers tab_ how much can I afford.jpg';
+import Approved from '../Resources/Buyers_tab approved.png';
+import Closing from '../Resources/Buyers tab_closing.jpg';
+import Thinking from '../Resources/Buyers tab_thinking of buying.jpg';
 const introStyle = {
   left: "50%",
   top: "50%",
@@ -49,6 +52,8 @@ const ForBuyers = props => {
             well-informed decisions.
           </p>
         </div>
+       
+        
         <div className="buyerLinkBox">
           <a href="#step1">Step 1: Where it Begins</a>
           <a href="#step2">Step 2: How Much House Can You Afford?</a>
@@ -59,6 +64,10 @@ const ForBuyers = props => {
           <a href="#step7">Step 7:Select Your Loan/ Appraisal</a>
           <a href="#step8">Step 8: Closing Time</a>
         </div>
+          
+    
+
+
         <div className="buyerParagraphHead">
           <p id="step1">Where It Begins</p>
         </div>
@@ -86,6 +95,10 @@ const ForBuyers = props => {
             online. One provider of this Zillow provides a great calculator that
             is available to all and can be found here.
           </p>
+          <div className="resourceBoxImage">
+          <img src={Afford} alt="" />
+          </div>
+
         </div>
         <div className="buyerParagraphHead">
           <p id="step3">Getting Pre-Approved By A Lender</p>
@@ -120,6 +133,11 @@ const ForBuyers = props => {
           <a target="_blank" href="https://www.hallmarkhomemortgage.com/meet-our-team/columbus-in">Hallmark Home Mortgage</a>
           <a target="_blank" href="https://www.ruoff.com/lending-centers/columbus">Ruoff Mortgage</a>
         </div>
+          <div className="buyerResourceBox">
+          <div className="resourceBoxImage">
+          <img src={Approved} alt="" />
+          </div>
+          </div>
         <div className="buyerParagraphHead">
           <p id="step4">Choosing A Home</p>
         </div>
@@ -203,13 +221,12 @@ const ForBuyers = props => {
             payment, prepaid interest, insurance, and taxes. This is also when
             your lender will distribute funds to the closing agent.{" "}
           </p>
+          <div className="resourceBoxImage">
+          <img src={Closing} alt="" />
+          </div>
         </div>
-
-        <div className="buyerResourceBox">
-          <img src={TinyHouse} alt="tinyHouse"></img>
-        </div>
-        
       </div>
+       <div className="pageBreak"></div>
       <Footer />
     </div>
   );

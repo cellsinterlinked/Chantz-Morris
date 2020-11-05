@@ -74,11 +74,12 @@
 }
 
 .buyerLinkBox {
+ 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 43rem;
+  /* width: 43rem; */
   min-width: 20rem;
   margin: auto;
   margin-bottom: 2rem;
@@ -107,6 +108,8 @@
   
 }
 
+
+
 .buyerParagraphHead {
   width: 100%;
   display:flex;
@@ -126,3 +129,18 @@
   font-weight: normal;
   text-align: center;
 }
+
+.resourceBoxImage {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.resourceBoxImage img{
+  width: 100%;
+  height: auto;
+}
+
+.pageBreak {
+  height: 3rem;
+}
+

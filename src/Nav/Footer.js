@@ -21,7 +21,7 @@ const Footer = props => {
         </div>
         <div className="footer-Phone-Email">
         <p>+1 812 592 7785</p>
-        <p>cmorris@ambit.com</p>
+        <p>chantz@themodglingroup.com</p>
         </div>
       </div>
       <div className="footer-columnTwo">
