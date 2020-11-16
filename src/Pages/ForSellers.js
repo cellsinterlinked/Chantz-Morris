@@ -3,11 +3,14 @@ import './ForSellers.css';
 import './Landing.css';
 import './AllPage.css';
 import { Parallax } from 'react-parallax';
-import HouseFront from '../Resources/houseFront.jpg';
+import HouseFront from '../Resources/SellersHouse.jpg';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import BackYard from '../Resources/backYard.jpg';
-import SellerInfographic from '../Resources/sellerInfographic.jpg';
+import Seller1 from '../Resources/Sellers tab_closing.jpg';
+import Seller2 from '../Resources/sellers tab_market strategy .jpg';
+import Seller3 from '../Resources/Sellers tab_open house(2).jpg';
+import Seller4 from '../Resources/Sellers tab_preparing the house.jpg';
+
 
 const introStyle = {
   left: '50%',
@@ -22,7 +25,7 @@ const introStyle = {
 const ForSellers = (props) => {
   return (
     <div className="sellers-Container">
-      <Parallax bgImage={HouseFront} strength={500}>
+      <Parallax className="testBanner" bgImage={HouseFront} strength={500}>
         <div className="image-cover">
           <div style={{ height: 600 }}>
             <NavBar />
@@ -93,8 +96,9 @@ const ForSellers = (props) => {
           <p id="sellerStep3">Prepare the House</p>
         </div>
 
-        <div className="sellerResourceBox">
-          <p>
+        <div className="sellerResourceBox2">
+          <img style={{float: "left"}}src={Seller4} alt="" />
+          <div className="sellerResourceText">
             The goal of preparing the house is to amaze buyers and have them
             excited as they take their first step through the front door. As
             soon as they enter, you want them envisioning the house as their
@@ -102,26 +106,26 @@ const ForSellers = (props) => {
             everything from fixing small repairs, cleaning the interior and
             exterior, and even sprucing up the curb appeal. Taking time to rid
             of any foul odors, cleaning carpet stains, or even washing baseboard
-            trimming and doors can make an impact on a homebuyer’s decision.
-          </p>
-          <p>
-            The goal of preparing the house is to amaze buyers and have them
-            excited as they take their first step through the front door. As
-            soon as they enter, you want them envisioning the house as their
-            own. To achieve this goal, homeowners should be doing anything and
-            everything from fixing small repairs, cleaning the interior and
-            exterior, and even sprucing up the curb appeal. Taking time to rid
-            of any foul odors, cleaning carpet stains, or even washing baseboard
-            trimming and doors can make an impact on a homebuyer’s decision.
-          </p>
+            trimming and doors can make an impact on a homebuyer’s decision. According to Home Staging Statistics, 94% of staged homes sell on an average of 29 days or less. Home
+staging is a great way to get the desired reaction out of a buyer. Instead of walking into an empty and
+hollowed out house, buyers walk into a warm and inviting home. This allows them to envision the space
+and see what purposes it can offer.
+          </div>
+          {/* <p>
+          According to Home Staging Statistics, 94% of staged homes sell on an average of 29 days or less. Home
+staging is a great way to get the desired reaction out of a buyer. Instead of walking into an empty and
+hollowed out house, buyers walk into a warm and inviting home. This allows them to envision the space
+and see what purposes it can offer.
+          </p> */}
         </div>
 
         <div className="sellerParagraphHead">
           <p id="sellerStep4">Develop a Marketing Plan</p>
         </div>
 
-        <div className="sellerResourceBox">
-          <p>
+        <div className="sellerResourceBox2">
+          <img style={{float: "right"}}src={Seller2} alt=""/>
+          <div className="sellerResourceText">
             The first step in developing a market plan is having professional
             pictures taken. Once the pictures have been taken and edited, your
             agent will create a listing on the local MLS. This allows other real
@@ -132,15 +136,16 @@ const ForSellers = (props) => {
             media, brochures, and the list goes on. When developing the
             marketing plan, your agent will determine which tactics are best
             suited to market the property.
-          </p>
+          </div>
         </div>
 
         <div className="sellerParagraphHead">
           <p id="sellerStep5">Show the House Off</p>
         </div>
 
-        <div className="sellerResourceBox">
-          <p>
+        <div className="sellerResourceBox2">
+        <img style={{float: "left"}}src={Seller3} alt=""/>
+          <div className="sellerResourceText">
             Aside from posting pictures on social media and the posted listing
             on the MLS, the home can be shown off a couple other ways. To make
             the property easily accessible to buyer agents wanting to show the
@@ -150,7 +155,7 @@ const ForSellers = (props) => {
             potential buyers, neighbors, or just onlookers to check out the
             house. The more people touring the home, the better. Word of mouth
             is a great way to help the property gain attention.
-          </p>
+          </div>
         </div>
 
         <div className="sellerParagraphHead">
@@ -189,8 +194,9 @@ const ForSellers = (props) => {
           <p id="sellerStep8">Closing</p>
         </div>
 
-        <div className="sellerResourceBox">
-          <p>
+        <div className="sellerResourceBox2">
+        <img style={{float: "right"}}src={Seller1} alt=""/>
+          <div className="sellerResourceText">
             Closing time is when you will transfer ownership to the buyer,
             receive funds, and pay off any mortgages. To do this, all relevant
             paperwork and funds must be exchanged and typically takes place at
@@ -198,7 +204,7 @@ const ForSellers = (props) => {
             completed prior and items such as keys or garage door openers must
             be turned over. Closing time is generally an easy process and the
             seller has very little to do.
-          </p>
+          </div>
         </div>
       </div>
       <br />

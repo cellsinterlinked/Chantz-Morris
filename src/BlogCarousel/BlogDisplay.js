@@ -1,13 +1,23 @@
 import React from 'react';
 import './BlogDisplay.css';
-import { BsArrowRight } from 'react-icons/bs';
-import BlockContent from '@sanity/block-content-to-react';
-import imageUrlBuilder from '@sanity/image-url';
-import sanityClient from '../client';
+import { NavLink } from 'react-router-dom';
+
 
 const BlogDisplay = (props) => {
+
+  const blogDateFunc = () => {
+    const {date} = props;
+    const blogDate = new Date(date);
+    const nowDate = new Date();
+    const diff = nowDate.getTime() - blogDate.getTime();
+    const msInDay = 1000 * 3600 * 24;
+    const total = diff / msInDay;
+    const days = Math.floor(total);
+    return days;
+  };
+
   return (
-    <div className="blogDisplay__container">
+    <div className='blogDisplay__container' >
       <div className="blogImageContainer">
         <img src={props.image} alt="oops" />
       </div>
@@ -16,11 +26,11 @@ const BlogDisplay = (props) => {
       </div>
       <div className="blogDetails">{props.children}</div>
       <div className="blogDate">
-        <p>{props.date}</p>
+        <p>{`${blogDateFunc()} ` + `Days Ago`}</p>
       </div>
-      <div className="blogDisplayButton">
-        <button>Read More</button>
-      </div>
+      <NavLink to={`/blog/${props.slug}`}className="blogDisplayButton">
+        <button type="button">Read More</button>
+      </NavLink>
     </div>
   );
 };

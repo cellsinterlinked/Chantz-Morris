@@ -6,6 +6,7 @@ import Message from '../Reusable/Message/Message';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
+import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
 import Auth from './Auth';
@@ -20,7 +21,8 @@ const Inbox = (props) => {
     const fetchMessages = async () => {
       try {
         const responseData = await sendRequest(
-          'http://localhost:5000/api/messages',
+          process.env.REACT_APP_GET_MESSAGES_URL,
+          // 'http://localhost:5000/api/messages',
           'GET',
           null,
           {
@@ -28,7 +30,8 @@ const Inbox = (props) => {
           }
         );
 
-        setMessages(responseData.allMessages);
+        setMessages(responseData.allMessages.reverse());
+        
       } catch (err) {}
     };
 
@@ -49,21 +52,23 @@ const Inbox = (props) => {
 
   const patchReadHandler = (event) => {
     event.preventDefault();
-    const idArray = readMessages;
-    try {
-      sendRequest(
-        'http://localhost:5000/api/messages',
-        'PATCH',
-        JSON.stringify({
-          idArray,
-        }),
-        {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${  auth.token}`,
-        }
-      );
-      console.log('patch sent');
-    } catch (err) {}
+    console.log(messages.reverse());
+    // event.preventDefault();
+    // const idArray = readMessages;
+    // try {
+    //   sendRequest(
+    //     'http://localhost:5000/api/messages',
+    //     'PATCH',
+    //     JSON.stringify({
+    //       idArray,
+    //     }),
+    //     {
+    //       'Content-Type': 'application/json',
+    //       Authorization: `Bearer ${  auth.token}`,
+    //     }
+    //   );
+    //   console.log('patch sent');
+    // } catch (err) {}
   };
 
   // test patch end
@@ -79,7 +84,8 @@ const Inbox = (props) => {
 
   return (
     <>
-      <div className="inboxPageContainer">
+    {isLoading && <LoadingSpinner />}
+      {!isLoading && <div className="inboxPageContainer">
         <NavBar />
         <div className="inbox__Container">
           <div className="inboxIcon__Container">
@@ -90,16 +96,17 @@ const Inbox = (props) => {
           <div className="inboxTitle__Container">
             <p id="titleDate">Date:</p>
             <p id="titleName">Name:</p>
-            <form onSubmit={patchReadHandler} className="solo_button">
+            {/* <form onSubmit={patchReadHandler} className="solo_button">
               <button id="titleRead" type="submit">
                 MARK READ
               </button>
-            </form>
+            </form> */}
+            <p id="titleRead">Read</p>
             <p id="titleDelete">Delete</p>
           </div>
           {!isLoading && messages && (
             <div className="messages__Container">
-              {messages.map((message) => (
+              {messages.reverse().map((message) => (
                 <Message
                   key={message._id}
                   messageId={message._id}
@@ -118,7 +125,7 @@ const Inbox = (props) => {
             </div>
           )}
         </div>
-      </div>
+      </div>}
       <Footer />
     </>
   );

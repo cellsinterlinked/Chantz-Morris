@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Parallax } from 'react-parallax';
-import image1 from '../Resources/field.jpeg';
-import image2 from '../Resources/town1.jpeg';
 import image3 from '../Resources/RailRoad.jpg';
 import image4 from '../Resources/Top_Front Page_Family.jpg';
 import image5 from '../Resources/Chantz_PUP PUP (2).JPG';
 import NavBar from '../Nav/NavBar';
-import HouseDisplay from '../HouseCarousel/HouseDisplay';
-import HouseCarousel from '../HouseCarousel/HouseCarousel';
 import './Landing.css';
 import './AllPage.css';
-import NewsCarousel from '../NewsCarousel/NewsCarousel';
 import Footer from '../Nav/Footer';
 import sanityClient from '../client.js';
 import BlogCarousel from '../BlogCarousel/BlogCarousel';
+import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
+import ComingSoon from '../Reusable/Temporary/ComingSoon';
 
 const introStyle = {
   left: '50%',
@@ -27,6 +24,7 @@ const introStyle = {
 
 const Landing = (props) => {
   const [blogs, setBlogs] = useState();
+  const [isLoading, setIsLoading] =useState(true)
 
   useEffect(() => {
     sanityClient
@@ -45,14 +43,18 @@ const Landing = (props) => {
             }
           }`
       )
-      .then((data) => setBlogs(data))
+      .then((data) => {
+        setBlogs(data)
+        setIsLoading(false)
+      }
+      )
       .catch(console.error);
   }, []);
 
   return (
     <>
       <div className="landingContainer">
-        <Parallax bgImage={image4} strength={500}>
+        <Parallax className="testBanner" bgImage={image4} strength={500}>
           <div className="image-cover">
             <div style={{ height: 650 }}>
               <NavBar />
@@ -66,7 +68,7 @@ const Landing = (props) => {
         <div className="divider-one">
           <div className="introTitle">
             <h1>
-              Something Profound About a Personalized Home Buying Experience
+              Serving Jennings County and Surrounding Areas
             </h1>
           </div>
           <div className="introInfoContainer">
@@ -88,7 +90,7 @@ const Landing = (props) => {
               <p id="chantzSig">-Chantz Morris</p>
             </div>
             <div className="landing-self-picture-container">
-              <img className="landing-self-picture" src={image5} />
+              <img className="landing-self-picture" src={image5} alt="" />
             </div>
 
             <div className="lineBreak spaceTop" />
@@ -100,24 +102,25 @@ const Landing = (props) => {
               <div className="listingTitle">
                 <p id="activeListings">Recent Blogs</p>
               </div>
-              {blogs ? (
+              {isLoading && <LoadingSpinner />}
+
+              {blogs && !isLoading && (
                 <BlogCarousel blogs={blogs} />
-              ) : (
-                <div>
-                  <h2>Loading...</h2>
-                </div>
-              )}
+                )}
+              
+              {!blogs && !isLoading && <ComingSoon  text={"Blogs Coming Soon!"}/>}
+              
             </div>
           </div>
         </Parallax>
-        <div className="divider-two">
+        {/* <div className="divider-two">
           <div className="newsSection__title">
             <h1>Whats Going On</h1>
             <p>In Southern Indiana Real Estate</p>
           </div>
           <div className="lineBreak" style={{ width: '75%' }} />
           <NewsCarousel />
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>

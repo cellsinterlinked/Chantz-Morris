@@ -7,7 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 const ModalOverlay = (props) => {
   const content = (
     <div className="modal">
-      \
+      
       <header className="modalHeader">
         <h2>{props.header}</h2>
       </header>

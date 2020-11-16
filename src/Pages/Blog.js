@@ -3,17 +3,17 @@ import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import Blogimg from '../Resources/blog.jpg';
-import Relationshipimg from '../Resources/relationshipblog.jpg';
-import Restaurant from '../Resources/restaurantblog.jpg';
-import Bar from '../Resources/brew.jpg';
-import BlogTemplate from '../Reusable/Blog/BlogTemplate';
+import Blogimg from '../Resources/eyes2.jpg';
 import './Landing.css';
 import './AllPage.css';
 import './Blog.css';
+import '../BlogCarousel/BlogDisplay.css';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import sanityClient from '../client.js';
-import post from "../chantzmorris/schemas/post";
+import ComingSoon from '../Reusable/Temporary/ComingSoon';
+import BlogDisplay from '../BlogCarousel/BlogDisplay';
+import BlockContent from '@sanity/block-content-to-react';
+import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 
 const introStyle = {
   left: '50%',
@@ -27,20 +27,9 @@ const introStyle = {
 
 const Blog = (props) => {
   const [blogs, setBlogs] = useState();
+  const [isLoading, setIsLoading] =  useState(true)
 
-  // useEffect(() => {
-  //   const fetchBlogs = async () => {
-  //     try {
-  //       const responseData = await sendRequest('http://localhost:5000/api/blogs'); //doesnt need method or headers because it is default get
-
-  //       setBlogs(responseData.allBlogs)
-  //     } catch (err) {}
-  //   };
-
-  //   fetchBlogs()
-
-  // }, [sendRequest]);
-  // this is for using the node back end for blogs which was dicided against
+  
 
   useEffect(() => {
     sanityClient
@@ -50,6 +39,7 @@ const Blog = (props) => {
           slug,
           description,
           publishedAt,
+          body,
           mainImage{
             asset->{
               _id,
@@ -58,19 +48,31 @@ const Blog = (props) => {
           }
         }`
       )
-      .then((data) => setBlogs(data))
+      .then((data) => {
+      setBlogs(data)
+      setIsLoading(false)
+    }
+      )
       .catch(console.error);
   }, []);
 
   return (
-    <div className="blog-container">
-      <Parallax bgImage={Blogimg} strength={500}>
+    <>
+    {isLoading && (
+        <div className="center">
+          <LoadingSpinner />
+        </div>
+      )}
+    {!isLoading && <div className="blog-container">
+      
+
+      <Parallax className="testBanner" bgImage={Blogimg} strength={500}>
         <div className="image-cover">
           <div style={{ height: 600 }}>
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>Through The Eyes Of An Agent</h1>
-              <p>Something About This Blog</p>
+          
             </div>
           </div>
         </div>
@@ -82,58 +84,68 @@ const Blog = (props) => {
       <div className="blogInfo">
         <div className="blogBlock">
           <p>
-            Completely synergize resource taxing relationships via premier niche
-            markets. Professionally cultivate one-to-one customer service with
-            robust ideas. Dynamically innovate resource-leveling customer
-            service for state of the art customer service.
+          The purpose of this blog is to help inform and educate without making it feel like you’re reading a
+report. As homeowners and homebuyers, I want you to be as well-informed as possible. I’m going to
+provide a wide range of information that will make reaching your real estate goals so much easier.
+Topics will range as far as taking care of your home, preparing to sell, deciding if buying is the right
+option, to understanding the relationship with your agent. I hope you enjoy these quick reads!
           </p>
         </div>
-        <div className="blogBlock">
-          <p>
-            Objectively innovate empowered manufactured products whereas
-            parallel platforms. Holisticly predominate extensible testing
-            procedures for reliable supply chains. Dramatically engage top-line
-            web services vis-a-vis cutting-edge deliverables.
-          </p>
-        </div>
+        
       </div>
 
       <div className="blog-list-container">
-        {blogs &&
+        {blogs && 
           blogs.map((blog, index) => (
             <Link
               to={`/blog/${  blog.slug.current}`}
               key={blog.slug.current}
-              className="blogPreviewBox"
+              className="blogLink"
+              // className="blogPreviewBox"
             >
-              {/* <span className="blogPreviewBox" key={index}> */}
-              <div className="blogPreviewImageContainer">
-                <img
-                  className="blogPreviewImage"
-                  alt=""
-                  src={blog.mainImage.asset.url}
-                />
-              </div>
-              <div className="innerPreviewBox">
-                <div className="titlePreviewContainer">
-                  <h2 style={{ textDecoration: 'none' }}>{blog.title}</h2>
-                </div>
-                <div className="publishedPreviewContainer">
-                  <p>{blog.publishedAt.slice(0, 10)}</p>
-                </div>
-                <div className="descriptionPreviewContainer">
-                  <p>{blog.description}</p>
-                </div>
-              </div>
-
-              {/* </span> */}
+            <BlogDisplay 
+              slug={blog.slug.current}
+              image={blog.mainImage.asset.url}
+              title={blog.title}
+              date={blog.publishedAt.slice(0, 10)}
+              children={
+                <BlockContent
+                  blocks={blog.body}
+                  projectId={sanityClient.clientConfig.projectId}
+                  dataset={sanityClient.clientConfig.dataset}
+                  className="workBody"/>
+              }
+              
+              />
             </Link>
           ))}
+          {!blogs && !isLoading && <ComingSoon text="Blogs Coming Soon!"/>}
       </div>
 
       <Footer />
-    </div>
+    </div>}
+    </>
   );
 };
 
 export default Blog;
+
+              
+              // <div className="blogPreviewImageContainer">
+              //   <img
+              //     className="blogPreviewImage"
+              //     alt=""
+              //     src={blog.mainImage.asset.url}
+              //   />
+              // </div>
+              // <div className="innerPreviewBox">
+              //   <div className="titlePreviewContainer">
+              //     <h2 style={{ textDecoration: 'none' }}>{blog.title}</h2>
+              //   </div>
+              //   <div className="publishedPreviewContainer">
+              //     <p>{blog.publishedAt.slice(0, 10)}</p>
+              //   </div>
+              //   <div className="descriptionPreviewContainer">
+              //     <p>{blog.description}</p>
+              //   </div>
+              // </div>

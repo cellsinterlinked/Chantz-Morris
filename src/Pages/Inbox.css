@@ -39,6 +39,11 @@
   justify-self: end;
 }
 
+#titleRead {
+  justify-self: flex-end;
+  margin-right: 1.5rem;
+}
+
 #titleDate {
   margin-left: 1rem;
 }

@@ -45,13 +45,95 @@
   margin-right: 0.7rem;
   margin-left: 0.7rem;
 }
-
 .buyerResourceBox img {
   max-width: 100%;
 }
 
 .buyerResourceBox p {
   letter-spacing: 1px;
+}
+
+.buyerResourceBox2 {
+  max-width: 43rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.buyerResourceBox2 img {
+  /* float: right; */
+
+  margin: 5px;
+  width: 22rem;
+  height: auto;
+}
+
+.buyerResourceText {
+  text-align: justify;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.buyerResourceBox3 {
+  max-width: 43rem;
+  min-width: 20rem;
+  font-family: Helvetica Neue;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.buyerResourceBox3 img {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+.box3LinksBox {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 20rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  top: 20%;
+  left: 1rem;
+  right: 1rem;
+}
+
+.box3LinksBox a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .box3LinksBox a {
+    margin-top: 1px;
+    font-size: 1.2rem;
+  }
+}
+
+.box3LinksBox a:hover {
+  color: rgb(0, 195, 255);
 }
 
 .buyerInfographicContainer {

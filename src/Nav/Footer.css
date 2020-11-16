@@ -24,6 +24,7 @@
   margin-right: 1rem;
   font-family: Helvetica Neue;
   color: rgb(194, 194, 194);
+  font-size: 2rem;
 }
 
 .footer-name {
@@ -37,6 +38,7 @@
 .footer-brokerAddress p {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 2rem;
 }
 
 .footer-Phone-Email {
@@ -49,7 +51,7 @@
 }
 
 .footer-columnOne p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .footer-columnTwo {
@@ -133,6 +135,7 @@
 }
 .broker-bit p {
   margin: 0;
+  cursor: pointer;
 }
 
 .broker-bit {
@@ -211,6 +214,22 @@
 
 .contactIcon:hover {
   color: black;
+}
+
+.footerLicense {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footerLicense p {
+  margin: 0;
+}
+
+@media (max-width 818px) {
+  .footerLicense p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1058px) {

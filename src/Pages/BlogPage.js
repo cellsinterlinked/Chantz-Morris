@@ -104,16 +104,10 @@ const BlogPage = (props) => {
     setBlogIndex(currentIndex);
   }, [blogList, slug]);
 
-  // const tryFunc = () => {   // trying to get a blog index to tell whether it is the first or last and base forward and backward buttons on that
-  //   const isBlog = (element) => element.slug = slug
-  //   const currentIndex = blogList.findIndex(isBlog)
-  //   setBlogIndex(currentIndex + 1)
-
-  // }
+  
 
   const dateFunc = () => {
     const date = blogData.publishedAt.slice(0, 10);
-
     const blogDate = new Date(date);
     const nowDate = new Date();
     const diff = nowDate.getTime() - blogDate.getTime();
@@ -125,7 +119,7 @@ const BlogPage = (props) => {
 
   if (!blogData) return <div>Loading...</div>;
 
-  const generateURL = () => {
+  const generateNextURL = () => {
     let targetIndex;
 
     if (blogIndex + 1 > blogList.length - 1) {
@@ -140,9 +134,24 @@ const BlogPage = (props) => {
     }
   };
 
+  const generatePrevURL = () => {
+    let targetIndex;
+
+    if (blogIndex  < blogList.length - 1) {
+      targetIndex = 0;
+    } else {
+      targetIndex = blogIndex - 1;
+    }
+
+    if (blogList.length > 0) {
+      const title = blogList[targetIndex].slug.current;
+      return `http://localhost:3000/blog/${title}`;
+    }
+  };
+
   return (
     <div className="blogPageContainer">
-      <Parallax bgImage={blogData.mainImage.asset.url} strength={500}>
+      <Parallax className="testBanner" bgImage={blogData.mainImage.asset.url} strength={500}>
         <div className="image-cover">
           <div style={{ height: 600 }}>
             <NavBar />
@@ -170,23 +179,25 @@ const BlogPage = (props) => {
 
           <div className="directButtonContainer">
             <div className="prevButtonContainer">
-              <a>
+              <a className="de-underline"href={generatePrevURL()}>
                 <IoIosArrowBack className="arrowed" />
                 <p>Prev Blog</p>
               </a>
             </div>
-
+            
             <div className="nextButtonContainer">
-              <a href={generateURL()}>
+              <a className="de-underline"href={generateNextURL()}>
                 <p>Next Blog</p>
                 <IoIosArrowForward className="arrowed" />
               </a>
             </div>
+
+
           </div>
         </div>
       </div>
 
-      <button style={{ height: '3rem', width: '8rem' }}>Fuck You</button>
+    
 
       <Footer />
     </div>

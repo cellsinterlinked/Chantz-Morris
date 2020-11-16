@@ -11,6 +11,7 @@ const BlogCarousel = (props) => {
 
   const itemArr = [
     <BlogDisplay
+      slug={props.blogs[0].slug.current}
       image={props.blogs[0].mainImage.asset.url}
       title={props.blogs[0].title}
       date={props.blogs[0].publishedAt.slice(0, 10)}

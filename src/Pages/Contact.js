@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
+import { NavLink } from 'react-router-dom';
 import './Contact.css';
 import './AllPage.css';
 import './Landing.css';
 import { FiPhone } from 'react-icons/fi';
-import { AiOutlineMail } from 'react-icons/ai';
-import Contactimg from '../Resources/professional.jpg';
+import {CgFileDocument} from 'react-icons/cg';
+import Contactimg from '../Resources/relationshipblog.jpg';
 import NavBar from '../Nav/NavBar';
-import Profile from '../Resources/Chantz Cut out.png';
+import Profile from '../Resources/Chantz_blue shirt (1).jpg';
 import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
+import Modal from '../Reusable/Modals/Modal';
+import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
 
 const introStyle = {
   left: '50%',
@@ -22,6 +25,14 @@ const introStyle = {
   textAlign: 'center',
 };
 
+const backgroundStyle = {
+  boxShadow: "inset 0 0 2000px rgba(255, 255, 255, 0.5)",
+  filter: "blur(0px)",
+ 
+  
+  display: "block"
+}
+
 const Contact = (props) => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [fName, setFName] = useState('');
@@ -32,6 +43,7 @@ const Contact = (props) => {
   const [phone3, setPhone3] = useState('');
   const [message, setMessage] = useState('');
   const [fullPhone, setFullPhone] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const fNameController = (event) => {
     setFName(event.target.value);
@@ -88,16 +100,43 @@ const Contact = (props) => {
         }),
         { 'Content-Type': 'application/json' }
       );
+      setShowModal(true);
       console.log('success! I think...');
       // redirect user to a different page, cause pop up/rerender
     } catch (err) {}
   };
 
+  const confirmModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <>
       <ErrorModal error={error} onClear={clearError} />
+      <Modal
+        show={showModal}
+        onCancel={confirmModal}
+        header="MESSAGE SENT!"
+        footerClass="deleteFooter"
+        footer={
+          <>
+          <button onClick={confirmModal}>
+          <NavLink to="/" exact style={{ textDecoration: 'none' }}>
+          <p>Got It!</p>
+          </NavLink>
+          </button> 
+          </>
+        }
+        >
+          <p>Please Allow Chase 1 - 2 Business Days to Reply!</p>
+          </Modal>
       <div className="contactContainer">
-        <Parallax bgImage={Contactimg} strength={500}>
+        <Parallax className="testBanner"  strength={500}>
+        <Background className="topBackground">
+        <div className="testParent">
+          <img src={Contactimg} alt="client" className="childImage" />
+        </div>
+        </Background>
           <div className="image-cover">
             <div style={{ height: 600 }}>
               <NavBar />
@@ -112,7 +151,7 @@ const Contact = (props) => {
             <img src={Profile} alt="me" className="profileImg__Contact" />
           </div>
           <div className="realtorInfo__Contact">
-            <h1 className="realtorName__Contact">CHANTZ MORRIS | REALTOR</h1>
+            <h1 className="realtorName__Contact">CHANTZ MORRIS | REALTOR&trade;</h1>
             <div className="contactPersonal">
               <div className="iconInfo__Contact">
                 <FiPhone style={{ marginRight: '.5rem' }} />
@@ -120,27 +159,51 @@ const Contact = (props) => {
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
-                <p>cmorris@ambit.com</p>
+                <p>chantz@themodglingroup.com</p>
               </div>
-              <p className="contact-basic-text">DRE 01894675</p>
+              <div className="iconInfo__Contact">
+                <CgFileDocument style={{ marginRight: '.5rem'}} />
+                <p>License #:RB20001606</p>
+                </div>
+            </div>
+            <div className="contactSquareContainer">
+            
+            <div className="iconSquare">
+              <AiOutlineInstagram className="bigIcon" />
+            </div>
+            <a className="iconSquare" href="mailto:chantz@themodglingroup.com" target="_blank">
+              <AiOutlineMail className="bigIcon" />
+            </a>
+            <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
+              <AiFillLinkedin className="bigIcon" />
+            </a>
+            <a className="iconSquare" href="https://www.facebook.com/chantz.morris.79" target="_blank">
+              <AiFillFacebook className="bigIcon" />
+            </a>
             </div>
 
-            <h1 className="visit__Contact"> VISIT ME:</h1>
+
+
+
+            {/* <h1 className="visit__Contact"> VISIT ME:</h1>
 
             <div className="brokerInfo__Contact">
               <p>AMBIT</p>
               <p>555 Hillside Dr.</p>
               <p>Duluth, GA 30096</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <form className="contactForm" onSubmit={submitHandler}>
+          <div className="contactIntro">
           <p>
-            If you not sure how to take the first step in a new home search, not
+            If you're not sure how to take the first step in a new home search, not
             sure which tactics to use to sell your house, or just have a random
             question about real estate, call, email, text me anytime. I’m here
             for you 24/7!
           </p>
+          </div>
+
           <div className="contactName__Container">
             <p style={{ letterSpacing: '1px' }}>Name *</p>
             <div className="contactName__smallBox">

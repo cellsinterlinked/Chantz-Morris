@@ -63,7 +63,8 @@ const Message = (props) => {
       <Modal
         show={showConfirmModal}
         onCancel={cancelDeleteHandler}
-        header="Are you sure?"
+        header="ARE YOU SURE?"
+        children={<p>Do You Want To Delete This Message?</p>}
         footerClass="deleteFooter"
         footer={
           <>

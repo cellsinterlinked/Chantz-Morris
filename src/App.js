@@ -98,6 +98,9 @@ const App = () => {
         <Route path="/about" exact>
           <About />
         </Route>
+        <Route path="/blog/:slug" exact>
+          <BlogPage />
+        </Route>
         <Redirect to="/inbox" />
       </Switch>
     );
