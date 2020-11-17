@@ -21,7 +21,7 @@ const Inbox = (props) => {
     const fetchMessages = async () => {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_GET_MESSAGES_URL,
+          `${process.env.REACT_APP_GET_MESSAGES_URL}`,
           // 'http://localhost:5000/api/messages',
           'GET',
           null,

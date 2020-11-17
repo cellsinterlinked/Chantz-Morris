@@ -22,7 +22,7 @@ const Auth = () => {
     event.preventDefault();
     try {
       const responseData = await sendRequest(
-        process.env.REACT_APP_AUTH_URL,
+        `${process.env.REACT_APP_AUTH_URL}`,
         // 'http://localhost:5000/api/user/login',
         'POST',
         JSON.stringify({
