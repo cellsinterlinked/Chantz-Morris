@@ -33,7 +33,7 @@
 
 .loginTitle h1 {
   color: rgb(7, 7, 7);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1.5px;
   font-weight: normal;
   text-align: center;
@@ -63,7 +63,7 @@
   border-bottom: 1px solid grey;
   outline: none;
   font-size: 1.1rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   font-weight: normal;
 }
@@ -76,7 +76,7 @@
   border-bottom: 1px solid grey;
   outline: none;
   font-size: 1.1rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   font-weight: normal;
 }
@@ -95,6 +95,7 @@
   box-shadow: none;
   border: none;
   color: white;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
+  font-size: 1rem;
 }

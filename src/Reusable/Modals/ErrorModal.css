@@ -5,9 +5,15 @@
   box-shadow: none;
   border: none;
   color: white;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   margin: auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
+}
+
+.errorButton:hover {
+  height: 3rem;
+  width: 9rem;
+  color: rgb(15, 247, 255);
 }

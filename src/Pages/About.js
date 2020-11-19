@@ -40,7 +40,9 @@ const About = (props) => {
       <div className="aboutTitle">
         <h1>Your Local Home-Grown Real Estate Agent</h1>
       </div>
+
       <div className="aboutInfoContainer">
+      <div className="title-pizzazz2"/>
         <div className="aboutBox">
           <img style={{float: "right"}} src={AboutInfo} alt="me" />
           <div className="aboutResourceBox">
@@ -110,6 +112,9 @@ const About = (props) => {
         <h1>The Modglin Group</h1>
       </div>
       <div className="aboutBrokerBox">
+
+        <div className="title-pizzazz2"/>
+
         <div className="aboutBrokerInfo">
           <p>
             The Modglin Group is independently owned and was founded more than

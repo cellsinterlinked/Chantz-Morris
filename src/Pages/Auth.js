@@ -60,7 +60,7 @@ const Auth = () => {
             </div>
             <div className="passwordInput">
               <input
-                type="text"
+                type="password"
                 id="password"
                 name="password"
                 onChange={passwordController}

@@ -5,13 +5,13 @@
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .aboutTitle h1 {
   margin: 0;
   color: rgb(0, 0, 0);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   font-weight: normal;
 }
@@ -25,7 +25,7 @@
 
 .aboutInfoContainer {
   margin: auto;
-  max-width: 44rem;
+  max-width: 54rem;
   min-width: 20rem;
   display: flex;
   flex-wrap: wrap;
@@ -43,13 +43,15 @@
   /* display: flex;
   flex-direction: column; */
   /* max-width: 25rem; */
+  max-width: 44rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .aboutBox img {
@@ -69,7 +71,7 @@
 }
 
 .aboutCredentials p {
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   font-style: italic;
   font-size: 1.2rem;
 }
@@ -84,10 +86,10 @@
   margin-bottom: 3rem;
 }
 
-.aboutBlogTitle h1 {
+/* .aboutBlogTitle h1 {
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   font-weight: normal;
 }
@@ -97,7 +99,7 @@
     width: 20rem;
     text-align: center;
   }
-}
+} */
 
 .aboutBrokerTitle {
   width: 100%;
@@ -106,16 +108,16 @@
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 
 .aboutBrokerTitle h1 {
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 2px;
   font-weight: normal;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -135,12 +137,12 @@
   flex-direction: column;
   max-width: 44rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   letter-spacing: 1px;
 }
 
@@ -148,12 +150,12 @@
   display: flex;
   max-width: 25rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .aboutBrokerImage img {
@@ -168,8 +170,8 @@
 }
 
 .aboutResourceBox {
-  text-align: justify;
+  /* text-align: justify; */
   font-size: 1.2rem;
   letter-spacing: 1px;
-  text-align: justify;
+  /* text-align: justify; */
 }

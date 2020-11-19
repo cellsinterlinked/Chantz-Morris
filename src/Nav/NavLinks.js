@@ -45,6 +45,13 @@ const NavLinks = (props) => {
           </NavLink>
         </li>
       )}
+      {auth.isLoggedIn && (
+        <li>
+          <NavLink to="/" exact style={{ textDecoration: 'none' }} onClick={auth.logout}>
+            <p>LOGOUT</p>
+          </NavLink>
+        </li>
+      )}
     </div>
   );
 };

@@ -65,6 +65,8 @@ const ForSellers = (props) => {
           <p id="sellerStep1">Contact your local Modglin Group Agent</p>
         </div>
 
+        <div className="title-pizzazz" />
+
         <div className="sellerResourceBox">
           <p>
             Call or arrange a time to meet with your local Modglin Group agent
@@ -81,6 +83,8 @@ const ForSellers = (props) => {
           <p id="sellerStep2">Determine Value of Home</p>
         </div>
 
+        <div className="title-pizzazz" />
+
         <div className="sellerResourceBox">
           <p>
             To determine the value of the home, your agent will complete a
@@ -95,6 +99,8 @@ const ForSellers = (props) => {
         <div className="sellerParagraphHead">
           <p id="sellerStep3">Prepare the House</p>
         </div>
+
+        <div className="title-pizzazz" />
 
         <div className="sellerResourceBox2">
           <img style={{float: "left"}}src={Seller4} alt="" />
@@ -123,6 +129,8 @@ and see what purposes it can offer.
           <p id="sellerStep4">Develop a Marketing Plan</p>
         </div>
 
+        <div className="title-pizzazz" />
+
         <div className="sellerResourceBox2">
           <img style={{float: "right"}}src={Seller2} alt=""/>
           <div className="sellerResourceText">
@@ -143,6 +151,8 @@ and see what purposes it can offer.
           <p id="sellerStep5">Show the House Off</p>
         </div>
 
+        <div className="title-pizzazz" />
+
         <div className="sellerResourceBox2">
         <img style={{float: "left"}}src={Seller3} alt=""/>
           <div className="sellerResourceText">
@@ -161,6 +171,8 @@ and see what purposes it can offer.
         <div className="sellerParagraphHead">
           <p id="sellerStep6">Offer/ Negotiate</p>
         </div>
+
+        <div className="title-pizzazz" />
 
         <div className="sellerResourceBox">
           <p>
@@ -181,6 +193,8 @@ and see what purposes it can offer.
           <p id="sellerStep7">Signing the Purchase Agreement</p>
         </div>
 
+        <div className="title-pizzazz" />
+
         <div className="sellerResourceBox">
           <p>
             After you have accepted the offer you will sign the home purchase
@@ -193,6 +207,8 @@ and see what purposes it can offer.
         <div className="sellerParagraphHead">
           <p id="sellerStep8">Closing</p>
         </div>
+
+        <div className="title-pizzazz" />
 
         <div className="sellerResourceBox2">
         <img style={{float: "right"}}src={Seller1} alt=""/>

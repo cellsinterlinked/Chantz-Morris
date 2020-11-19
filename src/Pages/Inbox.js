@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Inbox.css';
+import './AllPage.css';
 import { IoIosMail } from 'react-icons/io';
 import { AuthContext } from '../Context/auth-context';
 import Message from '../Reusable/Message/Message';
@@ -7,9 +8,7 @@ import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
-import ErrorModal from '../Reusable/Modals/ErrorModal';
-import Modal from '../Reusable/Modals/Modal';
-import Auth from './Auth';
+
 
 const Inbox = (props) => {
   const auth = useContext(AuthContext);
@@ -84,7 +83,10 @@ const Inbox = (props) => {
 
   return (
     <>
-    {isLoading && <LoadingSpinner />}
+    {isLoading && <div className="center">
+      <LoadingSpinner/>
+      </div>}
+      
       {!isLoading && <div className="inboxPageContainer">
         <NavBar />
         <div className="inbox__Container">
@@ -125,8 +127,8 @@ const Inbox = (props) => {
             </div>
           )}
         </div>
-      </div>}
       <Footer />
+      </div>}
     </>
   );
 };

@@ -26,9 +26,12 @@ const NavBar = (props) => {
       </SideDrawer>
 
       <div className="fullNavBar">
+        <NavLink to="/">
         <h1>
-          <a href="http://localhost:3000/">Chantz Morris</a>
+          Chantz Morris
         </h1>
+
+        </NavLink>
         <div className="wideNav">
           <NavLinks />
         </div>

@@ -53,7 +53,10 @@ const Landing = (props) => {
 
   return (
     <>
-      <div className="landingContainer">
+    {isLoading && <div className="center">
+      <LoadingSpinner/>
+      </div>}
+      {!isLoading && <div className="landingContainer">
         <Parallax className="testBanner" bgImage={image4} strength={500}>
           <div className="image-cover">
             <div style={{ height: 650 }}>
@@ -71,8 +74,10 @@ const Landing = (props) => {
               Serving Jennings County and Surrounding Areas
             </h1>
           </div>
-          <div className="introInfoContainer">
+          <div className="landing-starter">
             <div className="lineBreak" />
+
+          <div className="introInfoContainer">
             <div className="landing-self-info">
               <p>
                 It has become Chantz’s mission to educate and guide community
@@ -93,9 +98,10 @@ const Landing = (props) => {
               <img className="landing-self-picture" src={image5} alt="" />
             </div>
 
-            <div className="lineBreak spaceTop" />
           </div>
+            <div className="lineBreak spaceTop" />
         </div>
+          </div>
         <Parallax bgImage={image3} strength={500}>
           <div className="image-cover">
             <div style={{ height: 850 }} className="image-2">
@@ -108,7 +114,7 @@ const Landing = (props) => {
                 <BlogCarousel blogs={blogs} />
                 )}
               
-              {!blogs && !isLoading && <ComingSoon  text={"Blogs Coming Soon!"}/>}
+              {!blogs && !isLoading && <ComingSoon  text="Blogs Coming Soon!"/>}
               
             </div>
           </div>
@@ -121,8 +127,8 @@ const Landing = (props) => {
           <div className="lineBreak" style={{ width: '75%' }} />
           <NewsCarousel />
         </div> */}
-      </div>
       <Footer />
+      </div>}
     </>
   );
 };

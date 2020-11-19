@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { BsTrashFill } from 'react-icons/bs';
 import './Message.css';
 import { useHistory } from 'react-router-dom';
-import { IoIosRestaurant } from 'react-icons/io';
 import Modal from '../Modals/Modal';
 import ErrorModal from '../Modals/ErrorModal';
 import { useHttpClient } from "../Hooks/http-hook";
@@ -32,6 +31,8 @@ const Message = (props) => {
     setIsRead(!isRead);
   };
 
+  
+
   useEffect(() => {
     if (isRead) {
       props.markReadHandler(props.messageId);
@@ -46,14 +47,14 @@ const Message = (props) => {
     setShowConfirmModal(false);
     try {
       await sendRequest(
-        `http://localhost:5000/api/messages/${props.messageId}`,
+        `${process.env.REACT_APP_DELETE_MESSAGES_URL}${props.messageId}`,
         'DELETE',
         null,
         {
           Authorization: `Brearer ${  auth.token}`,
         }
       );
-      props.onDelete(props.messageId);
+      props.onDelete(props.messageId)
     } catch (err) {}
   };
 
@@ -62,7 +63,7 @@ const Message = (props) => {
       <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showConfirmModal}
-        onCancel={cancelDeleteHandler}
+        onCancel={cancelDeleteHandler && clearError}
         header="ARE YOU SURE?"
         children={<p>Do You Want To Delete This Message?</p>}
         footerClass="deleteFooter"
@@ -115,3 +116,4 @@ const Message = (props) => {
 };
 
 export default Message;
+

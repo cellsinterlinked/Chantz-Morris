@@ -11,7 +11,7 @@
   -2px -2px 1px 0 rgb(87, 86, 86),
   2px 2px 4px 0 rgb(0, 0, 0); */
   max-height: 70vh;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   color: rgb(58, 58, 58);
 }
 
@@ -27,11 +27,15 @@
   box-shadow: none;
   border: none;
   color: white;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   margin: auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
+}
+
+.modalFooter button:hover {
+  color: rgb(0, 247, 255);
 }
 
 .modalFooter p {

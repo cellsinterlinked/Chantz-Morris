@@ -43,6 +43,7 @@ export const useHttpClient = () => {
   );
 
   const clearError = () => {
+    console.log("im firing")
     setError(null);
   };
 

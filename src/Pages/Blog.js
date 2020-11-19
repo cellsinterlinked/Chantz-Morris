@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
+import BlockContent from '@sanity/block-content-to-react';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
 import Blogimg from '../Resources/eyes2.jpg';
@@ -12,7 +13,6 @@ import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import sanityClient from '../client.js';
 import ComingSoon from '../Reusable/Temporary/ComingSoon';
 import BlogDisplay from '../BlogCarousel/BlogDisplay';
-import BlockContent from '@sanity/block-content-to-react';
 import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 
 const introStyle = {
@@ -81,7 +81,11 @@ const Blog = (props) => {
       <div className="blogTitle">
         <h1>Follow Me on My Journey...</h1>
       </div>
+
+
       <div className="blogInfo">
+
+        <div className="title-pizzazz" />
         <div className="blogBlock">
           <p>
           The purpose of this blog is to help inform and educate without making it feel like you’re reading a

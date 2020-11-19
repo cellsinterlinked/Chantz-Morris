@@ -60,7 +60,8 @@
 }
 .landing-self-info p {
   font-size: 1.2rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
+  /* font-family: Helvetica Neue; */
   letter-spacing: 0.1rem;
   margin-top: 0rem;
 }
@@ -74,14 +75,16 @@
 
 .listingTitle p {
   color: white;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .newsSection__title {
   display: flex;
   flex-direction: column;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   color: rgb(48, 48, 48);
   justify-content: center;
   margin-top: 2rem;
@@ -117,14 +120,14 @@
   justify-content: center;
   margin: auto;
   margin-top: 5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .introTitle h1 {
   width: 35rem;
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 2px;
   /* font-weight: normal; */
   text-align: center;
@@ -145,13 +148,13 @@
 
 #chantzQuote {
   font-style: italic;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   text-align: center;
   margin-top: 4rem;
 }
 
 #chantzSig {
   font-style: italic;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   text-align: center;
 }

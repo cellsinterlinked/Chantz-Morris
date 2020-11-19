@@ -64,6 +64,9 @@ decisions.
         <div className="buyerParagraphHead">
           <p id="step1">Where It Begins</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox">
           <p >To begin the process, you should contact a local real estate agent who is familiar with the market. When
 you talk to the agent be sure to ask any questions you might have. Once you have found an agent you
@@ -90,6 +93,9 @@ like and trust, they will assist you in finding the home that best fits your wan
         <div className="buyerParagraphHead">
           <p id="step2">Getting Pre-Approved By A Lender</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox2">
         <img style={{float: "left"}}src={Approved} alt="" />
           <div className="buyerResourceText" >
@@ -196,6 +202,9 @@ lenders in the area are:
         <div className="buyerParagraphHead">
           <p id="step3">Choosing A Home</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox">
           <p>
             Finding the right home can be the most challenging part of the home
@@ -218,6 +227,9 @@ lenders in the area are:
         <div className="buyerParagraphHead">
           <p id="step4">Make An Offer</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox2">
      
           <div className="buyerResourceText">
@@ -230,6 +242,9 @@ lenders in the area are:
         <div className="buyerParagraphHead">
           <p id="step5">Get A Home Inspection</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox2">
         <img style={{float: "left", marginBottom: "0px"}}src={Inspector} alt="" />
           <div className="buyerResourceText">
@@ -250,6 +265,9 @@ lenders in the area are:
         <div className="buyerParagraphHead">
           <p id="step6">Home Appraisal</p>
         </div>
+
+        <div className="title-pizzazz" />
+
         <div className="buyerResourceBox">
           <p>
             Before the lender will submit to the loan, they will hire a
@@ -262,6 +280,9 @@ lenders in the area are:
         <div className="buyerParagraphHead">
           <p id="step7">Closing Time</p>
         </div>
+
+        <div className="title-pizzazz" />
+        
         <div className="buyerResourceBox2">
             <img style={{float: "left"}}src={Closing} alt="" />
           <div className="buyerResourceText">

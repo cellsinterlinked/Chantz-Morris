@@ -11,9 +11,9 @@
 .sellerTitle h1 {
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: Helvetica Neue;
-  letter-spacing: 1px;
-  font-weight: normal;
+  font-family: gilSans;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
@@ -38,12 +38,13 @@
   flex-direction: column;
   max-width: 43rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin: 0;
   font-size: 1.2rem;
   overflow: hidden;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
 }
 
 .sellerResourceBox img {
@@ -89,7 +90,7 @@
   text-decoration: underline;
   color: black;
   cursor: pointer;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin-bottom: 4px;
   font-size: 1.2rem;
 }
@@ -105,12 +106,14 @@
   justify-content: center;
   margin: auto;
   margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .sellerParagraphHead p {
   margin: 0;
   color: rgb(0, 0, 0);
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   letter-spacing: 1px;
   font-weight: normal;
   font-size: 1.5rem;
@@ -121,26 +124,26 @@
 .sellerResourceBox2 {
   max-width: 43rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   margin: 0;
   font-size: 1.2rem;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .sellerResourceBox2 img {
   /* float: right; */
 
-  margin: 5px;
+  margin: 7px;
   width: 22rem;
   height: auto;
   margin-bottom: 1px;
 }
 
 .sellerResourceText {
-  text-align: justify;
+  /* text-align: justify; */
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
@@ -148,7 +151,7 @@
 .sellerResourceBox3 {
   max-width: 43rem;
   min-width: 20rem;
-  font-family: Helvetica Neue;
+  font-family: gilSans;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -166,4 +169,12 @@
   width: 100%;
   height: auto;
   opacity: 0.4;
+}
+
+@media (max-width: 430px) {
+  .sellerResourceBox2 img {
+    margin: 0px;
+    width: 21rem;
+    margin: auto;
+  }
 }
