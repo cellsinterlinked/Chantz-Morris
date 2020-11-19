@@ -130,7 +130,9 @@ const BlogPage = (props) => {
 
     if (blogList.length > 0) {
       const title = blogList[targetIndex].slug.current;
-      return `http://localhost:3000/blog/${title}`;
+      console.log(title);
+      console.log(`${process.env.REACT_APP_BLOG_DIRECT_URL}${title}`)
+      return `${process.env.REACT_APP_BLOG_DIRECT_URL}${title}`;
     }
   };
 
@@ -186,7 +188,7 @@ const BlogPage = (props) => {
             </div>
             
             <div className="nextButtonContainer">
-              <a className="de-underline"href={generateNextURL()}>
+              <a className="de-underline" href={generateNextURL()}>
                 <p>Next Blog</p>
                 <IoIosArrowForward className="arrowed" />
               </a>

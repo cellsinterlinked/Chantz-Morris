@@ -89,7 +89,7 @@ const ForSellers = (props) => {
           <p>
             To determine the value of the home, your agent will complete a
             comprehensive comparative market analysis. They will use recently
-            sold homes within in a certain radius from your property, with the
+            sold homes within a certain radius from your property, with the
             same qualities and features as yours, to arrive at a range of
             values. After the analysis is complete and it has been presented, a
             listing price will be chosen.

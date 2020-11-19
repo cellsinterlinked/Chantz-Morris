@@ -55,7 +55,7 @@ decisions.
           <a href="#step3">Step 3: Choose a Home</a>
           <a href="#step4">Step 4: Make an Offer</a>
           <a href="#step5">Step 5: Get a Home Inspection</a>
-          <a href="#step6">Step 6:Select Your Loan/ Appraisal</a>
+          <a href="#step6">Step 6: Home Appraisal</a>
           <a href="#step7">Step 7: Closing Time</a>
         </div>
        
@@ -234,7 +234,7 @@ lenders in the area are:
      
           <div className="buyerResourceText">
             Once you have found the perfect home, I will complete a comparative
-            market analysis, comparing similar properties to determine a fair
+            market analysis comparing similar properties to determine a fair
             value. Once fair value is establish we will structure the offer and
             begin the negotiation process.
           </div>
@@ -256,7 +256,7 @@ lenders in the area are:
             the inspection reports any notable material defects.
             Both you and the seller will receive the home inspection report.
             After you have reviewed the report, it will be up to you to decide
-            if any issues need to be addressed, before proceeding to the closing
+            if any issues need to be addressed before proceeding to the closing
             of the sale. Prior to closing, you will be able to make a final walk
             through, giving you the chance to confirm agreed-upon repairs have
             been made.

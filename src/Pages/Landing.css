@@ -25,6 +25,7 @@
   justify-content: center;
   max-width: 25rem;
   height: auto;
+  max-height: 30rem;
   /* transform: skew(0deg, -5deg); */
 
   margin-left: 1rem;
@@ -35,6 +36,7 @@
 .landing-self-picture {
   width: 100%;
   height: auto;
+  max-height: 30rem;
 }
 
 @media (max-width: 860px) {

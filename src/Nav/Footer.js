@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
 
-
+import { NavLink } from 'react-router-dom';
 
 import { BsArrowRight } from 'react-icons/bs';
 import { SiRealm } from 'react-icons/si';
@@ -26,10 +26,10 @@ const Footer = (props) => {
         </div>
         <div className="footer-columnTwo">
           <div className="footer-workWithChantz">
-            <a href="http://localhost:3000/contact">
+            <NavLink to="/contact">
               <p>WORK WITH CHANTZ</p>
               <BsArrowRight />
-            </a>
+            </NavLink>
           </div>
           <a href="http://localhost:3000/contact" style={{ width: '15.5rem' }}>
             Schedule Free Consultation
