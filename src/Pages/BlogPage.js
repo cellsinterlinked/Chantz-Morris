@@ -131,7 +131,7 @@ const BlogPage = (props) => {
       const title = blogList[targetIndex].slug.current;
       console.log(title);
       console.log(`${process.env.REACT_APP_BLOG_DIRECT_URL}${title}`)
-      setNextBlogUrl(`https://nervous-agnesi-29fb05.netlify.app/blog/${title}`);
+      return `https://nervous-agnesi-29fb05.netlify.app/blog/${title}`;
     }
   };
 
