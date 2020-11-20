@@ -8,7 +8,7 @@ import './AllPage.css';
 import './BlogPage.css';
 import { Parallax } from 'react-parallax';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
-
+import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 import Footer from '../Nav/Footer';
 import NavBar from '../Nav/NavBar';
 import sanityClient from '../client';
@@ -33,8 +33,7 @@ const BlogPage = (props) => {
   const { slug } = useParams();
   const [blogList, setBlogList] = useState([]);
   const [blogIndex, setBlogIndex] = useState(0);
-  //  const [nextBlogUrl, setNextBlogUrl] = useState()
-  //  const [lastBlogUrl, setLastBlog] = useState();
+  
 
   useEffect(() => {
     sanityClient
@@ -117,7 +116,7 @@ const BlogPage = (props) => {
     return days;
   };
 
-  if (!blogData) return <div>Loading...</div>;
+  if (!blogData) return <div className="center"><LoadingSpinner /></div>;
 
   const generateNextURL = () => {
     let targetIndex;
@@ -132,7 +131,7 @@ const BlogPage = (props) => {
       const title = blogList[targetIndex].slug.current;
       console.log(title);
       console.log(`${process.env.REACT_APP_BLOG_DIRECT_URL}${title}`)
-      return `${process.env.REACT_APP_BLOG_DIRECT_URL}${title}`;
+      setNextBlogUrl(`http://localhost:3000/blog/${title}`);
     }
   };
 
@@ -179,7 +178,7 @@ const BlogPage = (props) => {
             className="workBody"
           />
 
-          <div className="directButtonContainer">
+          {/* <div className="directButtonContainer">
             <div className="prevButtonContainer">
               <a className="de-underline"href={generatePrevURL()}>
                 <IoIosArrowBack className="arrowed" />
@@ -195,7 +194,8 @@ const BlogPage = (props) => {
             </div>
 
 
-          </div>
+          </div> */}
+          
         </div>
       </div>
 

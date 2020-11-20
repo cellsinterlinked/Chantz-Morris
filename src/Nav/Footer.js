@@ -60,7 +60,7 @@ const Footer = (props) => {
           <div className="footer-bottomLine" />
           <p className="footer-contact-title">STAY IN TOUCH</p>
           <div className="footerIconContainer">
-            <AiOutlineInstagram
+            {/* <AiOutlineInstagram
               className="contactIcon"
               style={{
                 height: '2rem',
@@ -68,7 +68,7 @@ const Footer = (props) => {
                 marginLeft: '.3rem',
                 marginRight: '.3rem',
               }}
-            />
+            /> */}
             <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
               <AiFillFacebook
                 className="contactIcon"
