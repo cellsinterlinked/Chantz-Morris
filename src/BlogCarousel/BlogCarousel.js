@@ -41,12 +41,7 @@ const BlogCarousel = (props) => {
     <EmptyDisplay
       
     />,
-    <BlogDisplay
-      image={props.blogs[2].mainImage.asset.url}
-      title={props.blogs[2].title}
-      date={props.blogs[2].publishedAt}
-      details={props.blogs[2].body}
-    />,
+    
     
   ];
 
