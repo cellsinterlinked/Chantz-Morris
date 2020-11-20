@@ -88,8 +88,9 @@ const Contact = (props) => {
     const phone = `${phone1}-${phone2}-${phone3}`;
     try {
       sendRequest(
-        `${process.env.REACT_APP_GET_MESSAGES_URL}`,
+        'http://localhost:5000/api/messages',
         'POST',
+        'enctype: multipart/form-data',
         JSON.stringify({
           fName,
           lName,
@@ -194,7 +195,8 @@ const Contact = (props) => {
             </div> */}
           </div>
         </div>
-        <form enctypeclassName="contactForm" onSubmit={submitHandler}>
+        <form encType = "multipart/form-data" className="contactForm" onSubmit={submitHandler}>
+          
           <div className="contactIntro">
           <p>
             If you're not sure how to take the first step in a new home search, not
