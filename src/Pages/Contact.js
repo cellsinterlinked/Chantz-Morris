@@ -194,7 +194,7 @@ const Contact = (props) => {
             </div> */}
           </div>
         </div>
-        <form enctypeclassName="contactForm" onSubmit={submitHandler}>
+        <form className="contactForm" onSubmit={submitHandler}>
           <div className="contactIntro">
           <p>
             If you're not sure how to take the first step in a new home search, not
