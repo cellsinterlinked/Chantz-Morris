@@ -6,6 +6,7 @@ import './AllPage.css';
 import './Landing.css';
 import { FiPhone } from 'react-icons/fi';
 import {CgFileDocument} from 'react-icons/cg';
+import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
 import Contactimg from '../Resources/relationshipblog.jpg';
 import NavBar from '../Nav/NavBar';
 import Profile from '../Resources/Chantz_blue shirt (1).jpg';
@@ -13,7 +14,6 @@ import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
-import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
 
 const introStyle = {
   left: '50%',
@@ -90,6 +90,7 @@ const Contact = (props) => {
       sendRequest(
         'http://localhost:5000/api/messages',
         'POST',
+        'enctype: multipart/form-data',
         JSON.stringify({
           fName,
           lName,
@@ -194,7 +195,8 @@ const Contact = (props) => {
             </div> */}
           </div>
         </div>
-        <form className="contactForm" onSubmit={submitHandler}>
+        <form encType = "multipart/form-data" className="contactForm" onSubmit={submitHandler}>
+          
           <div className="contactIntro">
           <p>
             If you're not sure how to take the first step in a new home search, not
