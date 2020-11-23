@@ -6,7 +6,7 @@
   /* justify-items: center; */
   margin-right: 1rem;
   margin-left: 1rem;
-  height: 32rem;
+  height: 33rem;
   width: 20rem;
   background-color: rgba(27, 27, 27, 0.863);
   box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.055),
@@ -47,6 +47,7 @@
 .blogDisplayTitle p {
   margin-top: 0;
   margin-left: 1rem;
+  margin-bottom: 8px;
   /* font-weight: bold; */
 }
 
@@ -94,11 +95,14 @@
 }
 
 .blogDisplayButton button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 9rem;
   height: 2.5rem;
   margin: auto;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   background-color: rgba(90, 90, 90, 0.726);
   box-shadow: none;
   border: none;
