@@ -168,9 +168,6 @@ const Contact = (props) => {
             </div>
             <div className="contactSquareContainer">
             
-            <div className="iconSquare">
-              <AiOutlineInstagram className="bigIcon" />
-            </div>
             <a className="iconSquare" href="mailto:chantz@themodglingroup.com" target="_blank">
               <AiOutlineMail className="bigIcon" />
             </a>

@@ -144,7 +144,7 @@ const BlogPage = (props) => {
       targetIndex = blogIndex - 1;
     }
 
-    if (blogList.length > 0) {
+    if (blogList.length > 1) {
       const title = blogList[targetIndex].slug.current;
       return `https://nervous-agnesi-29fb05.netlify.app/blog/${title}`;
     }
@@ -180,17 +180,17 @@ const BlogPage = (props) => {
 
           <div className="directButtonContainer">
             <div className="prevButtonContainer">
-              <a className="de-underline"href={generatePrevURL()}>
+              {blogList.length > 1 && blogIndex > 0 && <a className="de-underline"href={generatePrevURL()}>
                 <IoIosArrowBack className="arrowed" />
                 <p>Prev Blog</p>
-              </a>
+              </a>}
             </div>
             
             <div className="nextButtonContainer">
-              <a className="de-underline" href={generateNextURL()}>
+              {blogList.length > 1 && blogIndex < blogList.length - 1 && <a className="de-underline" href={generateNextURL()}>
                 <p>Next Blog</p>
                 <IoIosArrowForward className="arrowed" />
-              </a>
+              </a>}
             </div>
 
 

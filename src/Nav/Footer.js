@@ -31,7 +31,7 @@ const Footer = (props) => {
               <BsArrowRight />
             </NavLink>
           </div>
-          <a href="http://localhost:3000/contact" style={{ width: '15.5rem' }}>
+          <a href="https://nervous-agnesi-29fb05.netlify.app/contact" style={{ width: '15.5rem' }}>
             Schedule Free Consultation
           </a>
           <div className="footerLicense">
