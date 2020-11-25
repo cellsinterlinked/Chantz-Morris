@@ -110,7 +110,7 @@
   .fullNavLinks {
     width: 100%;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     display: flex;
     justify-content: flex-start;
     min-width: 15rem;

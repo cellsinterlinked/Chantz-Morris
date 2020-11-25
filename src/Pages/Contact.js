@@ -14,6 +14,7 @@ import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
+import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 
 const introStyle = {
   left: '50%',
@@ -44,6 +45,7 @@ const Contact = (props) => {
   const [message, setMessage] = useState('');
   const [fullPhone, setFullPhone] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [messageLoad, setMessageLoad] = useState(false)
 
   const fNameController = (event) => {
     setFName(event.target.value);
@@ -74,6 +76,7 @@ const Contact = (props) => {
   };
 
   const submitHandler = (event) => {
+    
     event.preventDefault();
     const today = new Date();
     const date =
@@ -86,7 +89,9 @@ const Contact = (props) => {
     const total = `${date  } ${  time}`;
     console.log(total);
     const phone = `${phone1}-${phone2}-${phone3}`;
+    
     try {
+      setMessageLoad(true)
       sendRequest(
         `${process.env.REACT_APP_GET_MESSAGES_URL}`,
         'POST',
@@ -100,10 +105,12 @@ const Contact = (props) => {
         }),
         { 'Content-Type': 'application/json' }
       );
-      setShowModal(true);
       console.log('success! I think...');
+      setMessageLoad(false);
       // redirect user to a different page, cause pop up/rerender
-    } catch (err) {}
+    } catch (err) { setShowModal(false)}  
+    // this was changed above if problems ensue 
+    setShowModal(true);
   };
 
   const confirmModal = () => {
@@ -112,6 +119,7 @@ const Contact = (props) => {
 
   return (
     <>
+      {isLoading || messageLoad && <LoadingSpinner />}
       <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showModal}
@@ -128,7 +136,7 @@ const Contact = (props) => {
           </>
         }
         >
-          <p>Please Allow Chase 1 - 2 Business Days to Reply!</p>
+          <p>Please Allow Chantz 1 - 2 Business Days to Reply!</p>
           </Modal>
       <div className="contactContainer">
         <Parallax className="testBanner"  strength={500}>
