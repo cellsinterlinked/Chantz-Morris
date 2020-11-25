@@ -45,7 +45,14 @@ const Contact = (props) => {
   const [message, setMessage] = useState('');
   const [fullPhone, setFullPhone] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [messageLoad, setMessageLoad] = useState(false)
+
+  const wait = (ms) => {
+    const d = new Date();
+    let d2 = null;
+    do { d2 = new Date(); }
+    while(d2 - d < ms);
+}
+
 
   const fNameController = (event) => {
     setFName(event.target.value);
@@ -91,7 +98,7 @@ const Contact = (props) => {
     const phone = `${phone1}-${phone2}-${phone3}`;
     
     try {
-      setMessageLoad(true)
+ 
       sendRequest(
         `${process.env.REACT_APP_GET_MESSAGES_URL}`,
         'POST',
@@ -106,7 +113,7 @@ const Contact = (props) => {
         { 'Content-Type': 'application/json' }
       );
       console.log('success! I think...');
-      setMessageLoad(false);
+      wait(1000);
       // redirect user to a different page, cause pop up/rerender
     } catch (err) { setShowModal(false)}  
     // this was changed above if problems ensue 
@@ -117,9 +124,10 @@ const Contact = (props) => {
     setShowModal(false)
   }
 
+  
+
   return (
     <>
-      {isLoading || messageLoad && <LoadingSpinner />}
       <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showModal}
@@ -149,7 +157,7 @@ const Contact = (props) => {
             <div style={{ height: 600 }}>
               <NavBar />
               <div style={introStyle} className="pageHead">
-                <h1>Lets Work Together</h1>
+                <h1>Let's Work Together</h1>
               </div>
             </div>
           </div>
