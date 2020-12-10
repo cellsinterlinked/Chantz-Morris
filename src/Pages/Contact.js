@@ -82,7 +82,7 @@ const Contact = (props) => {
     setMessage(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async event => {
     
     event.preventDefault();
     const today = new Date();
@@ -99,7 +99,7 @@ const Contact = (props) => {
     
     try {
  
-      sendRequest(
+      await sendRequest(
         `${process.env.REACT_APP_GET_MESSAGES_URL}`,
         'POST',
         JSON.stringify({
