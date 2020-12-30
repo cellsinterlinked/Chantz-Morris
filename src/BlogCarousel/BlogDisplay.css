@@ -120,3 +120,8 @@
   background-color: black;
   color: rgb(0, 217, 255);
 }
+
+.workBody {
+  height: 8rem;
+  overflow: hidden;
+}
