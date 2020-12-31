@@ -40,8 +40,19 @@ const BlogCarousel = (props) => {
         />
       }
     />,
-    <EmptyDisplay
-      
+    <BlogDisplay
+      slug={props.blogs[2].slug.current}
+      image={props.blogs[2].mainImage.asset.url}
+      title={props.blogs[2].title}
+      date={props.blogs[2].publishedAt.slice(0, 10)}
+      children={
+        <BlockContent
+          blocks={props.blogs[2].body}
+          projectId={sanityClient.clientConfig.projectId}
+          dataset={sanityClient.clientConfig.dataset}
+          className="workBody"
+        />
+      }
     />,
     <EmptyDisplay
       
