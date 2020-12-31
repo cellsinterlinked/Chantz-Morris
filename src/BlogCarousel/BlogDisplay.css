@@ -57,6 +57,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
   height: 6rem;
+  overflow: hidden;
 }
 
 .blogDetails p {
@@ -119,9 +120,4 @@
 .blogDisplayButton button:hover {
   background-color: black;
   color: rgb(0, 217, 255);
-}
-
-.workBody {
-  height: 8rem;
-  overflow: hidden;
 }
