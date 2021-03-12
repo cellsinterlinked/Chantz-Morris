@@ -27,6 +27,36 @@ const BlogCarousel = (props) => {
       }
     />,
     <BlogDisplay
+    slug={props.blogs[2].slug.current}
+    image={props.blogs[2].mainImage.asset.url}
+    title={props.blogs[2].title}
+    date={props.blogs[2].publishedAt.slice(0, 10)}
+    children={
+      <BlockContent
+      blocks={props.blogs[2].body}
+      projectId={sanityClient.clientConfig.projectId}
+      dataset={sanityClient.clientConfig.dataset}
+      className="workBody"
+      />
+    }
+    />,
+
+    <BlogDisplay
+    slug={props.blogs[3].slug.current}
+    image={props.blogs[3].mainImage.asset.url}
+    title={props.blogs[3].title}
+    date={props.blogs[3].publishedAt.slice(0, 10)}
+    children={
+      <BlockContent
+        blocks={props.blogs[3].body}
+        projectId={sanityClient.clientConfig.projectId}
+        dataset={sanityClient.clientConfig.dataset}
+        className="workBody"
+      />
+    }
+      />,
+
+    <BlogDisplay
       slug={props.blogs[1].slug.current}
       image={props.blogs[1].mainImage.asset.url}
       title={props.blogs[1].title}
@@ -40,23 +70,8 @@ const BlogCarousel = (props) => {
         />
       }
     />,
-    <BlogDisplay
-      slug={props.blogs[2].slug.current}
-      image={props.blogs[2].mainImage.asset.url}
-      title={props.blogs[2].title}
-      date={props.blogs[2].publishedAt.slice(0, 10)}
-      children={
-        <BlockContent
-          blocks={props.blogs[2].body}
-          projectId={sanityClient.clientConfig.projectId}
-          dataset={sanityClient.clientConfig.dataset}
-          className="workBody"
-        />
-      }
-    />,
-    <EmptyDisplay
-      
-    />,
+
+
     <EmptyDisplay
       
     />,
@@ -79,8 +94,13 @@ const BlogCarousel = (props) => {
     console.log(x);
   };
 
+  // const whatTheHell = () => {
+  //   console.log(props.blogs[0].publishedAt.slice(0, 10))
+  // }
+
   return (
     <div className="blogCarousel__container">
+      {/* <button onClick={whatTheHell}>Yo Yo YO</button> */}
       <button id="item-slider__goLeft" onClick={goLeft}>
         <FaChevronLeft
           className="arrow"
