@@ -69,7 +69,7 @@ const Footer = (props) => {
                 marginRight: '.3rem',
               }}
             /> */}
-            <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
+            {/* <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
               <AiFillFacebook
                 className="contactIcon"
                 style={{
@@ -79,7 +79,7 @@ const Footer = (props) => {
                   marginRight: '.3rem',
                 }}
               />
-            </a>
+            </a> */}
             <a href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
             <AiFillLinkedin
               className="contactIcon"

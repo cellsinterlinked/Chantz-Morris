@@ -190,9 +190,9 @@ const Contact = (props) => {
             <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
               <AiFillLinkedin className="bigIcon" />
             </a>
-            <a className="iconSquare" href="https://www.facebook.com/chantz.morris.79" target="_blank">
+            {/* <a className="iconSquare" href="https://www.facebook.com/chantz.morris.79" target="_blank">
               <AiFillFacebook className="bigIcon" />
-            </a>
+            </a> */}
             </div>
 
 

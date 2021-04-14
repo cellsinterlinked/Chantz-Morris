@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Parallax } from 'react-parallax';
-import image3 from '../Resources/RailRoad.jpg';
+import image3 from '../Resources/frontBlog.jpg';
 import image4 from '../Resources/Top_Front Page_Family.jpg';
 import image5 from '../Resources/Chantz_PUP PUP (2).JPG';
 import NavBar from '../Nav/NavBar';
