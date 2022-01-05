@@ -28,7 +28,7 @@ const NavBar = (props) => {
       <div className="fullNavBar">
         <NavLink to="/">
         <h1>
-          Chantz Morris
+          ACM Realty Team
         </h1>
 
         </NavLink>

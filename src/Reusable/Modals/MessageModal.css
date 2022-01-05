@@ -1,0 +1,128 @@
+.messageModal {
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  position: fixed;
+  top: 22vh;
+  /* left: 5%; */
+  width: 90%;
+  max-width: 50rem;
+  background-color: transparent;
+  left: 5%;
+  right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 70vh;
+}
+
+.coolMessageStructure {
+  font-family: neuro;
+  color: rgb(23, 255, 255);
+  border: 1px solid rgb(23, 255, 255);
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100%;
+}
+
+.messageModalFooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coolModalClose button {
+  height: 2.5rem;
+  width: 8rem;
+  background-color: rgba(0, 0, 0, 0.644);
+  border: 1px solid rgb(23, 255, 255);
+  box-shadow: none;
+  color: rgb(255, 149, 28);
+  font-family: neuro;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.coolModalClose button:hover {
+  background-color: rgba(161, 0, 0, 0.644);
+}
+
+.coolModalDelete button:hover {
+  background-color: rgba(161, 0, 0, 0.644);
+}
+
+.coolModalDelete button {
+  height: 2.5rem;
+  width: 8rem;
+  border: 1px solid rgb(23, 255, 255);
+  color: rgb(255, 149, 28);
+  background-color: rgba(0, 0, 0, 0.644);
+  box-shadow: none;
+  font-family: neuro;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.messageModalFooter button:hover {
+  color: rgb(0, 247, 255);
+}
+
+.messageModalHeader {
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.coolSilhouette {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+}
+.messageModalHeader h2 {
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: rgb(23, 255, 255);
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+
+.coolDivide {
+  margin: auto;
+  width: 90%;
+  height: 0px;
+  border-bottom: 1px solid rgb(0, 247, 255);
+  margin-top: 1rem;
+}
+
+.messageModalContent {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.messageModal-enter {
+  transform: translateY(-10rem);
+  opacity: 0;
+}
+
+.messageModal-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.messageModal-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.messageModal-exit-active {
+  transform: translateY(-10rem);
+  opacity: 0;
+  transition: all 2000ms;
+}

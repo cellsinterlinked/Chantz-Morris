@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
 import AboutHead from '../Resources/train2.jpg';
@@ -23,19 +23,23 @@ const About = (props) => {
     <div className="aboutContainer">
       <Parallax
         className="testBanner"
-        bgImage={AboutHead}
-        bgImageStyle={{ maxHeight: '45rem' }}
         strength={500}
       >
-        <div className="image-cover2">
-          <div style={{ height: 500 }}>
+            <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={AboutHead} alt="fill murray" className="fuckImage" />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+        
+          <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
-            <h1 style={{letterSpacing: "4px", marginTop: "4rem"}}>Meet Chantz</h1>
+            <h1 style={{letterSpacing: "4px", marginTop: "4rem"}}>Meet The Team</h1>
 
             </div>
           </div>
-        </div>
+     
       </Parallax>
       <div className="aboutTitle">
         <h1>Your Local Home-Grown Real Estate Agent</h1>

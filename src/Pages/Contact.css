@@ -98,14 +98,14 @@
   font-size: 0.8rem;
 }
 
-#fname {
+#firstName {
   width: 90%;
   height: 2rem;
   border: 1px solid rgb(216, 216, 216);
   margin-bottom: 0.5rem;
 }
 
-#lname {
+#lastName {
   width: 90%;
   height: 2rem;
   border: 1px solid rgb(216, 216, 216);
@@ -154,7 +154,6 @@
 }
 
 .contactFormPhone__Container p {
-  width: 90%;
 }
 
 .phoneFormBox {
@@ -162,10 +161,6 @@
   flex-direction: column;
   max-width: 10rem;
   margin-right: 1rem;
-}
-
-.iHateYou {
-  width: 90%;
 }
 
 .phone-boxes__Container {
@@ -221,6 +216,10 @@
   outline-color: black;
   cursor: pointer;
   outline: none;
+}
+
+.submitButton:hover {
+  background-color: black;
 }
 
 .contactContents {

@@ -7,7 +7,7 @@ import './Landing.css';
 import { FiPhone } from 'react-icons/fi';
 import {CgFileDocument} from 'react-icons/cg';
 import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
-import Contactimg from '../Resources/relationshipblog.jpg';
+import Contactimg from '../Resources/relationshipblog.jpeg'
 import NavBar from '../Nav/NavBar';
 import Profile from '../Resources/Chantz_blue shirt (1).jpg';
 import Footer from '../Nav/Footer';
@@ -15,6 +15,7 @@ import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
 import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
+import emailjs from 'emailjs-com'
 
 const introStyle = {
   left: '50%',
@@ -26,104 +27,115 @@ const introStyle = {
   textAlign: 'center',
 };
 
-const backgroundStyle = {
-  boxShadow: "inset 0 0 2000px rgba(255, 255, 255, 0.5)",
-  filter: "blur(0px)",
- 
-  
-  display: "block"
-}
+
 
 const Contact = (props) => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
-  const [fName, setFName] = useState('');
-  const [lName, setLName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone1, setPhone1] = useState('');
-  const [phone2, setPhone2] = useState('');
-  const [phone3, setPhone3] = useState('');
-  const [message, setMessage] = useState('');
-  const [fullPhone, setFullPhone] = useState('');
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone1: "",
+    phone2: "",
+    phone3: "",
+    message: "",
+    fullPhone: "",
+
+  })
+ 
+  const [incomplete, setIncomplete] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
-  const wait = (ms) => {
-    const d = new Date();
-    let d2 = null;
-    do { d2 = new Date(); }
-    while(d2 - d < ms);
-}
 
 
-  const fNameController = (event) => {
-    setFName(event.target.value);
+
+  const firstNameController = (event) => {
+    setData({...data, firstName: event.target.value})
   };
 
-  const lNameController = (event) => {
-    setLName(event.target.value);
+  const lastNameController = (event) => {
+    setData({...data, lastName: event.target.value})
   };
 
   const emailController = (event) => {
-    setEmail(event.target.value);
+    setData({...data, email: event.target.value})
   };
 
-  const oneController = (event) => {
-    setPhone1(event.target.value);
+  const phone1Controller = (event) => {
+    setData({...data, phone1: event.target.value})
   };
 
-  const twoController = (event) => {
-    setPhone2(event.target.value);
+  const phone2Controller = (event) => {
+    setData({...data, phone2: event.target.value})
   };
 
-  const threeController = (event) => {
-    setPhone3(event.target.value);
+  const phone3Controller = (event) => {
+    setData({...data, phone3: event.target.value})
   };
 
-  const commentController = (event) => {
-    setMessage(event.target.value);
+  const messageController = (event) => {
+    setData({...data, message: event.target.value})
   };
 
-  const submitHandler = async event => {
+  const submitHandler = (e) => {
     
     event.preventDefault();
-    const today = new Date();
-    const date =
-      `${today.getFullYear() 
-      }-${ 
-      today.getMonth() + 1 
-      }-${ 
-      today.getDate()}`;
-    const time = `${today.getHours()  }:${  today.getMinutes()}`;
-    const total = `${date  } ${  time}`;
-    console.log(total);
-    const phone = `${phone1}-${phone2}-${phone3}`;
-    
-    try {
- 
-      await sendRequest(
-        `${process.env.REACT_APP_GET_MESSAGES_URL}`,
-        'POST',
-        JSON.stringify({
-          fName,
-          lName,
-          email,
-          phone,
-          content: message,
-          date: total,
-        }),
-        { 'Content-Type': 'application/json' }
-      );
-      console.log('success! I think...');
-      wait(1000);
-      // redirect user to a different page, cause pop up/rerender
-    } catch (err) { setShowModal(false)}  
-    // this was changed above if problems ensue 
-    setShowModal(true);
+
+    console.log(event.target.firstName.value)
+
+    if(data.message && data.email && data.firstName && data.lastName) {
+      emailjs.sendForm(
+        'service_4rkj86x', 
+        'template_ldinmwh', 
+        e.target, 
+        "user_hbc7uXk6VzJ9iJYYOUNTt"
+        ).then(res=>{
+          console.log(res);
+          setShowModal(true)
+          setData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone1: "",
+            phone2: "",
+            phone3: "",
+            message: "",
+            fullPhone: "",
+        
+          })
+          document.getElementById('myForm').reset();
+        }).catch(
+          err => {
+            alert("failed", err)
+          }
+          );
+  
+    } else {
+      alert("please fill out all fields")
+      setIncomplete(true)
+      console.log(incomplete)
+    }
+
+
+
+
+   
   };
+  
 
   const confirmModal = () => {
     setShowModal(false)
   }
 
+  const errorBorder = {
+    border: "1px solid red"
+  }
+
+  const normalBorder = {
+    border: "grey"
+  }
+
+  
   
 
   return (
@@ -147,21 +159,28 @@ const Contact = (props) => {
           <p>Please Allow Chantz 1 - 2 Business Days to Reply!</p>
           </Modal>
       <div className="contactContainer">
+
+
         <Parallax className="testBanner"  strength={500}>
-        <Background className="topBackground">
-        <div className="testParent">
-          <img src={Contactimg} alt="client" className="childImage" />
-        </div>
-        </Background>
-          <div className="image-cover">
-            <div style={{ height: 600 }}>
+        <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={Contactimg} alt="fill murray" className="fuckImage" style={{filter: "blur(10px)"}} />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+
+
+            <div className="height-controller">
               <NavBar />
               <div style={introStyle} className="pageHead">
                 <h1>Let's Work Together</h1>
               </div>
             </div>
-          </div>
+      
         </Parallax>
+
+
+
         <div className="contactPicAndInfo">
           <div className="imgContainer__Contact">
             <img src={Profile} alt="me" className="profileImg__Contact" />
@@ -190,24 +209,14 @@ const Contact = (props) => {
             <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
               <AiFillLinkedin className="bigIcon" />
             </a>
-            {/* <a className="iconSquare" href="https://www.facebook.com/chantz.morris.79" target="_blank">
-              <AiFillFacebook className="bigIcon" />
-            </a> */}
             </div>
 
 
 
 
-            {/* <h1 className="visit__Contact"> VISIT ME:</h1>
-
-            <div className="brokerInfo__Contact">
-              <p>AMBIT</p>
-              <p>555 Hillside Dr.</p>
-              <p>Duluth, GA 30096</p>
-            </div> */}
           </div>
         </div>
-        <form className="contactForm" onSubmit={submitHandler}>
+        <form className="contactForm" id="myForm" onSubmit={submitHandler}>
           <div className="contactIntro">
           <p>
             If you're not sure how to take the first step in a new home search, not
@@ -223,71 +232,77 @@ const Contact = (props) => {
               <div className="fname__Form">
                 <input
                   type="text"
-                  id="fname"
-                  name="fname"
-                  onChange={fNameController}
-                  value={message.firstName}
+                  id="firstName"
+                  name="firstName"
+                  onChange={firstNameController}
+                  value={data.firstName}
+                  style={{border: incomplete && data.firstName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
-                <label htmlFor="fname">First Name</label>
+                <label htmlFor="firstName" style={{color: incomplete && data.firstName === "" ? "red" : "black"}}>First Name</label>
               </div>
               <div className="lname__Form">
                 <input
                   type="text"
-                  id="lname"
-                  name="lname"
-                  onChange={lNameController}
-                  value={message.lastName}
+                  id="lastName"
+                  name="lastName"
+                  onChange={lastNameController}
+                  value={data.lastName}
+                  style={{border: incomplete && data.lastName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
-                <label htmlFor="lname">Last Name</label>
+                <label htmlFor="lastName" style={{color: incomplete && data.lastName === "" ? "red" : "black"}}>Last Name</label>
               </div>
             </div>
             <div className="emailContainer">
               <div>
-                <p>Email *</p>
+                <p style={{color: incomplete && data.email === "" ? "red" : "black"}}>Email *</p>
                 <input
                   type="text"
                   id="email"
                   name="email"
                   onChange={emailController}
-                  value={message.email}
+                  value={data.email}
+                  style={{border: incomplete && data.email === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
               </div>
             </div>
           </div>
           <div className="contactFormPhone__Container">
-            <div className="iHateYou">
-              <p>Phone * </p>
-            </div>
+           <div>
+             <p>Phone *</p>
+           </div>
             <div className="phone-boxes__Container">
               <div className="phoneFormBox">
                 <input
                   type="number"
-                  id="fnumber"
-                  name="fnumber"
-                  onChange={oneController}
-                  value={message.phone1}
+                  id="phone1"
+                  name="phone1"
+                  onChange={phone1Controller}
+                  value={data.phone1}
+                  style={{border: incomplete && data.phone1 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
-                <label htmlFor="fnumber">###</label>
+                <label htmlFor="phone1" style={{color: incomplete && data.phone1 === "" ? "red" : "black"}}>###</label>
               </div>
               <div className="phoneFormBox">
                 <input
                   type="number"
-                  id="snumber"
-                  name="snumber"
-                  onChange={twoController}
-                  value={message.phone2}
+                  id="phone2"
+                  name="phone2"
+                  onChange={phone2Controller}
+                  value={data.phone2}
+                  style={{border: incomplete && data.phone2 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
-                <label htmlFor="snumber">###</label>
+                <label htmlFor="phone2" style={{color: incomplete && data.phone2 === "" ? "red" : "black"}}>###</label>
               </div>
               <div className="phoneFormBox">
                 <input
                   type="number"
-                  id="tnumber"
-                  name="tnumber"
-                  onChange={threeController}
-                  value={message.phone3}
+                  id="phone3"
+                  name="phone3"
+                  onChange={phone3Controller}
+                  value={data.phone3}
+                  style={{border: incomplete && data.phone3 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
                  />
-                <label htmlFor="tnumber">####</label>
+                <label htmlFor="phone3" style={{color: incomplete && data.phone3 === "" ? "red" : "black"}}>####</label>
               </div>
             </div>
           </div>
@@ -296,8 +311,9 @@ const Contact = (props) => {
             <textarea
               id="message"
               name="message"
-              onChange={commentController}
-              value={message.comment}
+              onChange={messageController}
+              value={data.message}
+              style={{border: incomplete && data.message === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
              />
           </div>
           <div className="contactButton__Container">

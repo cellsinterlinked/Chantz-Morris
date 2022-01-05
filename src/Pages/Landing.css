@@ -1,8 +1,90 @@
-.image-cover {
+/* .landingContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.newImageCover {
   background-color: rgba(94, 94, 94, 0.4);
   z-index: 40;
   height: 100%;
   width: 100%;
+}
+
+.image-cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(94, 94, 94, 0.4);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+}
+
+.fuckImage {
+  min-width: 100%;
+  height: 100%;
+  max-width: 150%;
+
+  object-fit: cover;
+}
+
+.fuckImage_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 120rem;
+  height: 50rem;
+}
+@media (max-width: 700px) {
+  .fuckImage_container {
+    margin-top: 8rem;
+    height: 25rem;
+    width: 40rem;
+  }
+}
+
+.height-controller {
+  height: 40rem;
+}
+
+@media (max-width: 470px) {
+  .height-controller {
+    height: 22rem;
+  }
+}
+
+/* @media (max-width: 700px) {
+  .height-controller {
+    height: 25rem;
+  }
+} */
+
+.testBanner {
+  position: relative;
+  margin: auto;
+  max-width: 120rem;
+}
+
+.custom-bg {
+  left: 0;
+  z-index: 1;
+
+  height: 40rem;
+  width: auto;
+  max-width: 120rem;
+}
+
+@media (max-width: 700px) {
+  .testBanner {
+    max-width: 700px;
+    height: auto;
+  }
+  /* .custom-bg {
+    height: 30rem;
+  } */
 }
 
 .image-cover2 {
@@ -63,7 +145,6 @@
 .landing-self-info p {
   font-size: 1.2rem;
   font-family: gilSans;
-  /* font-family: Helvetica Neue; */
   letter-spacing: 0.1rem;
   margin-top: 0rem;
 }

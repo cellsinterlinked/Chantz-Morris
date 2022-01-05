@@ -1,8 +1,8 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import Cozy from '../Resources/cozy2.jpg';
+import Cozy from '../Resources/cozy2.jpeg';
 import './Landing.css';
 import './AllPage.css';
 import './ForBuyers.css';
@@ -24,15 +24,23 @@ const introStyle = {
 const ForBuyers = (props) => {
   return (
     <div className="landingContainer">
-      <Parallax className="testBanner" bgImage={Cozy} strength={600}>
-        <div className="image-cover">
-          <div style={{ height: 600 }}>
+      <Parallax className="testBanner" strength={600}>
+      <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={Cozy} alt="fill murray" className="fuckImage" />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+          
+          
+          
+          <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>Finding Your Dream Home</h1>
             </div>
           </div>
-        </div>
+       
       </Parallax>
       <div className="buyerTitle">
         <h1>Deciding To Buy A Home</h1>

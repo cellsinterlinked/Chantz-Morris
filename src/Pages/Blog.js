@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
 import NavBar from '../Nav/NavBar';
@@ -49,8 +49,10 @@ const Blog = (props) => {
         }`
       )
       .then((data) => {
+      console.log(data)
       setBlogs(data)
       setIsLoading(false)
+      console.log(blogs)
     }
       )
       .catch(console.error);
@@ -66,16 +68,23 @@ const Blog = (props) => {
     {!isLoading && <div className="blog-container">
       
 
-      <Parallax className="testBanner" bgImage={Blogimg} strength={500}>
-        <div className="image-cover">
-          <div style={{ height: 600 }}>
+      <Parallax className="testBanner"  strength={500}>
+      <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={Blogimg} alt="fill murray" className="fuckImage" />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+
+    
+          <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>Through The Eyes Of An Agent</h1>
           
             </div>
           </div>
-        </div>
+    
       </Parallax>
 
       <div className="blogTitle">

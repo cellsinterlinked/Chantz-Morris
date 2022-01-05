@@ -6,7 +6,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import './Landing.css';
 import './AllPage.css';
 import './BlogPage.css';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 import Footer from '../Nav/Footer';
@@ -55,6 +55,7 @@ const BlogPage = (props) => {
       }`
       )
       .then((data) => {
+        console.log(data[0])
         setBlogData(data[0]);
       })
       .catch(console.error);
@@ -76,7 +77,10 @@ const BlogPage = (props) => {
           }
         }`
       )
-      .then((data) => setBlogList(data))
+      .then((data) => {
+        setBlogList(data)
+        console.log(data)
+      })
       .catch(console.error);
   }, [slug]);
 
@@ -113,6 +117,9 @@ const BlogPage = (props) => {
     const msInDay = 1000 * 3600 * 24;
     const total = diff / msInDay;
     const days = Math.floor(total);
+
+   
+
     return days;
   };
 
@@ -152,15 +159,23 @@ const BlogPage = (props) => {
 
   return (
     <div className="blogPageContainer">
-      <Parallax className="testBanner" bgImage={blogData.mainImage.asset.url} strength={500}>
-        <div className="image-cover">
-          <div style={{ height: 600 }}>
+      <Parallax className="testBanner" strength={500}>
+
+      <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={blogData.mainImage.asset.url} alt="fill murray" className="fuckImage" />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+
+        
+          <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>{blogData.title}</h1>
             </div>
           </div>
-        </div>
+       
       </Parallax>
       <div className="bodyParent">
         <div className="blogBodyContainer">

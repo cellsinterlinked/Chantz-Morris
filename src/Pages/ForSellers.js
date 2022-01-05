@@ -2,7 +2,7 @@ import React from 'react';
 import './ForSellers.css';
 import './Landing.css';
 import './AllPage.css';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import HouseFront from '../Resources/SellersHouse.jpg';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
@@ -25,15 +25,22 @@ const introStyle = {
 const ForSellers = (props) => {
   return (
     <div className="sellers-Container">
-      <Parallax className="testBanner" bgImage={HouseFront} strength={500}>
-        <div className="image-cover">
-          <div style={{ height: 600 }}>
+      <Parallax className="testBanner"  strength={500}>
+
+      <Background className="custom-bg">
+              <div className="fuckImage_container">
+                <img src={HouseFront} alt="fill murray" className="fuckImage" />
+                <div className="image-cover"></div>
+              </div>
+            </Background>
+      
+          <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>I'm Here for You</h1>
             </div>
           </div>
-        </div>
+      
       </Parallax>
       <div className="sellerTitle">
         <h1>Selling Your Home</h1>
