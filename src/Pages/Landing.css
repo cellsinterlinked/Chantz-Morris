@@ -62,6 +62,11 @@
   }
 } */
 
+#activeListings {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
 .testBanner {
   position: relative;
   margin: auto;

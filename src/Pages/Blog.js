@@ -80,7 +80,7 @@ const Blog = (props) => {
           <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
-              <h1>Through The Eyes Of An Agent</h1>
+              <h1>Through the Eyes of an Agent</h1>
           
             </div>
           </div>
@@ -88,7 +88,7 @@ const Blog = (props) => {
       </Parallax>
 
       <div className="blogTitle">
-        <h1>Follow Me on My Journey...</h1>
+        <h1>Follow Us on Our Journey...</h1>
       </div>
 
 
@@ -97,11 +97,11 @@ const Blog = (props) => {
         <div className="title-pizzazz" />
         <div className="blogBlock">
           <p>
-          The purpose of this blog is to help inform and educate without making it feel like you’re reading a
-report. As homeowners and homebuyers, I want you to be as well-informed as possible. I’m going to
-provide a wide range of information that will make reaching your real estate goals so much easier.
-Topics will range as far as taking care of your home, preparing to sell, deciding if buying is the right
-option, to understanding the relationship with your agent. I hope you enjoy these quick reads!
+          The purpose of this blog is to help inform and educate without making it feel like you’re reading a report.
+          As homeowners and homebuyers, we want you to be as well-informed as possible. We’re going to provide a wide 
+          range of information that will make reaching your real estate goals so much easier. Topics will range as far
+           as taking care of your home, preparing to sell, deciding if buying is the right option, to understanding the 
+           relationship with your agent. We hope you enjoy these quick reads!
           </p>
         </div>
         

@@ -22,6 +22,8 @@ const Footer = (props) => {
           <div className="footer-Phone-Email">
             <p>+1 812 592 7785</p>
             <p>chantz@themodglingroup.com</p>
+            <p>+1 812 592 7784</p>
+            <p>ashlee@themoddglingroup.com</p>
           </div>
         </div>
         <div className="footer-columnTwo">
@@ -39,6 +41,7 @@ const Footer = (props) => {
             License Status: Active
           </p>
           <p>License #: RB20001606</p>
+          <p>License #: RB21002818</p>
           <p>License State: Indiana</p>
         </div>
         </div>
@@ -69,7 +72,7 @@ const Footer = (props) => {
                 marginRight: '.3rem',
               }}
             /> */}
-            {/* <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
+            <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
               <AiFillFacebook
                 className="contactIcon"
                 style={{
@@ -79,7 +82,7 @@ const Footer = (props) => {
                   marginRight: '.3rem',
                 }}
               />
-            </a> */}
+            </a>
             <a href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
             <AiFillLinkedin
               className="contactIcon"
@@ -109,7 +112,7 @@ const Footer = (props) => {
       <div className="footer-bottom">
         <div className="copyright-Container">
           <p>© Copyright 2020</p>
-          <p>Chantz Morris, THE MODGLIN GROUP</p>
+          <p>Ashlee & Chantz Morris, THE MODGLIN GROUP</p>
         </div>
       </div>
     </div>

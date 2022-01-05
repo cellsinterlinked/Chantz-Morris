@@ -21,10 +21,12 @@ const BlogDisplay = (props) => {
       <div className="blogImageContainer">
         <img src={props.image} alt="oops" />
       </div>
+      <div className="blogDetails">
       <div className="blogDisplayTitle">
         <p>{props.title}</p>
       </div>
-      <div className="blogDetails">{props.children}</div>
+      {props.children}
+      </div>
       <div className="blogDate">
         <p>{`${blogDateFunc()} ` + `Days Ago`}</p>
       </div>

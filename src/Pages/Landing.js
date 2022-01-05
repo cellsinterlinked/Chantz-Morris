@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import image3 from '../Resources/frontBlog.jpg';
 import image4 from '../Resources/Top_Front Page_Family.jpg';
-import image5 from '../Resources/Chantz_PUP PUP (2).JPG';
+import image5 from '../Resources/AshleeChantzFront.jpeg';
 import NavBar from '../Nav/NavBar';
 import './Landing.css';
 import './AllPage.css';
@@ -85,19 +85,18 @@ const Landing = (props) => {
               <div className="introInfoContainer">
                 <div className="landing-self-info">
                   <p>
-                    It has become Chantz’s mission to educate and guide
-                    community members of Jennings County and surrounding areas
-                    through their home buying and selling experiences. Through
-                    the love of his community, education, drive to succeed, and
-                    access to a diverse team of real estate professionals, he is
-                    confident in his ability to lead others in their quest to
-                    achieve their real estate goals.
+                  It has become Ashlee and Chantz’s mission to educate and guide 
+                  community members of Jennings County and surrounding areas through 
+                  their home buying and selling experiences. Through the love of their 
+                  community, education, drive to succeed, and access to a diverse team 
+                  or real estate professionals, they are confident in their ability to 
+                  lead others in their quest to achieve their real estate goals.
                   </p>
                   <p id="chantzQuote">
                     “If you’re not happy. I’m not happy. It’s simple, let’s both
                     be happy. “
                   </p>
-                  <p id="chantzSig">-Chantz Morris</p>
+                  <p id="chantzSig">-Ashlee and Chantz</p>
                 </div>
                 <div className="landing-self-picture-container">
                   <img className="landing-self-picture" src={image5} alt="" />

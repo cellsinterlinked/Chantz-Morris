@@ -9,13 +9,14 @@ import {CgFileDocument} from 'react-icons/cg';
 import { AiOutlineInstagram , AiFillFacebook , AiOutlineMail , AiFillLinkedin } from 'react-icons/ai';
 import Contactimg from '../Resources/relationshipblog.jpeg'
 import NavBar from '../Nav/NavBar';
-import Profile from '../Resources/Chantz_blue shirt (1).jpg';
+import Profile from '../Resources/AshleeChantz.jpeg';
 import Footer from '../Nav/Footer';
 import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import ErrorModal from '../Reusable/Modals/ErrorModal';
 import Modal from '../Reusable/Modals/Modal';
 import LoadingSpinner from '../Reusable/Loading/LoadingSpinner';
 import emailjs from 'emailjs-com'
+
 
 const introStyle = {
   left: '50%',
@@ -127,13 +128,7 @@ const Contact = (props) => {
     setShowModal(false)
   }
 
-  const errorBorder = {
-    border: "1px solid red"
-  }
 
-  const normalBorder = {
-    border: "grey"
-  }
 
   
   
@@ -183,7 +178,7 @@ const Contact = (props) => {
 
         <div className="contactPicAndInfo">
           <div className="imgContainer__Contact">
-            <img src={Profile} alt="me" className="profileImg__Contact" />
+            <img src={Profile} alt="Ashlee and Chantz" className="profileImg__Contact" />
           </div>
           <div className="realtorInfo__Contact">
             <h1 className="realtorName__Contact">CHANTZ MORRIS | REALTOR&trade;</h1>
@@ -209,7 +204,41 @@ const Contact = (props) => {
             <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
               <AiFillLinkedin className="bigIcon" />
             </a>
+            <a className="iconSquare" href="https://www.facebook.com/Chantzmorris.77" target="_blank">
+              <AiFillFacebook className="bigIcon" />
+            </a>
+            
             </div>
+
+            <h1 className="realtorName__Contact">ASHLEE MORRIS | REALTOR&trade;</h1>
+            <div className="contactPersonal">
+              <div className="iconInfo__Contact">
+                <FiPhone style={{ marginRight: '.5rem' }} />
+                <p>812.592.7784</p>
+              </div>
+              <div className="iconInfo__Contact">
+                <AiOutlineMail style={{ marginRight: '.5rem' }} />
+                <p>ashlee@themodglingroup.com</p>
+              </div>
+              <div className="iconInfo__Contact">
+                <CgFileDocument style={{ marginRight: '.5rem'}} />
+                <p>License #:RB21002818</p>
+                </div>
+            </div>
+            <div className="contactSquareContainer">
+            
+            <a className="iconSquare" href="mailto:ashlee@themodglingroup.com" target="_blank">
+              <AiOutlineMail className="bigIcon" />
+            </a>
+            {/* <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
+              <AiFillLinkedin className="bigIcon" />
+            </a> */}
+            <a className="iconSquare" href="https://www.facebook.com/AshleeMorris4" target="_blank">
+              <AiFillFacebook className="bigIcon" />
+            </a>
+            
+            </div>
+
 
 
 
@@ -219,10 +248,10 @@ const Contact = (props) => {
         <form className="contactForm" id="myForm" onSubmit={submitHandler}>
           <div className="contactIntro">
           <p>
-            If you're not sure how to take the first step in a new home search, not
-            sure which tactics to use to sell your house, or just have a random
-            question about real estate, call, email, text me anytime. I’m here
-            for you 24/7!
+          If you're not sure how to take the first step in a new home search, 
+          not sure which tactics to use to sell your house, or just have a random 
+          question about real estate, call, email, text either one, or both of us, 
+          anytime. We’re here for you 24/7!
           </p>
           </div>
 
