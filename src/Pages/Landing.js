@@ -89,11 +89,11 @@ const Landing = (props) => {
                   community members of Jennings County and surrounding areas through 
                   their home buying and selling experiences. Through the love of their 
                   community, education, drive to succeed, and access to a diverse team 
-                  or real estate professionals, they are confident in their ability to 
+                  of real estate professionals, they are confident in their ability to 
                   lead others in their quest to achieve their real estate goals.
                   </p>
                   <p id="chantzQuote">
-                    “If you’re not happy. I’m not happy. It’s simple, let’s both
+                    “If you’re not happy, neither are we. It’s simple, let’s both
                     be happy. “
                   </p>
                   <p id="chantzSig">-Ashlee and Chantz</p>
