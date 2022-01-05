@@ -4,7 +4,8 @@ import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
 import AboutHead from '../Resources/train2.jpg';
 import './About.css';
-import AboutInfo from '../Resources/chantzAboutFinal.JPG';
+import ChantzNew from '../Resources/ChantzNew.jpeg';
+import AshleeNew from '../Resources/AshleeNew.jpeg';
 
 
 
@@ -42,15 +43,15 @@ const About = (props) => {
      
       </Parallax>
       <div className="aboutTitle">
-        <h1>Your Local Home-Grown Real Estate Agent</h1>
+        <h1>Your Local Home-Grown Real Estate Agents</h1>
       </div>
 
       <div className="aboutInfoContainer">
       <div className="title-pizzazz2"/>
         <div className="aboutBox">
-          <img style={{float: "right"}} src={AboutInfo} alt="me" />
+          <img style={{float: "right"}} src={ChantzNew} alt="Chantz" />
           <div className="aboutResourceBox">
-            Chantz Morris has been a resident and community member of North
+            {/* Chantz Morris has been a resident and community member of North
             Vernon since he was three years old. From the time he was a tot
             playing in his papaw’s shop, Charlie’s Body Shop, a school boy
             learning multiplication facts in his mamaw’s fourth grade classroom,
@@ -63,49 +64,48 @@ const About = (props) => {
             teach the voices of the future; and he watched as his father served
             this great country in the United States Marine Corp. Following the
             footsteps of his family, Chantz has been serving the community for a
-            while.
+            while. */}
+            Growing up, the Morris siblings witnessed the several ways their family 
+            served the community. They watched as their papaw owned and operated a 
+            business working on cars, often times accepting apple pie as  form of
+             payment; they watched as their mamaw and mother spent endless hours outside 
+             of the classroom preparing to teach the voices of the future; and they watched 
+             as their father served this great country in the United States Marine Corp. 
+             Following the footsteps of their family, Chantz and Ashlee have dedicated their 
+             time to serving the community. The two siblings worked together at the White 
+             Front Café while it was open and operating, and also worked together at the 
+             Grateful Grubb, getting the opportunity to meet members of the community, 
+             build relationships, and make new friends.
+             <br></br>
+             <br></br>
+             While working within the community, Ashlee and Chantz attended Indiana 
+            University Purdue University of Columbus, where Chantz received his Bachelor’s 
+            in administration with a concentration in project management and Ashlee received 
+            her Bachelor’s in Psychology. After completing her Bachelor’s degree, 
+            Ashlee went on to get her Master in Public Affairs with a concentration 
+            in Policy Analysis. Throughout their educational careers, both siblings 
+            spent time at the Indiana Statehouse,
+            <img style={{float: "left", marginRight: "15px"}} src={AshleeNew} alt="Ashlee" />
+             with Ashlee being there in the 2017 
+            legislative session, serving under the Republican House of Representative’s 
+            Legislative Department and Chantz in the 2020 legislative session, 
+            serving under the Republican House of Representative’s communications department. 
+            <br></br>
+            <br></br>
+            With the compassion and knowledge they possess, Chantz and Ashlee have set 
+            out to help guide community members as they traverse the real estate landscape, 
+            whether it be informing of local zoning ordinances or advising on local housing 
+            trends. They both understand buying a new home or selling one can be a very 
+            emotional process, as it is the epicenter of many family memories. Given that 
+            community service and a strong family network have been ingrained in their everyday 
+            lives, Ashlee and Chantz are more than ready to help support their community 
+            members through the process!
+            <br></br>
+            <br></br>
+            Call or email them with any questions you may have!   
           </div>
 
           
-        </div>
-        
-        <div className="aboutBox">
-          <div className="aboutResourceBox" >
-            For the past eight years he has been a server at local diners in
-            North Vernon, getting the chance to meet members of the community,
-            making new friends. During this time, he attended Indiana University
-            Purdue University of Columbus, where he received his Bachelor’s in
-            administration with a concentration in project management. Shortly
-            after his graduation he spent time at the Indiana Statehouse during
-            the 2020 legislative session, serving under the Republican House of
-            Representative’s communications department.
-          </div>
-        </div>
-        <div className="aboutBox">
-          <div  className="aboutResourceBox">
-            With the compassion and knowledge he possesses, Chantz has set out
-            to help guide community members as they traverse the real estate
-            landscape, whether it be informing of local zoning ordinances or
-            advising on local housing trends. He understands buying a new home
-            or selling one can be a very emotional process, as it is the
-            epicenter of many family memories.
-          </div>
-        </div>
-        <div className="aboutBox">
-          <div  className="aboutResourceBox">
-            To best support the needs of the people, he has challenged himself
-            to never stop learning as rules, regulations and the market are
-            constantly fluctuating. He believes continuous education is
-            fundamental for success.
-          </div>
-        </div>
-        <div className="aboutBox">
-          <div  className="aboutResourceBox">
-            With high ambitions and the desire to make a positive impact on
-            others, Chantz is on a mission to provide his local communities with
-            knowledge and expertise that will ease the process of any real
-            estate demand.
-          </div>
         </div>
       </div>
       

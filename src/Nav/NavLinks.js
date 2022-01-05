@@ -30,7 +30,7 @@ const NavLinks = (props) => {
       </li>
       <li>
         <NavLink to="/about" exact style={{ textDecoration: 'none' }}>
-          <p>ABOUT ME</p>
+          <p>ABOUT US</p>
         </NavLink>
       </li>
       <li>
