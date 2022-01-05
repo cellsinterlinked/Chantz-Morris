@@ -256,12 +256,12 @@ const BlogPage = (props) => {
 
           <div className="directButtonContainer">
             <div className="prevButtonContainer">
-              {blogList.length > 1 && blogIndex > 0 && (
+              
                 <a className="de-underline" href="/blog">
                   <IoIosArrowBack className="arrowed" />
                   <p>Back to Blogs</p>
                 </a>
-              )}
+            
             </div>
 
             {/* <div className="nextButtonContainer">
