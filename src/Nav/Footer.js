@@ -13,7 +13,7 @@ const Footer = (props) => {
     <div className="fullFooter">
       <div className="footer-top">
         <div className="footer-columnOne">
-          <p className="footer-name">CHANTZ MORRIS</p>
+          <p className="footer-name">ACM REALTY TEAM</p>
           <div className="footer-brokerAddress">
             <p>THE MODGLIN GROUP</p>
             <p>432 S. Emerson Ave., Suite 120</p>
@@ -27,7 +27,7 @@ const Footer = (props) => {
         <div className="footer-columnTwo">
           <div className="footer-workWithChantz">
             <NavLink to="/contact">
-              <p>WORK WITH CHANTZ</p>
+              <p>WORK WITH US</p>
               <BsArrowRight />
             </NavLink>
           </div>
