@@ -212,10 +212,12 @@
   width: 8rem;
   height: 2.5rem;
   border: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   outline-color: black;
   cursor: pointer;
   outline: none;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
 .submitButton:hover {
