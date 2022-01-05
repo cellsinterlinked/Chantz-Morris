@@ -175,13 +175,12 @@
   margin-top: 0.2rem;
 }
 
-.footerIconContainer {
-}
-
 .footer-contact-title {
   color: white;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
+  margin: 1px;
+  margin-top: 4px;
 }
 
 .footerIconContainer {
@@ -268,4 +267,10 @@
   .footer-workWithChantz p {
     margin-bottom: 0rem;
   }
+}
+
+.footerNameContact {
+  margin: 0px;
+  color: white;
+  font-size: 0.7rem;
 }

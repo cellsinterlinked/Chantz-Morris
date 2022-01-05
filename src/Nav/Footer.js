@@ -63,15 +63,7 @@ const Footer = (props) => {
           <div className="footer-bottomLine" />
           <p className="footer-contact-title">STAY IN TOUCH</p>
           <div className="footerIconContainer">
-            {/* <AiOutlineInstagram
-              className="contactIcon"
-              style={{
-                height: '2rem',
-                width: '2rem',
-                marginLeft: '.3rem',
-                marginRight: '.3rem',
-              }}
-            /> */}
+            <h3 className="footerNameContact">Chantz</h3>
             <a href="https://www.facebook.com/chantz.morris.79" target="_blank">
               <AiFillFacebook
                 className="contactIcon"
@@ -96,6 +88,34 @@ const Footer = (props) => {
             </a>
 
             <a href="mailto:chantz@themodglingroup.com" target="_blank">
+              <AiOutlineMail
+                className="contactIcon"
+                style={{
+                  height: '2rem',
+                  width: '2rem',
+                  marginLeft: '.3rem',
+                  marginRight: '.3rem',
+                }}
+              />
+            </a>
+          </div>
+
+          <h3 className="footerNameContact">Ashlee</h3>
+
+          <div className="footerIconContainer">
+            <a href="https://www.facebook.com/AshleeMorris4" target="_blank">
+              <AiFillFacebook
+                className="contactIcon"
+                style={{
+                  height: '2rem',
+                  width: '2rem',
+                  marginLeft: '.3rem',
+                  marginRight: '.3rem',
+                }}
+              />
+            </a>
+
+            <a href="mailto:ashlee@themodglingroup.com" target="_blank">
               <AiOutlineMail
                 className="contactIcon"
                 style={{
