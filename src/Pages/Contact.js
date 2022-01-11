@@ -260,12 +260,13 @@ const Contact = (props) => {
             <div className="contactName__smallBox">
               <div className="fname__Form">
                 <input
+                
                   type="text"
                   id="firstName"
                   name="firstName"
                   onChange={firstNameController}
                   value={data.firstName}
-                  style={{border: incomplete && data.firstName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.firstName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
                 <label htmlFor="firstName" style={{color: incomplete && data.firstName === "" ? "red" : "black"}}>First Name</label>
               </div>
@@ -276,7 +277,7 @@ const Contact = (props) => {
                   name="lastName"
                   onChange={lastNameController}
                   value={data.lastName}
-                  style={{border: incomplete && data.lastName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.lastName === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
                 <label htmlFor="lastName" style={{color: incomplete && data.lastName === "" ? "red" : "black"}}>Last Name</label>
               </div>
@@ -290,7 +291,7 @@ const Contact = (props) => {
                   name="email"
                   onChange={emailController}
                   value={data.email}
-                  style={{border: incomplete && data.email === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.email === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
               </div>
             </div>
@@ -307,7 +308,7 @@ const Contact = (props) => {
                   name="phone1"
                   onChange={phone1Controller}
                   value={data.phone1}
-                  style={{border: incomplete && data.phone1 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.phone1 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
                 <label htmlFor="phone1" style={{color: incomplete && data.phone1 === "" ? "red" : "black"}}>###</label>
               </div>
@@ -318,7 +319,7 @@ const Contact = (props) => {
                   name="phone2"
                   onChange={phone2Controller}
                   value={data.phone2}
-                  style={{border: incomplete && data.phone2 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.phone2 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
                 <label htmlFor="phone2" style={{color: incomplete && data.phone2 === "" ? "red" : "black"}}>###</label>
               </div>
@@ -329,7 +330,7 @@ const Contact = (props) => {
                   name="phone3"
                   onChange={phone3Controller}
                   value={data.phone3}
-                  style={{border: incomplete && data.phone3 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+                  style={{border: incomplete && data.phone3 === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
                  />
                 <label htmlFor="phone3" style={{color: incomplete && data.phone3 === "" ? "red" : "black"}}>####</label>
               </div>
@@ -342,7 +343,7 @@ const Contact = (props) => {
               name="message"
               onChange={messageController}
               value={data.message}
-              style={{border: incomplete && data.message === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)"}}
+              style={{border: incomplete && data.message === "" ? "1px solid red" : "1px solid rgb(216, 216, 216)", fontSize="16px"}}
              />
           </div>
           <div className="contactButton__Container">
