@@ -21,11 +21,11 @@ const NavBar = (props) => {
       {drawerOpen && <Backdrop onClick={closeDrawerHandler} />}
       <SideDrawer show={drawerOpen} onClick={closeDrawerHandler}>
         <nav className="nav-drawer">
-          <NavLinks />
+          <NavLinks  />
         </nav>
       </SideDrawer>
 
-      <div className="fullNavBar">
+      <div className={`fullNavBar ${props.navStyle}`}>
         <NavLink to="/">
         <h1>
           ACM Realty Team
@@ -33,9 +33,9 @@ const NavBar = (props) => {
 
         </NavLink>
         <div className="wideNav">
-          <NavLinks />
+          <NavLinks dark={props.dark}/>
         </div>
-        <button className="menu-button" onClick={openDrawerHandler}>
+        <button className={`menu-button ${props.menuStyle}`} onClick={openDrawerHandler}>
           <span />
           <span />
           <span />

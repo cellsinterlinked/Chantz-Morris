@@ -16,6 +16,7 @@ import About from './Pages/About';
 import Auth from './Pages/Auth';
 import BlogPage from './Pages/BlogPage';
 import CoolBox from './Pages/CoolBox';
+import Survey from './Pages/Survey';
 import { AuthContext } from './Context/auth-context';
 
 let logoutTimer;
@@ -78,8 +79,12 @@ const App = () => {
   if (token) {
     routes = (
       <Switch>
+
         <Route path="/" exact>
           <Landing />
+        </Route>
+         <Route path="/checklist" exact>
+          <Survey />
         </Route>
         <Route path="/buyers" exact>
           <ForBuyers />
@@ -111,6 +116,9 @@ const App = () => {
   } else {
     routes = (
       <Switch>
+        <Route path="/checklist" exact>
+          <Survey />
+        </Route>
         <Route path="/" exact>
           <Landing />
         </Route>

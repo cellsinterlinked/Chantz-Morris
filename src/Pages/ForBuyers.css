@@ -223,3 +223,34 @@
     margin-bottom: 1rem;
   }
 }
+
+.questionnaire-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questionnaire-wrapper h3 {
+  text-align: center;
+  font-family: gilSans;
+  color: rgb(87, 87, 87);
+}
+.questionnaire-button {
+  width: 10rem;
+  height: 2.5rem;
+  border: none;
+  background-color: rgb(70, 70, 70);
+  color: white;
+  font-family: gilSans;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 5px rgb(58, 58, 58);
+  cursor: pointer;
+}
+
+.questionnaire-button:hover {
+  box-shadow: 1px 1px 3px rgb(58, 58, 58);
+  background-color: black;
+}

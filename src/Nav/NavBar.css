@@ -1,11 +1,16 @@
 .fullNavBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  padding-top: 2rem;
+  padding-top: 0rem;
   justify-content: space-between;
   color: white;
+  z-index: 5;
 }
 
 .fullNavLinks {
@@ -39,6 +44,40 @@
 }
 
 .fullNavLinks p:hover {
+  color: black;
+}
+
+.darkFullNavLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 38rem;
+  max-width: 40rem;
+  margin-right: 3rem;
+}
+
+.darkFullNavLinks li {
+  list-style: none;
+  text-decoration: none;
+  font-family: proxima;
+}
+
+.darkFullNavLinks li:hover {
+  color: black;
+}
+
+.darkFullNavLinks p {
+  color: rgb(70, 70, 70);
+  list-style: none;
+  text-decoration: none;
+  font-family: proxima;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.darkFullNavLinks p:hover {
   color: black;
 }
 
@@ -120,4 +159,8 @@
     align-items: flex-start;
     padding-left: 2rem;
   }
+}
+
+.navChange {
+  color: rgb(70, 70, 70);
 }

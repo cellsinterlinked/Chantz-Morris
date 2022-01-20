@@ -10,6 +10,7 @@ import homeList from '../Resources/home.pdf';
 import Approved from '../Resources/Buyers_tab approved.png';
 import Closing from '../Resources/Buyers tab_closing.jpg';
 import Inspector from '../Resources/inspector.jpg';
+import { NavLink } from 'react-router-dom';
 
 const introStyle = {
   left: '50%',
@@ -44,6 +45,11 @@ const ForBuyers = (props) => {
       </Parallax>
       <div className="buyerTitle">
         <h1>Deciding To Buy A Home</h1>
+      </div>
+      <div className="questionnaire-wrapper"><h3>What are you looking for in a home? Get started with our <strong>simple questionaire!</strong></h3>
+      <NavLink to="/checklist" exact style={{textDecoration: "none"}}>
+        <button className="questionnaire-button">Click Here</button>
+      </NavLink>
       </div>
       <div className="buyer-resources1-container">
         <div className="buyerResourceBox">
@@ -225,8 +231,9 @@ lenders in the area are:
           </p>
           <br />
           <p>
-            Download the{' '}
-            <a href={homeList} download>
+            Fill out our{' '}
+            {/* <a href={homeList} download> */}
+            <a href={"/checklist"}>
               “Homebuying Wishlist”
             </a>{' '}
             to help narrow down exactly what you’re searching for.{' '}

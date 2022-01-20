@@ -7,7 +7,7 @@ const NavLinks = (props) => {
   const auth = useContext(AuthContext);
 
   return (
-    <div className="fullNavLinks">
+    <div className={props.dark ? "darkFullNavLinks" : "fullNavLinks"}>
       <li>
         <NavLink to="/" exact style={{ textDecoration: 'none' }}>
           <p>HOME</p>
