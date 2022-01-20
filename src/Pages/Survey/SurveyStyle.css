@@ -71,6 +71,7 @@ input[type='text'] {
   height: 2rem;
   border: 1px solid rgb(216, 216, 216);
   margin-bottom: 0.5rem;
+  font-size: 16px;
 }
 
 input[type='checkbox'] {
@@ -89,6 +90,7 @@ textarea {
   width: 18rem;
   height: 9rem;
   outline: none;
+  font-size: 16px;
 }
 
 .text-input-wrapper {
