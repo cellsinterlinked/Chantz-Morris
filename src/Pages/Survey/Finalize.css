@@ -100,6 +100,18 @@
         var(--circle-animation-time) + var(--checkmark-animation-time)
     )
     forwards;
+  -webkit-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
+  -moz-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
   margin-bottom: 2rem;
 }
 
