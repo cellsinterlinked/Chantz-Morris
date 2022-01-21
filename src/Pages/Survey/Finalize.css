@@ -122,6 +122,18 @@
         var(--circle-animation-time) + var(--checkmark-animation-time)
     )
     forwards;
+  -webkit-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
+  -moz-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
 }
 
 .return-hidden {
@@ -156,6 +168,8 @@
   top: 10rem;
   left: auto;
   right: auto;
+  -webkit-animation: fadeOut 200ms forwards;
+  -moz-animation: fadeOut 200ms forwards;
   animation: fadeOut 200ms forwards;
 }
 
@@ -211,7 +225,43 @@
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
   0% {
     opacity: 1;
   }
