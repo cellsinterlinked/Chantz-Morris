@@ -306,18 +306,18 @@
 
 @-webkit-keyframes squish {
   0% {
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    border-radius: 5px;
+    -webkit-left: 0%;
+    -webkit-right: 0%;
+    -webkit-top: 0%;
+    -webkit-bottom: 0%;
+    -webkit-border-radius: 5px;
   }
   100% {
-    left: -25%;
-    right: -25%;
-    top: 45%;
-    bottom: 45%;
-    border-radius: 8px;
+    -webkit-left: -25%;
+    -webkit-right: -25%;
+    -webkit-top: 45%;
+    -webkit-bottom: 45%;
+    -webkit-border-radius: 8px;
   }
 }
 
@@ -385,12 +385,12 @@
 
 @-webkit-keyframes progress {
   0% {
-    left: 51%;
-    right: 51%;
+    -webkit-left: 51%;
+    -webkit-right: 51%;
   }
   100% {
-    left: -25%;
-    right: -25%;
+    -webkit-left: -25%;
+    -webkit-right: -25%;
   }
 }
 
@@ -439,12 +439,12 @@
 
 @-webkit-keyframes hide {
   0% {
-    height: var(--btn-height);
-    width: var(--btn-width);
+    -webkit-height: var(--btn-height);
+    -webkit-width: var(--btn-width);
   }
   100% {
-    height: 0;
-    width: 0;
+    -webkit-height: 0;
+    -webkit-width: 0;
   }
 }
 
@@ -495,14 +495,14 @@
 
 @-webkit-keyframes circle {
   0% {
-    width: calc(var(--btn-width) * 1.5);
-    height: calc(var(--btn-height * 0.1));
+    -webkit-width: calc(var(--btn-width) * 1.5);
+    -webkit-height: calc(var(--btn-height * 0.1));
   }
   100% {
-    background-color: var(--circle-color);
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
+    -webkit-background-color: var(--circle-color);
+    -webkit-width: 5rem;
+    -webkit-height: 5rem;
+    -webkit-border-radius: 100%;
   }
 }
 
@@ -556,10 +556,10 @@
 
 @-webkit-keyframes checkmark {
   0% {
-    stroke-dashoffset: 40.84104919433594;
+    -webkit-stroke-dashoffset: 40.84104919433594;
   }
   100% {
-    stroke-dashoffset: 0;
+    -webkit-stroke-dashoffset: 0;
   }
 }
 
@@ -601,10 +601,10 @@
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0;
+    -webkit-opacity: 0;
   }
   100% {
-    opacity: 1;
+    -webkit-opacity: 1;
   }
 }
 
@@ -646,10 +646,10 @@
 
 @-webkit-keyframes fadeOut {
   0% {
-    opacity: 1;
+    -webkit-opacity: 1;
   }
   100% {
-    opacity: 0;
+    -webkit-opacity: 0;
   }
 }
 
