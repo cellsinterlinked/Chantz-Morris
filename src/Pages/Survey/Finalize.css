@@ -33,6 +33,10 @@
     calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards;
   -moz-animation: hide 0ms
     calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards;
+  -ms-animation: hide 0ms
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards;
+  -o-animation: hide 0ms
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards;
 }
 
 .submitBtn::before {
@@ -45,12 +49,21 @@
   animation: squish var(--squish-animation-time)
     cubic-bezier(0.26, 0.6, 0.46, 1.7);
   animation-fill-mode: forwards;
+
   -webkit-animation: squish var(--squish-animation-time)
     cubic-bezier(0.26, 0.6, 0.46, 1.7);
   -webkit-animation-fill-mode: forwards;
+
   -moz-animation: squish var(--squish-animation-time)
     cubic-bezier(0.26, 0.6, 0.46, 1.7);
   -moz-animation-fill-mode: forwards;
+
+  -ms-animation: squish var(--squish-animation-time)
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -ms-animation-fill-mode: forwards;
+  -o-animation: squish var(--squish-animation-time)
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -o-animation-fill-mode: forwards;
 }
 
 .submitBtn::after {
@@ -66,12 +79,20 @@
   animation: progress var(--progress-animation-time)
     var(--squish-animation-time);
   animation-fill-mode: forwards;
+
   -webkit-animation: progress var(--progress-animation-time)
     var(--squish-animation-time);
   -webkit-animation-fill-mode: forwards;
+
   -moz-animation: progress var(--progress-animation-time)
     var(--squish-animation-time);
   -moz-animation-fill-mode: forwards;
+  -ms-animation: progress var(--progress-animation-time)
+    var(--squish-animation-time);
+  -ms-animation-fill-mode: forwards;
+  -o-animation: progress var(--progress-animation-time)
+    var(--squish-animation-time);
+  -o-animation-fill-mode: forwards;
 }
 
 .submitBtn.animating::before,
@@ -85,6 +106,18 @@
   width: 0;
   height: 0;
   animation: circle var(--circle-animation-time)
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -webkit-animation: circle var(--circle-animation-time)
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -moz-animation: circle var(--circle-animation-time)
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -ms-animation: circle var(--circle-animation-time)
+    calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  -o-animation: circle var(--circle-animation-time)
     calc(var(--squish-animation-time) + var(--progress-animation-time)) forwards
     cubic-bezier(0.26, 0.6, 0.46, 1.7);
   display: flex;
@@ -120,6 +153,18 @@
         var(--circle-animation-time)
     )
     forwards;
+  -ms-animation: checkmark var(--checkmark-animation-time)
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time)
+    )
+    forwards;
+  -o-animation: checkmark var(--checkmark-animation-time)
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time)
+    )
+    forwards;
 }
 
 .wish-submitted {
@@ -137,6 +182,19 @@
     )
     forwards;
   -moz-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
+
+  -ms-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
+  -o-animation: fadeIn 1000ms
     calc(
       var(--squish-animation-time) + var(--progress-animation-time) +
         var(--circle-animation-time) + var(--checkmark-animation-time)
@@ -176,6 +234,18 @@
         var(--circle-animation-time) + var(--checkmark-animation-time)
     )
     forwards;
+  -ms-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
+  -o-animation: fadeIn 1000ms
+    calc(
+      var(--squish-animation-time) + var(--progress-animation-time) +
+        var(--circle-animation-time) + var(--checkmark-animation-time)
+    )
+    forwards;
 }
 
 .return-hidden {
@@ -210,12 +280,21 @@
   top: 10rem;
   left: auto;
   right: auto;
+  animation: fadeOut 200ms forwards;
   -webkit-animation: fadeOut 200ms forwards;
   -moz-animation: fadeOut 200ms forwards;
-  animation: fadeOut 200ms forwards;
+  -ms-animation: fadeOut 200ms forwards;
+  -o-animation: fadeOut 200ms forwards;
 }
 
 @keyframes squish {
+  0% {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -226,6 +305,13 @@
 }
 
 @-webkit-keyframes squish {
+  0% {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -236,6 +322,47 @@
 }
 
 @-moz-keyframes squish {
+  0% {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+  }
+  100% {
+    left: -25%;
+    right: -25%;
+    top: 45%;
+    bottom: 45%;
+    border-radius: 8px;
+  }
+}
+
+@-o-keyframes squish {
+  0% {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+  }
+  100% {
+    left: -25%;
+    right: -25%;
+    top: 45%;
+    bottom: 45%;
+    border-radius: 8px;
+  }
+}
+
+@-ms-keyframes squish {
+  0% {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -246,6 +373,10 @@
 }
 
 @keyframes progress {
+  0% {
+    left: 51%;
+    right: 51%;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -253,6 +384,10 @@
 }
 
 @-webkit-keyframes progress {
+  0% {
+    left: 51%;
+    right: 51%;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -260,6 +395,31 @@
 }
 
 @-moz-keyframes progress {
+  0% {
+    left: 51%;
+    right: 51%;
+  }
+  100% {
+    left: -25%;
+    right: -25%;
+  }
+}
+
+@-ms-keyframes progress {
+  0% {
+    left: 51%;
+    right: 51%;
+  }
+  100% {
+    left: -25%;
+    right: -25%;
+  }
+}
+@-o-keyframes progress {
+  0% {
+    left: 51%;
+    right: 51%;
+  }
   100% {
     left: -25%;
     right: -25%;
@@ -267,6 +427,10 @@
 }
 
 @keyframes hide {
+  0% {
+    height: var(--btn-height);
+    width: var(--btn-width);
+  }
   100% {
     height: 0;
     width: 0;
@@ -274,6 +438,10 @@
 }
 
 @-webkit-keyframes hide {
+  0% {
+    height: var(--btn-height);
+    width: var(--btn-width);
+  }
   100% {
     height: 0;
     width: 0;
@@ -281,6 +449,31 @@
 }
 
 @-moz-keyframes hide {
+  0% {
+    height: var(--btn-height);
+    width: var(--btn-width);
+  }
+  100% {
+    height: 0;
+    width: 0;
+  }
+}
+
+@-ms-keyframes hide {
+  0% {
+    height: var(--btn-height);
+    width: var(--btn-width);
+  }
+  100% {
+    height: 0;
+    width: 0;
+  }
+}
+@-o-keyframes hide {
+  0% {
+    height: var(--btn-height);
+    width: var(--btn-width);
+  }
   100% {
     height: 0;
     width: 0;
@@ -326,19 +519,72 @@
   }
 }
 
+@-ms-keyframes circle {
+  0% {
+    width: calc(var(--btn-width) * 1.5);
+    height: calc(var(--btn-height * 0.1));
+  }
+  100% {
+    background-color: var(--circle-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+  }
+}
+
+@-o-keyframes circle {
+  0% {
+    width: calc(var(--btn-width) * 1.5);
+    height: calc(var(--btn-height * 0.1));
+  }
+  100% {
+    background-color: var(--circle-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+  }
+}
+
 @keyframes checkmark {
+  0% {
+    stroke-dashoffset: 40.84104919433594;
+  }
   100% {
     stroke-dashoffset: 0;
   }
 }
 
 @-webkit-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 40.84104919433594;
+  }
   100% {
     stroke-dashoffset: 0;
   }
 }
 
 @-moz-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 40.84104919433594;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-ms-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 40.84104919433594;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-o-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 40.84104919433594;
+  }
   100% {
     stroke-dashoffset: 0;
   }
@@ -371,6 +617,24 @@
   }
 }
 
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -390,6 +654,24 @@
 }
 
 @-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
   0% {
     opacity: 1;
   }
