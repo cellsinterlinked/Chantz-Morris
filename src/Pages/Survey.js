@@ -118,7 +118,7 @@ const Survey = () => {
     specialFeatures: '',
   });
 
-  const [page, setPage] = useState(12);
+  const [page, setPage] = useState(1);
 
   const [clicked, setClicked] = useState(false)
 
