@@ -130,36 +130,36 @@ const Survey = () => {
 
   
   const finalDataHandler = () => {
-    setClicked(true)
-    // var data = {
-    //   service_id: 'service_4rkj86x',
-    //   template_id: 'template_0apq26u',
-    //   user_id: 'user_hbc7uXk6VzJ9iJYYOUNTt',
-    //   template_params: {
-    //     ...personal,
-    //     ...basics,
-    //     ...kind,
-    //     ...style,
-    //     ...renovation,
-    //     ...access,
-    //     ...animals,
-    //     ...lot,
-    //     ...interior,
-    //     ...interiorFeatures,
-    //     ...community,
-    //     highRange: basics.range.high,
-    //     lowRange: basics.range.low,
-    //   }
-    // };
-    // Axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
-    // .then(response => {
-    //   setClicked(true)
-    //   console.log(response)
-    // })
-    // .catch(error => {
-    //   console.log(error)
-    //   setError(error)
-    // })
+    // setClicked(true)
+    var data = {
+      service_id: 'service_4rkj86x',
+      template_id: 'template_0apq26u',
+      user_id: 'user_hbc7uXk6VzJ9iJYYOUNTt',
+      template_params: {
+        ...personal,
+        ...basics,
+        ...kind,
+        ...style,
+        ...renovation,
+        ...access,
+        ...animals,
+        ...lot,
+        ...interior,
+        ...interiorFeatures,
+        ...community,
+        highRange: basics.range.high,
+        lowRange: basics.range.low,
+      }
+    };
+    Axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
+    .then(response => {
+      setClicked(true)
+      console.log(response)
+    })
+    .catch(error => {
+      console.log(error)
+      setError(error)
+    })
   };
 
   return (
