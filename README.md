@@ -20,10 +20,10 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<!-- <div align="center">
   <a href="https://github.com/cellsinterlinked/Chantz-Morris">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">ACM Realty Team</h3>
 
