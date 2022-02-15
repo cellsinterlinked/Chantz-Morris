@@ -9,7 +9,6 @@ import './Landing.css';
 import './AllPage.css';
 import './Blog.css';
 import '../BlogCarousel/BlogDisplay.css';
-import { useHttpClient } from '../Reusable/Hooks/http-hook';
 import sanityClient from '../client.js';
 import ComingSoon from '../Reusable/Temporary/ComingSoon';
 import BlogDisplay from '../BlogCarousel/BlogDisplay';
@@ -114,7 +113,6 @@ const Blog = (props) => {
               to={`/blog/${  blog.slug.current}`}
               key={blog.slug.current}
               className="blogLink"
-              // className="blogPreviewBox"
             >
             <BlogDisplay 
               slug={blog.slug.current}
@@ -142,23 +140,3 @@ const Blog = (props) => {
 };
 
 export default Blog;
-
-              
-              // <div className="blogPreviewImageContainer">
-              //   <img
-              //     className="blogPreviewImage"
-              //     alt=""
-              //     src={blog.mainImage.asset.url}
-              //   />
-              // </div>
-              // <div className="innerPreviewBox">
-              //   <div className="titlePreviewContainer">
-              //     <h2 style={{ textDecoration: 'none' }}>{blog.title}</h2>
-              //   </div>
-              //   <div className="publishedPreviewContainer">
-              //     <p>{blog.publishedAt.slice(0, 10)}</p>
-              //   </div>
-              //   <div className="descriptionPreviewContainer">
-              //     <p>{blog.description}</p>
-              //   </div>
-              // </div>

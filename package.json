@@ -18,7 +18,8 @@
     "react-parallax": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.0",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

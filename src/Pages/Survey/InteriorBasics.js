@@ -3,11 +3,16 @@ import './SurveyStyle.css'
 
 const InteriorBasics = ({interior, setInterior, page, setPage}) => {
 
-  
+  const [error, setError] = useState("")
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (interior.bedroomMinimum === "" || interior.bathroomsMinimum === "" || interior.minSize === "" || interior.maxSize === "") {
+      return setError("Please fill out all inputs or write N/A ")
+    } else {
+      setPage(page + 1)
+    }
+
   }
 
   const prevHandler = (e) => {
@@ -69,6 +74,10 @@ const InteriorBasics = ({interior, setInterior, page, setPage}) => {
          <p className="suffix">sq. ft.</p>
 
         </div>
+
+<div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
         <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

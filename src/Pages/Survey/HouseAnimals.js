@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './SurveyStyle.css'
 
 const HouseAnimals = ({ animals, setAnimals, page, setPage }) => {
+
+  const [error, setError] = useState("")
  
 
   const handleRadio = (e) => {
@@ -10,7 +12,14 @@ const HouseAnimals = ({ animals, setAnimals, page, setPage }) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (animals.animalOption === "none") {
+      return setError("Plese select yes or no")
+    } else if (animals.animalOption === "Yes" && animals.animalDetails === "") {
+      return setError("Please give details regarding the special facilities needed")
+    } else {
+      setPage(page + 1)
+
+    }
   }
 
   const prevHandler = (e) => {
@@ -23,7 +32,7 @@ const HouseAnimals = ({ animals, setAnimals, page, setPage }) => {
       <form className="basics-wrapper">
          <div className="fadeContainer">
         <h3 className="extra-label">
-          DO you have anmials that will require special facilities?
+          Do you have anmials that will require special facilities?
         </h3>
         <div className="radio-input-wrapper">
 
@@ -41,7 +50,7 @@ const HouseAnimals = ({ animals, setAnimals, page, setPage }) => {
         <div className="radio-input-wrapper">
         <input
           type="radio"
-          checked={animals.animalsOption === 'No'}
+          checked={animals.animalOption === 'No'}
           id="animalsNo"
           name="animalsNo"
           value="No"
@@ -61,6 +70,9 @@ const HouseAnimals = ({ animals, setAnimals, page, setPage }) => {
           onChange={(e) => setAnimals({ ...animals, animalDetails: e.target.value })}
         />
         </div>
+        <div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
 <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

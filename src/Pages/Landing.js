@@ -121,14 +121,6 @@ const Landing = (props) => {
               </div>
             </div>
           </Parallax>
-          {/* <div className="divider-two">
-          <div className="newsSection__title">
-            <h1>Whats Going On</h1>
-            <p>In Southern Indiana Real Estate</p>
-          </div>
-          <div className="lineBreak" style={{ width: '75%' }} />
-          <NewsCarousel />
-        </div> */}
           <Footer />
         </div>
       )}

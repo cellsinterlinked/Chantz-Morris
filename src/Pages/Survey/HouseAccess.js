@@ -3,7 +3,7 @@ import './SurveyStyle.css'
 
 const HouseAccess = ({ access, setAccess, page, setPage}) => {
   
-  
+  const [error, setError] = useState("")
 
   const handleRadio = (e) => {
     setAccess({ ...access, accessOption: e.target.value });
@@ -11,7 +11,14 @@ const HouseAccess = ({ access, setAccess, page, setPage}) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (access.accessOption === "none") {
+      return setError("Please check yes or no")
+    } else if (access.accessOption === "Yes" && access.accessDetails === "") {
+      return setError("Please list details about access needed")
+    } else {
+      setPage(page + 1)
+
+    }
   }
 
   const prevHandler = (e) => {
@@ -65,6 +72,9 @@ const HouseAccess = ({ access, setAccess, page, setPage}) => {
           onChange={(e) => setAccess({...access, accessDetails: e.target.value})}
         />
         </div>
+        <div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
 <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

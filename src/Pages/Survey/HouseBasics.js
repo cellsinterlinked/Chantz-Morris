@@ -1,18 +1,37 @@
 import React, {useState} from 'react'
 import './SurveyStyle.css'
+import validator from 'validator'
 
 const HouseBasics = ({basics, setBasics, page, setPage}) => {
 
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (basics.part.length < 2) {
+      return setError("Please put which part of down or just write N/A")
+    } else if (basics.range.high === "" || basics.range.low === "") {
+      return setError("Please put a minimum and maximum price or write N/A")
+    } else if (basics.school === "") {
+      return setError("Please leave your school preferences or write N/A")
+    }else if (basics.old === "") {
+      return setError("Please type if you would like an older or newer home. If you don't know just write N/A")
+    } else {
+      setPage(page + 1)
+
+    }
+
+
+
+
+
   }
 
   const prevHandler = (e) => {
     e.preventDefault()
     setPage(page - 1)
   }
+
+  const [error, setError] = useState("")
 
 
   return (
@@ -78,6 +97,9 @@ const HouseBasics = ({basics, setBasics, page, setPage}) => {
         style={{}}
         onChange={(e) => setBasics({...basics, old: e.target.value})}
         />
+        <div className="error_container">
+    {error && <p>{error}</p>}
+    </div>
         </div>
 
         <div className="survey-button-container">

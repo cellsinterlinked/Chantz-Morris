@@ -10,12 +10,9 @@ import Landing from './Pages/Landing';
 import ForBuyers from './Pages/ForBuyers';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
-import Inbox from './Pages/Inbox';
 import ForSellers from './Pages/ForSellers';
 import About from './Pages/About';
-import Auth from './Pages/Auth';
 import BlogPage from './Pages/BlogPage';
-import CoolBox from './Pages/CoolBox';
 import Survey from './Pages/Survey';
 import { AuthContext } from './Context/auth-context';
 
@@ -95,9 +92,6 @@ const App = () => {
         <Route path="/contact" exact>
           <Contact />
         </Route>
-        <Route path="/inbox" exact>
-          <Inbox />
-        </Route>
         <Route path="/sellers" exact>
           <ForSellers />
         </Route>
@@ -106,9 +100,6 @@ const App = () => {
         </Route>
         <Route path="/blog/:slug" exact>
           <BlogPage />
-        </Route>
-        <Route path="/coolbox" exact>
-          <CoolBox />
         </Route>
         <Redirect to="/inbox" />
       </Switch>
@@ -136,9 +127,6 @@ const App = () => {
         </Route>
         <Route path="/about" exact>
           <About />
-        </Route>
-        <Route path="/login" exact>
-          <Auth />
         </Route>
         <Route path="/blog/:slug" exact>
           <BlogPage />

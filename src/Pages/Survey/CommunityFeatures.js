@@ -3,7 +3,7 @@ import './SurveyStyle.css'
 
 const CommunityFeatures = ({community, setCommunity, page, setPage, finalDataHandler}) => {
 
-
+const [error, setError] = useState("")
 
   const handleCheckbox = (e, id) => {
     setCommunity({...community, [id]: e.target.checked})
@@ -17,7 +17,12 @@ const CommunityFeatures = ({community, setCommunity, page, setPage, finalDataHan
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if(community.association === 'false') {
+      return setError("Please select whether you would like a home owners association or not.")
+    } else {
+      setPage(page + 1)
+
+    }
    
   }
 
@@ -154,6 +159,10 @@ const CommunityFeatures = ({community, setCommunity, page, setPage, finalDataHan
         />
         </div>
         {/* <label htmlFor="specialFeatures">Townhouse or condo</label> */}
+
+<div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
         <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

@@ -6,7 +6,7 @@ const HouseRenovation = ({renovation, setRenovation, page, setPage}) => {
 
   
 
-
+const [error, setError] = useState("")
 
   const handleRadio = (e) => {
     setRenovation({renovationOption: e.target.value})
@@ -15,6 +15,9 @@ const HouseRenovation = ({renovation, setRenovation, page, setPage}) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
+    if (renovation.renovationOption === 'none') {
+      return setError("Please select one")
+    }
     setPage(page + 1)
   }
 
@@ -74,6 +77,9 @@ const HouseRenovation = ({renovation, setRenovation, page, setPage}) => {
         />
         <label htmlFor="none">None</label>
         </div>
+        <div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
         <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

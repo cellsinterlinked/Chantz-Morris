@@ -6,7 +6,7 @@ const InteriorFeatures = ({interiorFeatures, setInteriorFeatures, page, setPage}
 
  
 
-
+const [error, setError] = useState("")
 
 
 
@@ -18,7 +18,13 @@ const InteriorFeatures = ({interiorFeatures, setInteriorFeatures, page, setPage}
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (Object.values(interiorFeatures).indexOf(true) > -1) {
+      setPage(page + 1)
+   } else {
+     return setError("Please check the box for at least one kind of feature you would like in your house")
+   }
+
+   
   }
 
   const prevHandler = (e) => {
@@ -262,6 +268,12 @@ const InteriorFeatures = ({interiorFeatures, setInteriorFeatures, page, setPage}
         onChange={(e) => setInteriorFeatures({...interiorFeatures, intDetails: e.target.value})}
         />
         </div>
+
+
+<div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
+    
     <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>
         <p>PREVIOUS</p>

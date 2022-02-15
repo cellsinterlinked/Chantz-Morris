@@ -5,7 +5,7 @@ import './SurveyStyle.css'
 const HouseStyle = ({style, setStyle, page, setPage}) => {
 
 
-
+const [error, setError] = useState("")
 
 
   const handleCheckbox = (e, id) => {
@@ -15,7 +15,13 @@ const HouseStyle = ({style, setStyle, page, setPage}) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (Object.values(style).indexOf(true) > -1) {
+      console.log("At least one is selected");
+      setPage(page + 1)
+   } else {
+     return setError("Please check the box for at least one kind of style")
+   }
+  
   }
 
   const prevHandler = (e) => {
@@ -95,6 +101,9 @@ const HouseStyle = ({style, setStyle, page, setPage}) => {
         />
         <label htmlFor="noPreference">No preference</label>
         </div>
+        <div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
 
         <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>

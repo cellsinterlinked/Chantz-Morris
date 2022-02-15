@@ -4,7 +4,7 @@ import './SurveyStyle.css'
 
 const HouseKind = ({kind, setKind, page, setPage}) => {
 
- 
+ const [error, setError] = useState("")
 
 
 
@@ -15,7 +15,13 @@ const HouseKind = ({kind, setKind, page, setPage}) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setPage(page + 1)
+    if (Object.values(kind).indexOf(true) > -1) {
+      console.log("At least one is selected");
+      setPage(page + 1)
+   } else {
+     return setError("Please check the box for at least one kind of house")
+   }
+
   }
 
   const prevHandler = (e) => {
@@ -124,6 +130,11 @@ const HouseKind = ({kind, setKind, page, setPage}) => {
         />
         <label htmlFor="condo">Townhouse or condo</label>
         </div>
+
+<div className="error_container">
+    {error && <p style={{textAlign: "center"}}>{error}</p>}
+    </div>
+
 
         <div className="survey-button-container">
         <button className="survey-button" onClick={prevHandler}>
