@@ -33,14 +33,14 @@ const ForSellers = (props) => {
                 <div className="image-cover"></div>
               </div>
             </Background>
-      
+
           <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
               <h1>I'm Here for You</h1>
             </div>
           </div>
-      
+
       </Parallax>
       <div className="sellerTitle">
         <h1>Selling Your Home</h1>
@@ -57,7 +57,7 @@ const ForSellers = (props) => {
         </div>
         <div className="sellerLinkBox">
           <a href="#sellerStep1">
-            Step 1: Contact your local Modglin Group Agent
+            Step 1: Contact your local F.C Tucker Agent
           </a>
           <a href="#sellerStep2">Step 2: Determine Value of Home</a>
           <a href="#sellerStep3">Step 3: Prepare the House</a>

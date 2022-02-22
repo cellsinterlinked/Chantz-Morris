@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 import { BsArrowRight } from 'react-icons/bs';
 import { SiRealm } from 'react-icons/si';
-import brokerImg from '../Resources/THE MODGLIN GROUP A Realty Company banner.png';
+import brokerImg from '../Resources/8.5x11FCTLogoInfo.svg';
 import './Footer.css';
 
 const Footer = (props) => {
@@ -15,15 +15,15 @@ const Footer = (props) => {
         <div className="footer-columnOne">
           <p className="footer-name">ACM REALTY TEAM</p>
           <div className="footer-brokerAddress">
-            <p>THE MODGLIN GROUP</p>
-            <p>432 S. Emerson Ave., Suite 120</p>
-            <p>Greenwood, IN 46143</p>
+            <p>F.C. Tucker Real Estate Experts</p>
+            <p>524 N. State Street </p>
+            <p>North Vernon, IN 47265</p>
           </div>
           <div className="footer-Phone-Email">
             <p>+1 812 592 7785</p>
-            <p>chantz@themodglingroup.com</p>
+            <p>Chantz.Morris@talktotucker.com</p>
             <p>+1 812 592 7784</p>
-            <p>ashlee@themoddglingroup.com</p>
+            <p>Ashlee.Morris@talktotucker.com</p>
           </div>
         </div>
         <div className="footer-columnTwo">
@@ -46,16 +46,16 @@ const Footer = (props) => {
         </div>
         </div>
 
-          
-          
+
+
         <div className="footer-columnThree">
           <div className="broker-bit">
-            <a href="https://www.themodglingroup.com/" target="_blank">
+            <a href="https://www.talktotucker.com/" target="_blank">
             <img
               target="_blank"
-              href="https://www.themodglingroup.com/"
+              href="https://www.talktotucker.com/"
               src={brokerImg}
-              alt="MODGLIN"
+              alt="F.C. Tucker Real Estate Experts"
             />
             </a>
 
@@ -131,8 +131,8 @@ const Footer = (props) => {
       </div>
       <div className="footer-bottom">
         <div className="copyright-Container">
-          <p>© Copyright 2020</p>
-          <p>Ashlee & Chantz Morris, THE MODGLIN GROUP</p>
+          <p>© Copyright 2021</p>
+          <p>Ashlee & Chantz Morris, F.C. Tucker Real Estate Experts</p>
         </div>
       </div>
     </div>

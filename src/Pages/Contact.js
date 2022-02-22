@@ -43,7 +43,7 @@ const Contact = (props) => {
     fullPhone: "",
 
   })
- 
+
   const [incomplete, setIncomplete] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
@@ -79,16 +79,16 @@ const Contact = (props) => {
   };
 
   const submitHandler = (e) => {
-    
+
     event.preventDefault();
 
-   
+
 
     if(data.message && data.email && data.firstName && data.lastName) {
       emailjs.sendForm(
-        'service_4rkj86x', 
-        'template_ldinmwh', 
-        e.target, 
+        'service_4rkj86x',
+        'template_ldinmwh',
+        e.target,
         "user_hbc7uXk6VzJ9iJYYOUNTt"
         ).then(res=>{
           console.log(res);
@@ -102,7 +102,7 @@ const Contact = (props) => {
             phone3: "",
             message: "",
             fullPhone: "",
-        
+
           })
           document.getElementById('myForm').reset();
         }).catch(
@@ -110,7 +110,7 @@ const Contact = (props) => {
             alert("failed", err)
           }
           );
-  
+
     } else {
       alert("please fill out all fields")
       setIncomplete(true)
@@ -120,9 +120,9 @@ const Contact = (props) => {
 
 
 
-   
+
   };
-  
+
 
   const confirmModal = () => {
     setShowModal(false)
@@ -130,8 +130,8 @@ const Contact = (props) => {
 
 
 
-  
-  
+
+
 
   return (
     <>
@@ -147,7 +147,7 @@ const Contact = (props) => {
           <NavLink to="/" exact style={{ textDecoration: 'none' }}>
           <p>Got It!</p>
           </NavLink>
-          </button> 
+          </button>
           </>
         }
         >
@@ -171,7 +171,7 @@ const Contact = (props) => {
                 <h1>Let's Work Together</h1>
               </div>
             </div>
-      
+
         </Parallax>
 
 
@@ -189,7 +189,7 @@ const Contact = (props) => {
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
-                <p>chantz@themodglingroup.com</p>
+                <p>Chantz.Morris@talktotucker.com</p>
               </div>
               <div className="iconInfo__Contact">
                 <CgFileDocument style={{ marginRight: '.5rem'}} />
@@ -197,8 +197,8 @@ const Contact = (props) => {
                 </div>
             </div>
             <div className="contactSquareContainer">
-            
-            <a className="iconSquare" href="mailto:chantz@themodglingroup.com" target="_blank">
+
+            <a className="iconSquare" href="mailto:Chantz.Morris@talktotucker.com" target="_blank">
               <AiOutlineMail className="bigIcon" />
             </a>
             <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
@@ -207,7 +207,7 @@ const Contact = (props) => {
             <a className="iconSquare" href="https://www.facebook.com/Chantzmorris.77" target="_blank">
               <AiFillFacebook className="bigIcon" />
             </a>
-            
+
             </div>
 
             <h1 className="realtorName__Contact">ASHLEE MORRIS | REALTOR&trade;</h1>
@@ -218,7 +218,7 @@ const Contact = (props) => {
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
-                <p>ashlee@themodglingroup.com</p>
+                <p>Ashlee.Morris@talktotucker.com</p>
               </div>
               <div className="iconInfo__Contact">
                 <CgFileDocument style={{ marginRight: '.5rem'}} />
@@ -226,8 +226,8 @@ const Contact = (props) => {
                 </div>
             </div>
             <div className="contactSquareContainer">
-            
-            <a className="iconSquare" href="mailto:ashlee@themodglingroup.com" target="_blank">
+
+            <a className="iconSquare" href="mailto:Ashlee.Morris@talktotucker.com" target="_blank">
               <AiOutlineMail className="bigIcon" />
             </a>
             {/* <a className="iconSquare" href="https://www.linkedin.com/in/chantz-morris-8bb3471bb/" target="_blank">
@@ -236,7 +236,7 @@ const Contact = (props) => {
             <a className="iconSquare" href="https://www.facebook.com/AshleeMorris4" target="_blank">
               <AiFillFacebook className="bigIcon" />
             </a>
-            
+
             </div>
 
 
@@ -248,9 +248,9 @@ const Contact = (props) => {
         <form className="contactForm" id="myForm" onSubmit={submitHandler}>
           <div className="contactIntro">
           <p>
-          If you're not sure how to take the first step in a new home search, 
-          not sure which tactics to use to sell your house, or just have a random 
-          question about real estate, call, email, text either one, or both of us, 
+          If you're not sure how to take the first step in a new home search,
+          not sure which tactics to use to sell your house, or just have a random
+          question about real estate, call, email, text either one, or both of us,
           anytime. We’re here for you 24/7!
           </p>
           </div>
@@ -260,7 +260,7 @@ const Contact = (props) => {
             <div className="contactName__smallBox">
               <div className="fname__Form">
                 <input
-                
+
                   type="text"
                   id="firstName"
                   name="firstName"
