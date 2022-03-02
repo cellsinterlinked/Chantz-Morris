@@ -164,3 +164,18 @@
 .navChange {
   color: rgb(70, 70, 70);
 }
+
+.acmlogo {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 25rem;
+  height: auto;
+  height: 7rem;
+}
+
+.acmlogo img {
+  object-fit: cover;
+}

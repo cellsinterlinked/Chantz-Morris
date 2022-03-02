@@ -4,6 +4,7 @@ import './NavBar.css';
 import SideDrawer from './SideDrawer';
 import Backdrop from './Backdrop';
 import NavLinks from './NavLinks';
+import Logo from '../Resources/ACMLogo.svg';
 
 const NavBar = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,9 +28,12 @@ const NavBar = (props) => {
 
       <div className={`fullNavBar ${props.navStyle}`}>
         <NavLink to="/">
-        <h1>
+          <div className="acmlogo">
+         <img src={Logo} alt="" />
+          </div>
+        {/* <h1>
           ACM Realty Team
-        </h1>
+        </h1> */}
 
         </NavLink>
         <div className="wideNav">
