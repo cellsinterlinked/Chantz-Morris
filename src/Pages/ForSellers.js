@@ -69,18 +69,16 @@ const ForSellers = (props) => {
         </div>
 
         <div className="sellerParagraphHead">
-          <p id="sellerStep1">Contact your local Modglin Group Agent</p>
+          <p id="sellerStep1">Contact your local F.C. Tucker Agent</p>
         </div>
 
         <div className="title-pizzazz" />
 
         <div className="sellerResourceBox">
           <p>
-            Call or arrange a time to meet with your local Modglin Group agent
+            Call or arrange a time to meet with your local F.C Tucker agent
             to explain your real estate needs and goals. Selling your home can
-            be one of the most stressful experiences and that’s why the Modglin
-            Group trains their agents with clients in mind. Having a Modglin
-            Group agent at your side from start to close will most certainly
+            be one of the most stressful experiences and that’s why the F.C. Tucker trains their agents with clients in mind. Having a F.C Tucker agent at your side from start to close will most certainly
             alleviate some of the stress that comes along with selling your
             home.
           </p>
