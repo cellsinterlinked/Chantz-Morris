@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
 import NavBar from '../Nav/NavBar';
 import Footer from '../Nav/Footer';
-import Blogimg from '../Resources/eyes2.jpg';
+import Blogimg from '../Resources/blog.jpeg';
 import './Landing.css';
 import './AllPage.css';
 import './Blog.css';
@@ -28,7 +28,7 @@ const Blog = (props) => {
   const [blogs, setBlogs] = useState();
   const [isLoading, setIsLoading] =  useState(true)
 
-  
+
 
   useEffect(() => {
     sanityClient
@@ -65,7 +65,7 @@ const Blog = (props) => {
         </div>
       )}
     {!isLoading && <div className="blog-container">
-      
+
 
       <Parallax className="testBanner"  strength={500}>
       <Background className="custom-bg">
@@ -75,15 +75,15 @@ const Blog = (props) => {
               </div>
             </Background>
 
-    
+
           <div className="height-controller">
             <NavBar />
             <div style={introStyle} className="pageHead">
-              <h1>Through the Eyes of an Agent</h1>
-          
+              {/* <h1>Through the Eyes of an Agent</h1> */}
+
             </div>
           </div>
-    
+
       </Parallax>
 
       <div className="blogTitle">
@@ -97,24 +97,25 @@ const Blog = (props) => {
         <div className="blogBlock">
           <p>
           The purpose of this blog is to help inform and educate without making it feel like you’re reading a report.
-          As homeowners and homebuyers, we want you to be as well-informed as possible. We’re going to provide a wide 
-          range of information that will make reaching your real estate goals so much easier. Topics will range as far
-           as taking care of your home, preparing to sell, deciding if buying is the right option, to understanding the 
-           relationship with your agent. We hope you enjoy these quick reads!
+          As homeowners and homebuyers, we want you to be as well-informed as possible.
+          <br />
+          <br />
+          We’re going to provide a wide
+          range of information that will make reaching your real estate goals so much easier.We hope you enjoy these quick reads!
           </p>
         </div>
-        
+
       </div>
 
       <div className="blog-list-container">
-        {blogs && 
+        {blogs &&
           blogs.map((blog, index) => (
             <Link
               to={`/blog/${  blog.slug.current}`}
               key={blog.slug.current}
               className="blogLink"
             >
-            <BlogDisplay 
+            <BlogDisplay
               slug={blog.slug.current}
               image={blog.mainImage.asset.url}
               title={blog.title}
@@ -126,7 +127,7 @@ const Blog = (props) => {
                   dataset={sanityClient.clientConfig.dataset}
                   className="workBody"/>
               }
-              
+
               />
             </Link>
           ))}

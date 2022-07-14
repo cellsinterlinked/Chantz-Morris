@@ -77,7 +77,7 @@ const Landing = (props) => {
           </Parallax>
           <div className="divider-one">
             <div className="introTitle">
-              <h1>Serving Jennings County and Surrounding Areas</h1>
+              <h1>Serving Central and Southern Indiana</h1>
             </div>
             <div className="landing-starter">
               <div className="lineBreak" />
@@ -85,16 +85,36 @@ const Landing = (props) => {
               <div className="introInfoContainer">
                 <div className="landing-self-info">
                   <p>
-                  It has become Ashlee and Chantz’s mission to educate and guide 
-                  community members of Jennings County and surrounding areas through 
-                  their home buying and selling experiences. Through the love of their 
-                  community, education, drive to succeed, and access to a diverse team 
-                  of real estate professionals, they are confident in their ability to 
-                  lead others in their quest to achieve their real estate goals.
+                    Ashlee and Chantz have a two-fold mission:
+                    {/* It has become Ashlee and Chantz’s mission to educate and
+                    guide community members of Jennings County and surrounding
+                    areas through their home buying and selling experiences.
+                    Through the love of their community, education, drive to
+                    succeed, and access to a diverse team of real estate
+                    professionals, they are confident in their ability to lead
+                    others in their quest to achieve their real estate goals. */}
+                  </p>
+                  <ul>
+                    <li>
+                      To become your go to experts for all real estate buying
+                      and selling needs through the ACM Realty Team
+                    </li>
+                    <li>
+                      To provide a wide range of property management services to
+                      investors to make managing property investments efficient
+                      and simple
+                    </li>
+                  </ul>
+                  <p>
+                    Through the love of their community, education, drive to
+                    succeed, and access to a diverse team of real estate
+                    professionals, they are confident in their ability to lead
+                    others in their quest to achieve their real estate goals.
                   </p>
                   <p id="chantzQuote">
-                    “If you’re not happy, neither are we. It’s simple, let’s both
-                    be happy. “
+                    “ Our clients are our main priority. We build our services
+                    based on your needs and work to ensure you’re 100%
+                    satisfied.”
                   </p>
                   <p id="chantzSig">-Ashlee and Chantz</p>
                 </div>

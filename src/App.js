@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,141 +14,52 @@ import ForSellers from './Pages/ForSellers';
 import About from './Pages/About';
 import BlogPage from './Pages/BlogPage';
 import Survey from './Pages/Survey';
-import { AuthContext } from './Context/auth-context';
+import Services from './Pages/Services';
+import Local from './Pages/Local';
 
-let logoutTimer;
 
 const App = () => {
-  const [token, setToken] = useState(null);
-  const [tokenExpirationDate, setTokenExpirationDate] = useState();
-  const [userId, setUserId] = useState(null);
-
-  const login = useCallback((uid, token, expirationDate) => {
-    setToken(token);
-    setUserId(uid);
-    const tokenExpirationDate =
-      expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
-    setTokenExpirationDate(tokenExpirationDate);
-    localStorage.setItem(
-      'userData',
-      JSON.stringify({
-        userId: uid,
-        token,
-        expiration: tokenExpirationDate.toISOString(),
-      })
-    );
-  }, []);
-
-  const logout = useCallback(() => {
-    setToken(null);
-    setTokenExpirationDate(null);
-    setUserId(null);
-    localStorage.removeItem('userData');
-  }, []);
-
-  useEffect(() => {
-    if (token && tokenExpirationDate) {
-      const remainingTime =
-        tokenExpirationDate.getTime() - new Date().getTime();
-      logoutTimer = setTimeout(logout, remainingTime);
-    } else {
-      clearTimeout(logoutTimer);
-    }
-  }, [token, logout, tokenExpirationDate]);
-
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('userData')); // like JSON.stringify translates a string to JSON, JSON.parse translages JSON into a javascript data structure
-    if (
-      storedData &&
-      storedData.token &&
-      new Date(storedData.expiration) > new Date()
-    ) {
-      login(
-        storedData.userId,
-        storedData.token,
-        new Date(storedData.expiration)
-      );
-    }
-  }, [login]);
-
   let routes;
 
-  if (token) {
-    routes = (
-      <Switch>
-
-        <Route path="/" exact>
-          <Landing />
-        </Route>
-         <Route path="/checklist" exact>
-          <Survey />
-        </Route>
-        <Route path="/buyers" exact>
-          <ForBuyers />
-        </Route>
-        <Route path="/blog" exact>
-          <Blog />
-        </Route>
-        <Route path="/contact" exact>
-          <Contact />
-        </Route>
-        <Route path="/sellers" exact>
-          <ForSellers />
-        </Route>
-        <Route path="/about" exact>
-          <About />
-        </Route>
-        <Route path="/blog/:slug" exact>
-          <BlogPage />
-        </Route>
-        <Redirect to="/inbox" />
-      </Switch>
-    );
-  } else {
-    routes = (
-      <Switch>
-        <Route path="/checklist" exact>
-          <Survey />
-        </Route>
-        <Route path="/" exact>
-          <Landing />
-        </Route>
-        <Route path="/buyers" exact>
-          <ForBuyers />
-        </Route>
-        <Route path="/blog" exact>
-          <Blog />
-        </Route>
-        <Route path="/contact" exact>
-          <Contact />
-        </Route>
-        <Route path="/sellers" exact>
-          <ForSellers />
-        </Route>
-        <Route path="/about" exact>
-          <About />
-        </Route>
-        <Route path="/blog/:slug" exact>
-          <BlogPage />
-        </Route>
-        <Redirect to="/" />
-      </Switch>
-    );
-  }
+  routes = (
+    <Switch>
+      <Route path="/checklist" exact>
+        <Survey />
+      </Route>
+      <Route path="/" exact>
+        <Landing />
+      </Route>
+      <Route path="/buyers" exact>
+        <ForBuyers />
+      </Route>
+      <Route path="/blog" exact>
+        <Blog />
+      </Route>
+      <Route path="/contact" exact>
+        <Contact />
+      </Route>
+      <Route path="/sellers" exact>
+        <ForSellers />
+      </Route>
+      <Route path="/about" exact>
+        <About />
+      </Route>
+      <Route path="/services" exact>
+        <Services />
+      </Route>
+      <Route path="/local" exact>
+        <Local />
+      </Route>
+      <Route path="/blog/:slug" exact>
+        <BlogPage />
+      </Route>
+      <Redirect to="/" />
+    </Switch>
+  );
 
   return (
     <div className="App" style={{ height: '100vh' }}>
-      <AuthContext.Provider
-        value={{
-          isLoggedIn: !!token,
-          token,
-          userId,
-          login,
-          logout,
-        }}
-      >
-        <Router>{routes}</Router>
-      </AuthContext.Provider>
+      <Router>{routes}</Router>
     </div>
   );
 };

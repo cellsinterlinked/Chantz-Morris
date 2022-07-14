@@ -51,6 +51,11 @@
   max-width: 100%;
 }
 
+.sellerResourceBox p {
+  margin-left: 2rem;
+  text-align: left;
+}
+
 .sellerInfographicContainer {
   display: flex;
   justify-content: center;

@@ -66,6 +66,11 @@
   margin-top: 2rem;
 }
 
+.buyerResourceBox2 p {
+  text-align:left;
+  margin-left: 2rem;
+}
+
 .buyerResourceBox2 img {
   /* float: right; */
 
@@ -151,6 +156,11 @@
 }
 
 .buyerLinkBox {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
   display: flex;
   align-items: center;
   justify-content: center;

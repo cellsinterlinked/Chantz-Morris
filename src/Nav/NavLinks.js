@@ -1,64 +1,31 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+
 import './NavBar.css';
-import { AuthContext } from '../Context/auth-context';
+
+import SexyNav from './SexyNav';
 
 const NavLinks = (props) => {
-  const auth = useContext(AuthContext);
-
   return (
-    <div className={props.dark ? "darkFullNavLinks" : "fullNavLinks"}>
-      <li>
-        <NavLink to="/" exact style={{ textDecoration: 'none' }}>
-          <p>HOME</p>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/buyers" exact style={{ textDecoration: 'none' }}>
-          <p>BUYERS</p>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/sellers" exact style={{ textDecoration: 'none' }}>
-          <p>SELLERS</p>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog" exact style={{ textDecoration: 'none' }}>
-          <p>BLOG</p>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/about" exact style={{ textDecoration: 'none' }}>
-          <p>ABOUT US</p>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact" exact style={{ textDecoration: 'none' }}>
-          <p>CONTACT</p>
-        </NavLink>
-      </li>
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/inbox" exact style={{ textDecoration: 'none' }}>
-            <p>INBOX</p>
-          </NavLink>
-        </li>
-      )}
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/coolbox" exact style={{ textDecoration: 'none' }}>
-            <p>COOL</p>
-          </NavLink>
-        </li>
-      )}
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/" exact style={{ textDecoration: 'none' }} onClick={auth.logout}>
-            <p>LOGOUT</p>
-          </NavLink>
-        </li>
-      )}
+    <div className={props.dark ? 'darkFullNavLinks' : 'fullNavLinks'}>
+      <SexyNav link="/" title="HOME" />
+      <SexyNav
+        title="BUYING OR SELLING A HOME"
+        child={[
+          { title: 'BUYERS', url: '/buyers', redirect: false  },
+          { title: 'SELLERS', url: '/sellers', redirect: false  },
+        ]}
+      />
+      <SexyNav
+        title="PROPERTY MANAGEMENT"
+        child={[
+          { title: 'SERVICES AND RATES', url: '/services' , redirect: false },
+          { title: 'TENANT/OWNER PORTAL', url: 'https://acmpropertymanagement.managebuilding.com/Resident/public/home', redirect: true },
+        ]}
+      />
+      <SexyNav link="/local" title="LOCAL SERVICES" />
+      <SexyNav redirect="true"  link="https://www.talktotucker.com/ashlee.morris" title="PROPERTY SEARCH" />
+      <SexyNav link="/blog" title="BLOG" />
+      <SexyNav link="/about" title="ABOUT US" />
     </div>
   );
 };

@@ -1,0 +1,122 @@
+@keyframes grower {
+  from {width: 0%; opacity: 0;}
+  to {width: 100%; opacity: 1;}
+}
+
+
+
+div {
+  background: transparent;
+}
+
+
+li:hover .growbar {
+
+  position: absolute;
+  bottom: .5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+  animation-name: grower;
+  animation-duration: 1s;
+
+}
+
+li:hover .navdropper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+ /* bottom: -6rem; */
+  /* top: 6rem; */
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+  transition: 1s ease;
+  height: 6rem;
+  overflow: hidden;
+  opacity: 1
+}
+
+.navdropper_mobile-active {
+  display: flex;
+
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 1s ease;
+  height: auto;
+  overflow: hidden;
+  opacity: 1
+}
+
+.navdropper_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+  width: 100%;
+
+
+  transition: 1s ease;
+  height: 0rem;
+  overflow: hidden;
+  opacity: 0;
+}
+
+
+
+.navdropper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  /* bottom: -6rem; */
+  top: 4rem;
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+  transition: 1s ease;
+  height: 0rem;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.sexylink {
+  font-size: 0.9rem;
+  color:white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: 1s ease
+}
+
+.sexylink:hover {
+  color: black;
+  transition: 1s ease;
+}
+
+
+.sexylink_mobile {
+  font-size: 0.9rem;
+  color:white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: 1s ease;
+  padding: 0px;
+  margin-left: 0px;
+
+}

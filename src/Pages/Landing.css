@@ -1,9 +1,4 @@
-/* .landingContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-} */
+
 
 .newImageCover {
   background-color: rgba(94, 94, 94, 0.4);
@@ -152,7 +147,7 @@
 
   /* transform: skew(0deg, -5deg); */
 }
-.landing-self-info p {
+.landing-self-info p, li {
   font-size: 1.2rem;
   font-family: gilSans;
   letter-spacing: 0.1rem;
