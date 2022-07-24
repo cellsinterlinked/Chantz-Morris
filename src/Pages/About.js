@@ -109,36 +109,6 @@ const About = (props) => {
         </div>
       </div>
 
-      {/* <div className="aboutBrokerTitle">
-        <h1>The Modglin Group</h1>
-      </div>
-      <div className="aboutBrokerBox">
-        <div className="title-pizzazz2" />
-
-        <div className="aboutBrokerInfo">
-          <p>
-            The Modglin Group is independently owned and was founded more than
-            fifteen years ago by Raymond Modglin. The company is based out of
-            Greenwood Indiana, but spans north, as far as Lake, Porter and
-            Jasper counties, and south, as far as Jennings, Bartholomew, and
-            Jackson counties. In addition to operating a real estate brokerage,
-            they also operate Real University and Five Stone Mortgage. This
-            creates an advantage for Modglin Group agents because they have
-            direct access to a large diverse team of real estate and mortgage
-            professionals with years of experience. The Modglin Group prides
-            themselves on making every real estate transaction as smooth as
-            possible, as they understand the stresses of buying and selling a
-            home. It is with this pride and dedication to their clients that has
-            allowed them to continue growing, serving Northern, Central and
-            Southern parts of Indiana.
-          </p>
-          <p id="modglinQuote">
-            “It is our mission to glorify God by putting our clients’ interests
-            above our own, providing the highest level of honesty and
-            expertise.”
-          </p>
-        </div>
-      </div> */}
 
       <div style={{marginTop: "6rem"}}></div>
 

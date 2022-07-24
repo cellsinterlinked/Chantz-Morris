@@ -19,11 +19,11 @@ const NavLinks = (props) => {
         title="PROPERTY MANAGEMENT"
         child={[
           { title: 'SERVICES AND RATES', url: '/services' , redirect: false },
-          { title: 'TENANT/OWNER PORTAL', url: 'https://acmpropertymanagement.managebuilding.com/Resident/public/home', redirect: true },
+          { title: 'TENANT / OWNER PORTAL', url: 'https://acmpropertymanagement.managebuilding.com/Resident/public/home', redirect: true },
         ]}
       />
       <SexyNav link="/local" title="LOCAL SERVICES" />
-      <SexyNav redirect="true"  link="https://www.talktotucker.com/ashlee.morris" title="PROPERTY SEARCH" />
+      <SexyNav redirect="true"  link="https://www.talktotucker.com/chantz.morris" title="PROPERTY SEARCH" />
       <SexyNav link="/blog" title="BLOG" />
       <SexyNav link="/about" title="ABOUT US" />
     </div>

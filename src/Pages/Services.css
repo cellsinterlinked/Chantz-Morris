@@ -10,14 +10,12 @@
   margin-bottom: 4rem;
   padding-left: 2px;
   padding-right: 2px;
-
 }
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
   .tableContainer {
     margin: auto;
     margin-bottom: 4rem;
   }
-
 }
 
 .grid-box-three {
@@ -30,20 +28,19 @@
 
 .grid-box-three p {
   font-weight: bold;
-  color:rgb(110, 110, 110)
+  color: rgb(110, 110, 110);
 }
 
 .grid-box-three div {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color :rgb(61, 184, 61);
+  background-color: rgb(61, 184, 61);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-
 }
 
 .grid-box-three h1 {
@@ -51,8 +48,6 @@
   font-weight: bold;
   color: white !important;
 }
-
-
 
 .grid-box-two {
   display: flex;
@@ -64,14 +59,14 @@
 
 .grid-box-two p {
   font-weight: bold;
-  color:rgb(110, 110, 110)
+  color: rgb(110, 110, 110);
 }
 
 .grid-box-two div {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color :rgb(124, 124, 124);
+  background-color: rgb(124, 124, 124);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,28 +74,25 @@
   height: 1.5rem;
 }
 
- .grid-box {
-
+.grid-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(200, 200, 200);
   min-height: 3rem;
   border-bottom: 1px solid rgb(157, 157, 157);
-
-
 }
 
 .grid-box p {
   font-weight: bold;
-  color:rgb(110, 110, 110)
+  color: rgb(110, 110, 110);
 }
 
 .grid-box div {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color :rgb(61, 184, 61);
+  background-color: rgb(61, 184, 61);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +115,6 @@
   border-bottom-right-radius: 5px;
 }
 .grid-bold {
-
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -136,11 +127,10 @@
   color: white;
   margin-bottom: 2rem;
   /* margin-top: 4rem; */
-
 }
 
 .grid-bold h1 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-left: 1rem;
 }
 
@@ -151,11 +141,10 @@
 }
 
 .grid-bold section {
-
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  margin:auto;
+  margin: auto;
   justify-content: center;
   align-items: flex-end;
   padding-top: 1rem;
@@ -163,22 +152,22 @@
 }
 
 .grid-bold h2 {
-font-size: 4rem;
-margin: 0px;
+  font-size: 4rem;
+  margin: 0px;
 }
 
 .grid-bold h3 {
   font-weight: normal;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 0px;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .grid-bold p {
   color: rgb(137, 137, 137);
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: lighter;
-  margin:auto;
+  margin: auto;
   margin-top: 2px;
   margin-bottom: 8px;
 }
@@ -189,12 +178,11 @@ margin: 0px;
 }
 
 .wide-box {
-grid-column: span 4;
+  grid-column: span 4;
 }
 
-
 .blue {
-  background-color: rgb(65, 65, 65) !important
+  background-color: rgb(65, 65, 65) !important;
 }
 
 .blue p {
@@ -207,11 +195,9 @@ grid-column: span 4;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-
 }
 
-.service-title h1{
+.service-title h1 {
   margin-top: 2rem;
   font-family: gilSans;
   font-size: 1.8rem;
@@ -243,23 +229,21 @@ grid-column: span 4;
 
 .terms-container {
   border-radius: 5px;
-  background-color:rgb(231, 231, 231);
+  background-color: rgb(231, 231, 231);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* min-width:80%; */
   max-width: 40rem;
-  margin-left: 2rem ;
-  margin-right: 2rem ;
-
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .grid-box p,
   .grid-box-two p,
-  .grid-box-three p
-  {
+  .grid-box-three p {
     font-size: 0.7rem;
     margin-right: 5px;
   }
@@ -279,6 +263,4 @@ grid-column: span 4;
   .service-title li {
     font-size: 1rem;
   }
-
-
 }

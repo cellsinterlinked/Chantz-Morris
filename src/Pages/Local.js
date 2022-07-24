@@ -452,14 +452,14 @@ const Local = () => {
         >
           Ruoff Mortgage
         </a>
-        <h1>GreenWood</h1>
+        {/* <h1>GreenWood</h1>
         <a
           rel="noreferrer"
           target="_blank"
           href="https://www.5stonesmortgage.com/"
         >
           Five Stone Mortgage
-        </a>
+        </a> */}
 
         <h3 className="local-head">Inspectors</h3>
         <a rel="noreferrer" target="_blank" href="https://www.homeinspekt.com/">

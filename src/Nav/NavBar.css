@@ -25,7 +25,6 @@
 }
 
 .fullNavLinks li {
-
   text-align: center;
   list-style: none;
   text-decoration: none;
@@ -145,13 +144,13 @@
   }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1199px) {
   .menu-button {
     display: none;
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
   .wideNav {
     display: none;
   }
@@ -168,12 +167,10 @@
   height: 7rem;
 }
 
-
-
 .acmlogo img {
   object-fit: cover;
 }
-@media (max-width: 950px) {
+@media (max-width: 1199px) {
   .fullNavLinks {
     width: 100%;
     flex-direction: column;
@@ -185,14 +182,13 @@
     padding-left: 2rem;
   }
   .acmlogo {
-  padding-top: 5px;
-   width: 14.5rem;
-   height: 3.3rem;
-   padding-left: 0rem;
+    padding-top: 5px;
+    width: 14.5rem;
+    height: 3.3rem;
+    padding-left: 0rem;
   }
 }
 
 .navChange {
   color: rgb(70, 70, 70);
 }
-

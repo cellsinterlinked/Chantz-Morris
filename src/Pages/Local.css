@@ -6,7 +6,7 @@
   animation: fadein 2s;
   position: relative;
   max-width: 40rem;
-  margin:auto;
+  margin: auto;
   margin-top: 2rem;
   height: auto;
   display: flex;
@@ -15,15 +15,13 @@
   margin-bottom: 4rem;
   padding: 1.5rem;
   opacity: 1;
-  transition: 1s ease
-
-
+  transition: 1s ease;
 }
 
 .map-container-hidden {
   position: relative;
   max-width: 40rem;
-  margin:auto;
+  margin: auto;
   margin-top: 2rem;
   height: auto;
   display: none;
@@ -39,7 +37,6 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-
 }
 
 .map-container p {
@@ -55,10 +52,7 @@
 .map-container p:hover {
   font-size: 1.7rem;
   transition: 1s ease;
-
-
 }
-
 
 #jennings {
   top: 34%;
@@ -70,11 +64,9 @@
   left: 41%;
 }
 
-
-
 #jackson {
-top: 40%;
-left: 26%;
+  top: 40%;
+  left: 26%;
 }
 
 #jackson:hover {
@@ -92,7 +84,6 @@ left: 26%;
   left: 27%;
 }
 
-
 #jefferson {
   top: 47%;
   left: 53%;
@@ -101,7 +92,6 @@ left: 26%;
 #jefferson:hover {
   top: 44%;
   left: 50%;
-
 }
 .map-instruct {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -120,8 +110,7 @@ left: 26%;
   font-weight: bold;
 }
 
-@media(max-width: 450px) {
-
+@media (max-width: 450px) {
   .map-container p {
     font-size: 0.8rem;
     color: white;
@@ -135,14 +124,11 @@ left: 26%;
   .map-container p:hover {
     font-size: 1.3rem;
     transition: 1s ease;
-
-
   }
-
 
   #jennings {
     top: 34%;
-  left: 44%;
+    left: 44%;
   }
 
   #jennings:hover {
@@ -150,11 +136,9 @@ left: 26%;
     left: 41%;
   }
 
-
-
   #jackson {
-  top: 40%;
-  left: 26%;
+    top: 40%;
+    left: 26%;
   }
 
   #jackson:hover {
@@ -172,16 +156,14 @@ left: 26%;
     left: 25%;
   }
 
-
   #jefferson {
-  top: 47%;
-  left: 53%;
+    top: 47%;
+    left: 53%;
   }
 
   #jefferson:hover {
     top: 44%;
     left: 50%;
-
   }
 
   .map-instruct {
@@ -192,13 +174,18 @@ left: 26%;
 }
 
 .local-head {
-  color: rgb(65, 65, 65);
+  background: rgb(212, 212, 212);
   font-family: gilSans;
   font-weight: bold;
   font-size: 1.3rem;
   text-align: center;
   letter-spacing: 1px;
-
+  height: auto;
+  width: 16rem;
+  color: white;
+  padding: 0.4rem;
+  padding-top: 0.6rem;
+  border-radius: 4px;
 }
 
 .no-link {
@@ -229,8 +216,6 @@ left: 26%;
   transition: 200ms ease;
   padding-left: 1rem;
   padding-right: 1rem;
-
-
 }
 
 .back-map-button:hover {

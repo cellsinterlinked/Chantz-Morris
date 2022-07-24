@@ -46,13 +46,13 @@ const Services = () => {
           know:
         </p>
         <div className="terms-container">
-        <p> - NO hidden fees</p>
+        <p>NO Hidden Fees</p>
         <li>Rest assured there are no sneaky fees lurking around the corner</li>
 
         </div>
         <br />
         <div className="terms-container">
-        <p> - NO contract</p>
+        <p> NO Contract</p>
         <li>
           ACM Property Management LLC wants landlords and investors to utilize
           their services because they are of value, not because of a locked-in
@@ -62,7 +62,7 @@ const Services = () => {
         </div>
         <br />
         <div className="terms-container">
-        <p> - Signed Non-Disclosure Agreements</p>
+        <p> Signed Non-Disclosure Agreements</p>
 
         <li>
           Our team signs a legally binding Non-Disclosure Agreement with you.
@@ -89,7 +89,7 @@ const Services = () => {
           <div></div>
           <p className="marginT">Management Fee</p>
         </div>
-        <div className="= grid-bold">
+        <div className="grid-bold">
           <h1>Standard</h1>
           <div></div>
           <section>
