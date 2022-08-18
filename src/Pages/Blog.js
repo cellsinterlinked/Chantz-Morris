@@ -87,13 +87,15 @@ const Blog = (props) => {
       </Parallax>
 
       <div className="blogTitle">
-        <h1>Follow Us on Our Journey...</h1>
+        <h1>Follow Us on Our Journey...
+        </h1>
+        <div className="title_flare3"></div>
       </div>
 
 
       <div className="blogInfo">
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
         <div className="blogBlock">
           <p>
           The purpose of this blog is to help inform and educate without making it feel like you’re reading a report.

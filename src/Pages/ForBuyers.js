@@ -11,6 +11,7 @@ import Approved from '../Resources/Buyers_tab approved.png';
 import Closing from '../Resources/Buyers tab_closing.jpg';
 import Inspector from '../Resources/inspector.jpg';
 import { NavLink } from 'react-router-dom';
+import Trust from '../Resources/Trust.jpeg';
 
 const introStyle = {
   left: '50%',
@@ -28,7 +29,7 @@ const ForBuyers = (props) => {
       <Parallax className="testBanner" strength={600}>
         <Background className="custom-bg">
           <div className="fuckImage_container">
-            <img src={Cozy} alt="fill murray" className="fuckImage" />
+            <img src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_45978705_kxq9eg.jpg"} alt="fill murray" className="fuckImage" />
             <div className="image-cover"></div>
           </div>
         </Background>
@@ -42,6 +43,7 @@ const ForBuyers = (props) => {
       </Parallax>
       <div className="buyerTitle">
         <h1>Deciding To Buy A Home</h1>
+        <div className="title_flare2"></div>
       </div>
       <div className="questionnaire-wrapper">
         <h3>
@@ -80,11 +82,17 @@ const ForBuyers = (props) => {
 
         <div className="buyerParagraphHead">
           <p id="step1">Find a Realtor You Trust</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox">
+        <img
+            style={{ float: 'left', marginBottom: '0px' }}
+            src={Trust}
+            alt=""
+          />
           <p>
             Having a realtor you trust and enjoy working with is incredibly
             important to your home buying experience. Initially, you should
@@ -100,9 +108,10 @@ const ForBuyers = (props) => {
 
         <div className="buyerParagraphHead">
           <p id="step2">Find a Lender you Trust, Get Pre-Approved</p>
+          <div className="title_flare" style={{width:"25rem"}}></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox2">
           {/* <img style={{ float: 'left' }} src={Approved} alt="" /> */}
@@ -127,12 +136,18 @@ const ForBuyers = (props) => {
 
         <div className="buyerParagraphHead">
           <p id="step3">Choosing A Home</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
-        <div className="buyerResourceBox">
-          <p>
+        <div className="buyerResourceBox2">
+        <img
+            style={{ float: 'left', marginBottom: '0px' }}
+            src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838857/Realty/AdobeStock_320575850_esiaof.jpg"}
+            alt=""
+          />
+          <div className="buyerResourceText">
             Finding the right home can be the most challenging part of the home
             buying process because no two properties are the same. Every home
             offers its own uniqueness, so it is of the utmost importance buyers
@@ -140,7 +155,7 @@ const ForBuyers = (props) => {
             estate team, it is our job to remain objective and provide you our
             real estate expertise. It is our goal to help you find exactly what
             you are looking for.
-          </p>
+          </div>
           <br />
           <p>
             Fill out our {/* <a href={homeList} download> */}
@@ -150,9 +165,10 @@ const ForBuyers = (props) => {
         </div>
         <div className="buyerParagraphHead">
           <p id="step4">Make An Offer</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox2">
           <div className="buyerResourceText">
@@ -164,14 +180,15 @@ const ForBuyers = (props) => {
         </div>
         <div className="buyerParagraphHead">
           <p id="step5">Get A Home Inspection</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox2">
           <img
             style={{ float: 'left', marginBottom: '0px' }}
-            src={Inspector}
+            src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838998/Realty/AdobeStock_296782477_yjwxeu.jpg"}
             alt=""
           />
           <div className="buyerResourceText">
@@ -192,9 +209,10 @@ const ForBuyers = (props) => {
         </div>
         <div className="buyerParagraphHead">
           <p id="step6">Home Appraisal</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox">
           <p>
@@ -204,15 +222,21 @@ const ForBuyers = (props) => {
             appraisal report to ensure the amount their lending does not exceed
             the value of the property.
           </p>
+        <img
+            style={{ float: 'right', marginBottom: '0px' }}
+            src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_136507807_ts6jcy.jpg"}
+            alt=""
+          />
         </div>
         <div className="buyerParagraphHead">
           <p id="step7">Closing</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox2">
-          <img style={{ float: 'left' }} src={Closing} alt="" />
+          <img style={{ float: 'left' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_247260977_vqmt3s.jpg"} alt="" />
           <div className="buyerResourceText">
             Closing time is typically the easiest part of the process. This is
             when you will review and sign all loan documents for your new home.

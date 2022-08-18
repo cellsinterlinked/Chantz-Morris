@@ -27,7 +27,7 @@ const ForSellers = (props) => {
       <Parallax className="testBanner" strength={500}>
         <Background className="custom-bg">
           <div className="fuckImage_container">
-            <img src={HouseFront} alt="fill murray" className="fuckImage" />
+            <img src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_51710890_qztgod.jpg"} alt="fill murray" className="fuckImage" />
             <div className="image-cover"></div>
           </div>
         </Background>
@@ -65,9 +65,10 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep1">Find a Realtor You Trust</p>
+          <div className="title_flare"></div>
         </div>
-
-        <div className="title-pizzazz" />
+{/* 
+        <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox">
           <p>
@@ -82,9 +83,10 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep2">Determine Value of Home</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox">
           <p>
@@ -99,12 +101,13 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep3">Prepare the House</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox2">
-          <img style={{ float: 'left' }} src={Seller4} alt="" />
+          <img style={{ float: 'left' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838120/Realty/AdobeStock_493842425_w5xald.jpg"} alt="" />
           <div className="sellerResourceText">
             The goal of preparing the house is to amaze buyers and have them
             excited as they take their first step through the front door. As
@@ -136,12 +139,13 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep4">Develop a Marketing Plan</p>
+          <div className="title_flare"></div>
         </div>
-
-        <div className="title-pizzazz" />
+{/* 
+        <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox2">
-          <img style={{ float: 'right' }} src={Seller2} alt="" />
+          <img style={{ float: 'right' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_504990437_mtbvwl.jpg"} alt="" />
           <div className="sellerResourceText">
             The first step in developing a market plan is having professional
             pictures taken. Once the pictures have been taken and edited, your
@@ -181,9 +185,10 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep6">Offer/ Negotiate</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox">
           There are three ways you can respond to an offer:
@@ -211,9 +216,10 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep7">Signing the Purchase Agreement</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox">
           <p>
@@ -222,16 +228,18 @@ and see what purposes it can offer.
             prepared by the buyer’s agent. A purchase agreement is a binding
             contract that outlines the terms and conditions of the sale.
           </p>
+          <img style={{ float: 'right' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660839623/Realty/AdobeStock_87438799_yfpptb.jpg"} alt="" />
         </div>
 
         <div className="sellerParagraphHead">
           <p id="sellerStep8">Closing</p>
+          <div className="title_flare"></div>
         </div>
 
-        <div className="title-pizzazz" />
+        {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox2">
-          <img style={{ float: 'right' }} src={Seller1} alt="" />
+          <img style={{ float: 'right' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838119/Realty/AdobeStock_513713991_d6r0nh.jpg"} alt="" />
           <div className="sellerResourceText">
             Closing time is when you will transfer ownership to the buyer,
             receive funds, and pay off any liens. To do this, all relevant

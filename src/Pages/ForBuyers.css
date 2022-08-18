@@ -1,4 +1,6 @@
 .buyerTitle {
+
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,6 +11,7 @@
 }
 
 .buyerTitle h1 {
+  
   margin: 0;
   color: rgb(93, 93, 93);
   font-family: gilSans;
@@ -193,6 +196,7 @@
 }
 
 .buyerParagraphHead {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -208,7 +212,7 @@
   letter-spacing: 1px;
   font-weight: normal;
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -250,17 +254,19 @@
   width: 10rem;
   height: 2.5rem;
   border: none;
-  background-color: rgb(70, 70, 70);
-  color: white;
+  background-color: rgb(0, 207, 145);
+  color: rgb(0, 0, 0);
   font-family: gilSans;
   font-weight: bold;
   border-radius: 8px;
   font-size: 1.2rem;
   box-shadow: 3px 3px 5px rgb(58, 58, 58);
   cursor: pointer;
+  padding-bottom: 2px;
+  transition: 200ms ease;
 }
 
 .questionnaire-button:hover {
   box-shadow: 1px 1px 3px rgb(58, 58, 58);
-  background-color: black;
+  background-color: rgb(0, 255, 128);
 }

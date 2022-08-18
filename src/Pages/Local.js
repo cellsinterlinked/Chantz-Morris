@@ -51,12 +51,12 @@ const Local = () => {
           companies.
         </p>
       )}
-      {!county && (
+      {/* {!county && (
         <div
           className="lineBreak"
           style={{ marginBottom: '3rem', maxWidth: '45rem' }}
         />
-      )}
+      )} */}
 
       <section className={!county ? 'map-container' : 'map-container-hidden'}>
         <img alt="indiana map" src={map} />
@@ -187,10 +187,10 @@ const Local = () => {
             Woodall's Roofing & Home Improvement, Inc: (812) 346-8039
           </p>
 
-          <div
+          {/* <div
             className="lineBreak"
             style={{ marginBottom: '3rem', maxWidth: '45rem' }}
-          />
+          /> */}
         </div>
       )}
 
@@ -317,10 +317,10 @@ const Local = () => {
           >
             Goins Lawncare/Handyman Services LLC
           </a>
-          <div
+          {/* <div
             className="lineBreak"
             style={{ marginBottom: '3rem', maxWidth: '45rem' }}
-          />
+          /> */}
         </div>
       )}
 
@@ -444,10 +444,10 @@ const Local = () => {
             Home Remodeling Service
           </a>
 
-          <div
+          {/* <div
             className="lineBreak"
             style={{ marginBottom: '3rem', maxWidth: '45rem' }}
-          />
+          /> */}
         </div>
       )}
 
@@ -594,10 +594,10 @@ const Local = () => {
             JHJ Handyman
           </a>
 
-          <div
+          {/* <div
             className="lineBreak"
             style={{ marginBottom: '3rem', maxWidth: '45rem' }}
-          />
+          /> */}
         </div>
       )}
 

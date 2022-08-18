@@ -106,8 +106,10 @@
   max-width: 40rem;
   font-family: gilSans;
   font-size: 1.3rem;
-  color: rgb(65, 65, 65);
+  color: rgb(12, 12, 12);
   font-weight: bold;
+  background-color: rgb(224, 224, 224);
+  padding:1rem
 }
 
 @media (max-width: 450px) {

@@ -47,7 +47,7 @@
   text-decoration: none;
   font-family: proxima;
   letter-spacing: 2px;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 0.9rem;
 }
 
@@ -59,16 +59,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   min-width: 38rem;
-  max-width: 40rem;
+  padding-top: 1rem;
+  /* max-width: 40rem; */
   margin-right: 3rem;
 }
 
 .darkFullNavLinks li {
+  text-align: center;
   list-style: none;
   text-decoration: none;
   font-family: proxima;
+  margin-right: 2rem;
+  position: relative;
+  transition: 1s ease;
+  max-width: 10rem;
 }
 
 .darkFullNavLinks li:hover {
@@ -105,7 +111,7 @@
 }
 
 .fullNavBar a {
-  font-weight: bold;
+  /* font-weight: bold; */
   text-decoration: none;
   color: inherit;
   font-size: 1.5rem;

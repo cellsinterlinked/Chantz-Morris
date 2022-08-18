@@ -28,6 +28,7 @@ const NavLinksMobile = (props) => {
       <SexyNavMobile redirect="true"  link="https://www.talktotucker.com/ashlee.morris" title="PROPERTY SEARCH" />
       <SexyNavMobile link="/blog" title="BLOG" />
       <SexyNavMobile link="/about" title="ABOUT US" />
+      <SexyNavMobile link="/contact" title="CONTACT" />
     </div>
   );
 };

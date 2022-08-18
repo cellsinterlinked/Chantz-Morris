@@ -6,6 +6,7 @@ import AboutHead from '../Resources/train2.jpg';
 import './About.css';
 import ChantzNew from '../Resources/ChantzNew.jpeg';
 import AshleeNew from '../Resources/AshleeNew.jpeg';
+import './AllPage.css';
 
 const introStyle = {
   left: '50%',
@@ -23,7 +24,7 @@ const About = (props) => {
       <Parallax className="testBanner" strength={500}>
         <Background className="custom-bg">
           <div className="fuckImage_container">
-            <img src={AboutHead} alt="fill murray" className="fuckImage" />
+            <img src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838864/Realty/AdobeStock_431689087_Editorial_Use_Only_ppv0dx.jpg"} alt="fill murray" className="fuckImage" />
             <div className="image-cover"></div>
           </div>
         </Background>
@@ -38,11 +39,17 @@ const About = (props) => {
         </div>
       </Parallax>
       <div className="aboutTitle">
-        <h1>Your Local Home-Grown Real Estate Agents</h1>
+        <h1>Your Local Home-Grown Real Estate Agents
+
+          <div className="title_flare3"></div>
+        </h1>
+        
       </div>
+      <br></br>
+      <br></br>
 
       <div className="aboutInfoContainer">
-        <div className="title-pizzazz2" />
+        {/* <div className="title-pizzazz2" /> */}
         <div className="aboutBox">
           <img style={{ float: 'right' }} src={ChantzNew} alt="Chantz" />
           <div className="aboutResourceBox">

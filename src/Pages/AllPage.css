@@ -2,6 +2,78 @@
   font-family: gilSans;
 }
 
+.title_flare {
+  position: absolute;
+  height: 2rem;
+  width: 20rem;
+  background-color: rgb(231, 231, 231);
+  top: 1rem;
+  left: 0rem;
+  right: 0rem;
+  /* right: 0px;
+  bottom: 0px; */
+  margin: auto;
+
+  z-index: -1;
+}
+
+.title_flare2 {
+  position: absolute;
+  height: 3rem;
+  width: 24rem;
+  background-color: rgb(231, 231, 231);
+  top: 1.5rem;
+  left: 0rem;
+  right: 0rem;
+  /* right: 0px;
+  bottom: 0px; */
+  margin: auto;
+
+  z-index: -1;
+}
+
+.title_flare3 {
+  position: absolute;
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  top: 1.3rem;
+  left: 0rem;
+  right: 0rem;
+  /* right: 0px;
+  bottom: 0px; */
+  margin: auto;
+
+  z-index: -1;
+}
+
+.title_flare4 {
+  position: absolute;
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  top: 1.3rem;
+  left: 0rem;
+  right: 0rem;
+  /* right: 0px;
+  bottom: 0px; */
+  margin: auto;
+
+  z-index: -1;
+}
+
+@media (max-width: 860px) {
+ .title_flare4,
+ .title_flare3 {
+  height: 100%;
+  top:0;
+ }
+  
+}
+
+
+
+
 @keyframes fadein {
   from {
     opacity: 0;

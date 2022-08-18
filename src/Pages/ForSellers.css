@@ -105,6 +105,7 @@
 }
 
 .sellerParagraphHead {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -120,9 +121,9 @@
   color: rgb(0, 0, 0);
   font-family: gilSans;
   letter-spacing: 1px;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.5rem;
-  font-weight: normal;
+
   text-align: center;
 }
 

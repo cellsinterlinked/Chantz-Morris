@@ -77,10 +77,12 @@ const Landing = (props) => {
           </Parallax>
           <div className="divider-one">
             <div className="introTitle">
-              <h1>Serving Central and Southern Indiana</h1>
+              <h1>Serving Central and Southern Indiana
+                <div className="title_flare4" ></div>
+              </h1>
             </div>
             <div className="landing-starter">
-              <div className="lineBreak" />
+              {/* <div className="lineBreak" /> */}
 
               <div className="introInfoContainer">
                 <div className="landing-self-info">
