@@ -9,7 +9,7 @@ const NavLinks = (props) => {
     <div className={props.dark ? 'darkFullNavLinks' : 'fullNavLinks'}>
       <SexyNav link="/" title="HOME" />
       <SexyNav
-        title="BUYING OR SELLING A HOME"
+        title="BUYING OR SELLING"
         child={[
           { title: 'BUYERS', url: '/buyers', redirect: false  },
           { title: 'SELLERS', url: '/sellers', redirect: false  },
