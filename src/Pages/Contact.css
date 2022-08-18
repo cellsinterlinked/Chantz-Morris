@@ -248,21 +248,25 @@
   align-items: center;
   margin-top: 1rem;
   margin-right: 10px;
-}
+  transition: 200ms ease;
+  background-color: white;
+} 
 
 .iconSquare:hover {
-  background-color: rgb(138, 138, 138);
-}
-
-.iconSqure:hover :first-child {
-  color: red;
+  border: 2px solid rgba(91, 0, 238, 0.726);
+  background-color: rgba(91, 0, 238, 0.726)
 }
 
 .bigIcon {
   width: 2.5rem;
   height: 2.5rem;
   color: black;
+  transition: 200ms ease;
 }
+.iconSqure:hover .bigIcon {
+  color: rgba(91, 0, 238, 0.726)
+}
+
 
 .contactSquareContainer {
   width: 100%;
