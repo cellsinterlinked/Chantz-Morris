@@ -206,7 +206,7 @@
 }
 
 .submitButton {
-  background-color: gray;
+  background-color: rgba(91, 0, 238, 0.726);
   color: white;
   letter-spacing: 1px;
   width: 8rem;
@@ -221,7 +221,7 @@
 }
 
 .submitButton:hover {
-  background-color: black;
+  background-color: rgb(58, 1, 148);
 }
 
 .contactContents {
