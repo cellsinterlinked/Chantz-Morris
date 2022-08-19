@@ -126,7 +126,7 @@ const ForBuyers = (props) => {
             <p>&#x2022; Debt</p>
             <p>&#x2022; Assets</p>
             This may vary by lender, but you will typically need to provide:
-            <p>&#x2022; Driver's liiocense</p>
+            <p>&#x2022; Driver's license</p>
             <p>&#x2022; Bank statements for the last month</p>
             <p>&#x2022; Paycheck stubs</p>
             <p>&#x2022; W2</p>

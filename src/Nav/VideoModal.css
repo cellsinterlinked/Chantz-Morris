@@ -1,0 +1,86 @@
+
+
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 15vh;
+  left: 0rem;
+  right: 0rem;
+  margin:auto;
+ 
+  min-width: 22rem;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 0.8rem;
+  background-color: white;
+  border: none;
+  max-height: 90vh;
+  
+}
+
+@media(max-width: 800px) {
+    .modal {
+        width: 100vw;
+    }
+}
+
+.escape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -3.5rem;
+    right: 0rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.322);
+    z-index: 101;
+    transition: 200ms ease;
+}
+
+.escape:hover {
+    background-color:rgba(158, 158, 158, 0.863)  
+}
+
+.close {
+    height: 2rem;
+    width: 2rem;
+    color: white;
+}
+
+/* .alternate-modal {
+  z-index: 100;
+  position: fixed;
+  top: 10vh;
+  left: 15%;
+  width: 70%;
+  border-radius: 0.8rem;
+  background-color: white;
+  border: none;
+  max-height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+} */
+
+.modal-enter {
+  transform: translateY(-10rem);
+  opacity: 0;
+}
+
+.modal-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.modal-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-exit-active {
+  transform: translateY(-10rem);
+  opacity: 0;
+  transition: all 200ms;
+}
