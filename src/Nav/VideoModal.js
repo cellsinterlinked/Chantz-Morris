@@ -16,7 +16,7 @@ const ModalOverlay = props => {
     className="video"
     controls="controls"
     preload="none"
-    autoPlay
+    // autoPlay
     onClick="this.play()"
     >
     <source type="video/webm" src={props.video} />
