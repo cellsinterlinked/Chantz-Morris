@@ -41,7 +41,7 @@ const About = (props) => {
       <div className="aboutTitle">
         <h1>Your Local Home-Grown Real Estate Agents
 
-          <div className="title_flare3"></div>
+          {/* <div className="title_flare3"></div> */}
         </h1>
         
       </div>
@@ -51,8 +51,8 @@ const About = (props) => {
       <div className="aboutInfoContainer">
         {/* <div className="title-pizzazz2" /> */}
         <div className="aboutBox">
-          <img style={{ float: 'right' }} src={ChantzNew} alt="Chantz" />
           <div className="aboutResourceBox">
+          <img style={{ float: 'right' }} src={ChantzNew} alt="Chantz" />
             {/* Chantz Morris has been a resident and community member of North
             Vernon since he was three years old. From the time he was a tot
             playing in his papaw’s shop, Charlie’s Body Shop, a school boy

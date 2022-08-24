@@ -42,8 +42,11 @@ const ForBuyers = (props) => {
         </div>
       </Parallax>
       <div className="buyerTitle">
-        <h1>Deciding To Buy A Home</h1>
-        <div className="title_flare2"></div>
+        <h1>Deciding To Buy A Home
+        {/* <div className="title_flare4"></div> */}
+        </h1>
+
+
       </div>
       <div className="questionnaire-wrapper">
         <h3>
@@ -81,18 +84,15 @@ const ForBuyers = (props) => {
         </div>
 
         <div className="buyerParagraphHead">
-          <p id="step1">Find a Realtor You Trust</p>
-          <div className="title_flare"></div>
+          <p id="step1">Find a Realtor You Trust
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
 
         <div className="buyerResourceBox">
-        <img
-            style={{ float: 'left', marginBottom: '0px' }}
-            src={Trust}
-            alt=""
-          />
           <p>
             Having a realtor you trust and enjoy working with is incredibly
             important to your home buying experience. Initially, you should
@@ -104,11 +104,18 @@ const ForBuyers = (props) => {
             different realtor, could lead to uncomfortable situations
             surrounding procuring cause. Be upfront, be honest.
           </p>
+        <img
+            style={{ float: 'left', marginBottom: '0px' }}
+            src={Trust}
+            alt=""
+          />
         </div>
 
         <div className="buyerParagraphHead">
-          <p id="step2">Find a Lender you Trust, Get Pre-Approved</p>
-          <div className="title_flare" style={{width:"25rem"}}></div>
+          <p id="step2">Find a Lender you Trust, Get Pre-Approved
+          {/* <div className="title_flare" ></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -135,8 +142,10 @@ const ForBuyers = (props) => {
 
 
         <div className="buyerParagraphHead">
-          <p id="step3">Choosing A Home</p>
-          <div className="title_flare"></div>
+          <p id="step3">Choosing A Home
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -164,8 +173,10 @@ const ForBuyers = (props) => {
           </p>
         </div>
         <div className="buyerParagraphHead">
-          <p id="step4">Make An Offer</p>
-          <div className="title_flare"></div>
+          <p id="step4">Make An Offer
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -179,8 +190,10 @@ const ForBuyers = (props) => {
           </div>
         </div>
         <div className="buyerParagraphHead">
-          <p id="step5">Get A Home Inspection</p>
-          <div className="title_flare"></div>
+          <p id="step5">Get A Home Inspection
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -208,8 +221,10 @@ const ForBuyers = (props) => {
           </div>
         </div>
         <div className="buyerParagraphHead">
-          <p id="step6">Home Appraisal</p>
-          <div className="title_flare"></div>
+          <p id="step6">Home Appraisal
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -229,8 +244,10 @@ const ForBuyers = (props) => {
           />
         </div>
         <div className="buyerParagraphHead">
-          <p id="step7">Closing</p>
-          <div className="title_flare"></div>
+          <p id="step7">Closing
+          {/* <div className="title_flare"></div> */}
+          
+          </p>
         </div>
 
         {/* <div className="title-pizzazz" /> */}

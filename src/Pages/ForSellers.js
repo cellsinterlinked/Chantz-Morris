@@ -65,7 +65,7 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep1">Find a Realtor You Trust</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 {/* 
         <div className="title-pizzazz" /> */}
@@ -83,7 +83,7 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep2">Determine Value of Home</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -101,13 +101,12 @@ const ForSellers = (props) => {
 
         <div className="sellerParagraphHead">
           <p id="sellerStep3">Prepare the House</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 
         {/* <div className="title-pizzazz" /> */}
 
         <div className="sellerResourceBox2">
-          <img style={{ float: 'left' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838120/Realty/AdobeStock_493842425_w5xald.jpg"} alt="" />
           <div className="sellerResourceText">
             The goal of preparing the house is to amaze buyers and have them
             excited as they take their first step through the front door. As
@@ -115,6 +114,7 @@ const ForSellers = (props) => {
             own.
             <br />
             <br />
+          <img style={{ float: 'left' }} src={"https://res.cloudinary.com/dbnapmpvm/image/upload/v1660838120/Realty/AdobeStock_493842425_w5xald.jpg"} alt="" />
             To achieve this goal, homeowners should be doing anything and
             everything from fixing small repairs, cleaning the interior and
             exterior, and even sprucing up the curb appeal. Taking time to rid
@@ -139,7 +139,7 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep4">Develop a Marketing Plan</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 {/* 
         <div className="title-pizzazz" /> */}
@@ -185,7 +185,7 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep6">Offer/ Negotiate</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -216,7 +216,7 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep7">Signing the Purchase Agreement</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 
         {/* <div className="title-pizzazz" /> */}
@@ -233,7 +233,7 @@ and see what purposes it can offer.
 
         <div className="sellerParagraphHead">
           <p id="sellerStep8">Closing</p>
-          <div className="title_flare"></div>
+          {/* <div className="title_flare"></div> */}
         </div>
 
         {/* <div className="title-pizzazz" /> */}

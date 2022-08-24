@@ -78,7 +78,7 @@ const Landing = (props) => {
           <div className="divider-one">
             <div className="introTitle">
               <h1>Serving Central and Southern Indiana
-                <div className="title_flare4" ></div>
+                {/* <div className="title_flare4" ></div> */}
               </h1>
             </div>
             <div className="landing-starter">
@@ -131,7 +131,9 @@ const Landing = (props) => {
             <div className="newImageCover">
               <div style={{ height: 850 }} className="image-2">
                 <div className="listingTitle">
-                  <p id="activeListings">Recent Blogs</p>
+                  <p id="activeListings">Recent Blogs
+                  <div className="title_flare4" ></div>
+                  </p>
                 </div>
                 {isLoading && <LoadingSpinner />}
 

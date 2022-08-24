@@ -4,62 +4,70 @@
 
 .title_flare {
   position: absolute;
-  height: 2rem;
-  width: 20rem;
-  background-color: rgb(231, 231, 231);
-  top: 1rem;
-  left: 0rem;
+  height: calc(50% + .5rem);
+  width: 100%;
+  background: linear-gradient( to bottom, rgba(214, 214, 214, 0), rgba(196, 196, 196, 0.651) );
+  top: 50%;
+  left: -1rem;
   right: 0rem;
   /* right: 0px;
   bottom: 0px; */
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   z-index: -1;
 }
 
 .title_flare2 {
   position: absolute;
-  height: 3rem;
-  width: 24rem;
-  background-color: rgb(231, 231, 231);
-  top: 1.5rem;
-  left: 0rem;
+  height: calc(50% + 1.5rem);
+  width: 100%;
+  background: linear-gradient( to bottom, rgba(214, 214, 214, 0), rgba(196, 196, 196, 0.651) );
+  top: 50%rem;
+  left: -1rem;
   right: 0rem;
   /* right: 0px;
   bottom: 0px; */
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   z-index: -1;
 }
 
 .title_flare3 {
   position: absolute;
-  height: 2rem;
+  height: calc(50% + 1.5rem);
   width: 100%;
-  background-color: rgb(231, 231, 231);
-  top: 1.3rem;
-  left: 0rem;
+  background: linear-gradient( to bottom, rgba(214, 214, 214, 0), rgba(196, 196, 196, 0.651) );
+  top: 50%;
+  left: -1rem;
   right: 0rem;
   /* right: 0px;
   bottom: 0px; */
   margin: auto;
-
+  padding-left: 1rem;
+  padding-right: 1rem;
   z-index: -1;
 }
 
 .title_flare4 {
   position: absolute;
-  height: 2rem;
+  height: calc(50% + 1.5rem);
   width: 100%;
-  background-color: rgb(231, 231, 231);
-  top: 1.3rem;
-  left: 0rem;
+  /* background: linear-gradient( to bottom, rgba(196, 196, 196, 0.651), rgba(214, 214, 214, 0) ); */
+   background: linear-gradient( to bottom, rgba(214, 214, 214, 0), rgba(196, 196, 196, 0.651) );
+  top: 50%;
+  left: -1rem;
   right: 0rem;
   /* right: 0px;
   bottom: 0px; */
   margin: auto;
-
+  padding-left: 1rem;
+  padding-right: 1rem;
   z-index: -1;
+ 
 }
 
 @media (max-width: 860px) {
@@ -67,6 +75,7 @@
  .title_flare3 {
   height: 100%;
   top:0;
+  background: linear-gradient( to bottom, rgba(214, 214, 214, 0), rgba(196, 196, 196, 0.651), 50% rgba(214, 214, 214, 0), 100% );
  }
   
 }
@@ -207,6 +216,8 @@
 }
 
 .pageHead h1 {
+  font-family: gilSansBold;
+
   font-size: 3rem;
   font-weight: normal;
   -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */

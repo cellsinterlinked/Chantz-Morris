@@ -3,6 +3,10 @@
   to {width: 100%; opacity: 1;}
 }
 
+a {
+  text-decoration: none;
+}
+
 
 
 div {

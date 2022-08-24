@@ -11,10 +11,11 @@
 }
 
 .buyerTitle h1 {
-  
+  position: relative;
+  display: inline-block;
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: gilSans;
+  font-family: gilSansBold;
   letter-spacing: 2px;
   font-weight: bold;
 }
@@ -203,16 +204,19 @@
   justify-content: center;
   margin: auto;
   margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .buyerParagraphHead p {
-  margin: 0;
+  display:inline-block; 
+  position: relative;
   color: rgb(0, 0, 0);
-  font-family: gilSans;
+  font-family: gilSansBold;
   letter-spacing: 1px;
-  font-weight: normal;
-  font-size: 1.5rem;
   font-weight: bold;
+  font-size: 1.5rem;
+  
   text-align: center;
 }
 

@@ -38,9 +38,9 @@
 }
 
 @media (min-width: 2000px) {
-  /* .fuckImage_container {
+  .fuckImage_container {
     height: 50rem;
-  } */
+  }
   /* .height-controller {
     height: 50rem;
   } */
@@ -88,7 +88,7 @@
 
 @media(min-width: 2000px) {
   .custom-bg {
-    height: 80rem;
+    height: 120rem;
   }
 }
 
@@ -177,11 +177,12 @@
 }
 
 .listingTitle p {
+  position: relative;
   color: white;
-  font-family: gilSans;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-family: gilSansBold;
+  font-size: 3.5rem;
   letter-spacing: 2px;
+  width: auto;
 }
 
 .newsSection__title {
@@ -227,13 +228,14 @@
 }
 
 .introTitle h1 {
+  font-family: gilSansBold;
   position: relative;
   width: auto;
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: gilSans;
+  /* font-family: gilSans; */
   letter-spacing: 2px;
-  /* font-weight: normal; */
+  /* font-weight: light; */
   text-align: center;
   font-size: 2rem;
   

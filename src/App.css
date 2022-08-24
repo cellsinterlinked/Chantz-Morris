@@ -20,6 +20,21 @@
 }
 
 @font-face {
+  font-family: 'gilSansBold';
+  src: url(./Resources//Fonts/Gill-Sans-Font-Family/Gill\ Sans\ Bold.otf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'gilSansItalic';
+  src: url(./Resources//Fonts/Gill-Sans-Font-Family/Gill\ Sans\ Bold\ Italic.otf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+
+@font-face {
   font-family: 'neuro';
   src: url(./Resources//Fonts/Neuro//neuropol\ x\ rg.ttf);
   font-style: normal;

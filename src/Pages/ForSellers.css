@@ -11,7 +11,7 @@
 .sellerTitle h1 {
   margin: 0;
   color: rgb(93, 93, 93);
-  font-family: gilSans;
+  font-family: gilSansBold;
   letter-spacing: 2px;
   font-weight: bold;
 }
@@ -52,7 +52,7 @@
 }
 
 .sellerResourceBox p {
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   text-align: left;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .sellerParagraphHead {
-  position: relative;
+  max-width: 43rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -117,13 +117,14 @@
 }
 
 .sellerParagraphHead p {
-  margin: 0;
+  position: relative;
+  display:inline-block; 
   color: rgb(0, 0, 0);
-  font-family: gilSans;
+  font-family: gilSansBold;
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 1.5rem;
-
+  
   text-align: center;
 }
 
@@ -180,8 +181,23 @@
 @media (max-width: 430px) {
   .sellerResourceBox2 img {
     margin: 0px;
-    width: 21rem;
+    /* width: 21rem; */
     margin: auto;
     margin-bottom: 1rem;
   }
+  .sellerResourceBox2 img {
+    /* float: right; */
+  margin-top: 5px;
+  
+    width: 100%;
+   
+}
+
+.sellerParagraphHead {
+  margin-top: 0rem;
+}
+.sellerParagraphHead p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
 }

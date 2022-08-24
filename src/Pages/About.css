@@ -12,16 +12,22 @@
 .aboutTitle h1 {
   position:relative;
   margin: 0;
-  color: rgb(0, 0, 0);
-  font-family: gilSans;
+  color: rgb(68, 68, 68);
+  font-family: gilSansBold;
   letter-spacing: 1px;
   font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 600px) {
   .aboutTitle h1 {
     width: 20rem;
     text-align: center;
+    font-size: 1.5rem;
+  }
+  aboutBox img {
+    width: 100%;
   }
 }
 
@@ -180,4 +186,10 @@
   font-size: 1.2rem;
   letter-spacing: 1px;
   /* text-align: justify; */
+}
+
+@media (max-width: 600px) {
+  .aboutBox img {
+    width: 100%;
+  }
 }
