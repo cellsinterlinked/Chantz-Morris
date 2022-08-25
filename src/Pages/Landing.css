@@ -242,6 +242,9 @@
 }
 
 @media (max-width: 860px) {
+  .introTitle {
+    margin-top: 2rem
+  }
   .introTitle h1 {
     width: 22rem;
   }

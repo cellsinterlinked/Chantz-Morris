@@ -227,11 +227,12 @@
   animation: fadein 4s;
 }
 
-@media (max-width: 470px) {
+@media (max-width: 476px) {
   .pageHead h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 400;
   }
+
 }
 
 .testParent {
@@ -271,10 +272,11 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 436px) {
   .title-pizzazz {
     width: 100vw;
   }
+  
 }
 
 .title-pizzazz2 {
