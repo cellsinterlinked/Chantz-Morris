@@ -229,7 +229,7 @@
 
 @media (max-width: 476px) {
   .pageHead h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
   }
 
@@ -276,7 +276,7 @@
   .title-pizzazz {
     width: 100vw;
   }
-  
+
 }
 
 .title-pizzazz2 {
