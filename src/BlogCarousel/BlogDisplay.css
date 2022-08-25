@@ -35,13 +35,14 @@
 }
 
 .blogDisplayTitle {
-  font-family: gilSans;
+  font-family: gilSansBold;
   letter-spacing: 0.1rem;
   color: white;
   font-weight: bolder;
   font-size: 1.2rem;
   width: 100%;
   margin-top: 0.9rem;
+  min-height: 2rem
   /* background-color:rgba(221, 221, 221, 0.178) */
 }
 
@@ -50,6 +51,10 @@
   margin-left: 0rem;
   margin-bottom: 8px;
   /* font-weight: bold; */
+}
+
+.blogDisplayTitle h1 {
+  font-size: 1.2rem;
 }
 
 .blogDetails {

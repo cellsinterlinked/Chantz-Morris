@@ -53,7 +53,7 @@ const BlogDisplay = (props) => {
       </div>
       <div className="blogDetails">
       <div className="blogDisplayTitle">
-        <p>{props.title}</p>
+        <h1>{props.title}</h1>
       </div>
       {props.children}
       </div>
