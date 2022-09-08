@@ -18,6 +18,8 @@ const NavBar = (props) => {
     setDrawerOpen(false);
   };
 
+  
+
   return (
     <>
       {drawerOpen && <Backdrop onClick={closeDrawerHandler} />}

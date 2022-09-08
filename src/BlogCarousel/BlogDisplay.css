@@ -113,11 +113,11 @@
   margin: auto;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  background-color: rgba(91, 0, 238, 0.726);
+  background-color: rgba(88, 194, 255, 0.425);
   box-shadow: none;
   border: none;
   color: rgb(255, 255, 255);
-  font-family: gilSans;
+  font-family: gilSansBold;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 0.9rem;

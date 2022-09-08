@@ -206,22 +206,25 @@
 }
 
 .submitButton {
-  background-color: rgba(91, 0, 238, 0.726);
-  color: white;
-  letter-spacing: 1px;
+  background-color: rgba(85, 148, 184, 0.725);;
+  color:white;
+
   width: 8rem;
   height: 2.5rem;
   border: none;
-  font-size: 0.8rem;
-  outline-color: black;
+  font-size: 1rem;
+  font-family: gilSansBold;
+  /* outline-color: rgb(114, 114, 114); */
   cursor: pointer;
   outline: none;
   border-radius: 3px;
   font-weight: bold;
+  transition: 1s ease;
 }
 
 .submitButton:hover {
-  background-color: rgb(58, 1, 148);
+  background-color: rgba(88, 194, 255, 0.425);
+  color: rgb(99, 99, 99);
 }
 
 .contactContents {
@@ -253,8 +256,8 @@
 } 
 
 .iconSquare:hover {
-  border: 2px solid rgba(91, 0, 238, 0.726);
-  background-color: rgba(91, 0, 238, 0.726)
+  border: 2px solid rgba(88, 194, 255, 0.199);
+  background-color: rgba(88, 194, 255, 0.199);
 }
 
 .bigIcon {
