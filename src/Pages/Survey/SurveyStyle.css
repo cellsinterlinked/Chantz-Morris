@@ -125,7 +125,7 @@ textarea {
   width: 8rem;
   border-radius: 5px;
   color: white;
-  background-color: rgba(91, 0, 238, 0.726);;
+  background-color: rgba(76, 152, 196, 0.911);
   box-shadow: none;
   border: none;
   font-weight: bold;
@@ -137,7 +137,7 @@ textarea {
 .survey-button:hover {
 
   box-shadow: 1px 1px 3px rgb(58, 58, 58);
-  background-color: rgb(57, 0, 150);;
+  background-color: rgba(76, 152, 196, 0.445);
 }
 
 .checkbox-input-wrapper {
