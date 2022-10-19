@@ -193,7 +193,13 @@
     height: 3.3rem;
     padding-left: 0rem;
   }
+.logofix {
+  width: 100%;
+  height:auto;
 }
+
+}
+
 
 .navChange {
   color: rgb(70, 70, 70);
