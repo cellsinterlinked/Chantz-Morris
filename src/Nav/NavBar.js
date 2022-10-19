@@ -32,7 +32,7 @@ const NavBar = (props) => {
       <div className={`fullNavBar ${props.navStyle}`}>
         <NavLink to="/">
           <div className="acmlogo">
-         <img src={Logo} alt="" />
+         <img src={Logo} alt="" className="logofix" />
           </div>
 
 
