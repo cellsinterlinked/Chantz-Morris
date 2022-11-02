@@ -69,10 +69,10 @@
 ACM Realty Team is the business webpage of A local property management and real estate team. It's main goals are to educate potential home sellers/buyers about the process, as well as showcase the tools and rates available to property management clients. It also acts as an easy way to start up communication with the team. 
 <br/>
 
-To educate home buyers/sellers there is a "Buyers" page that explains step by step the process of purchasing a home and the roll of the agent in it. Similarly there is a "Sellers" page which does the same for sellers. Using the Sanity.io client, the team writes a blog about different subjects in the field of real estate which are displayed on the home page. The "local services" page gives home buyers/sellers resources for inspectors, lenders, electricians etc...  
+To educate home buyers/sellers there is a "Buyers" page that explains step by step the process of purchasing a home and the roll of the agent in it. Similarly there is a "Sellers" page which does the same for sellers. Using the Sanity.io client, the team writes a blog about different subjects in the field of real estate which are displayed on the home page. The "Local Services" page gives home buyers/sellers resources for inspectors, lenders, electricians etc...  
 <br/>
 
-For potential property management clients/current clients, the property management page shows the ACM's rates as well as has instructional videos on how to use their 
+For potential property management clients/current clients, the "Property Management" page shows the ACM's rates as well as has instructional videos on how to use their 
 property management software. 
 <br/>
 
