@@ -28,7 +28,7 @@
 <h3 align="center">ACM Realty Team</h3>
 
   <p align="center">
-    ACM Realty Team is the business web site for a local real estate team.
+    ACM Realty Team is the business web site for a local real estate/property management team.
     <br />
     <a href="https://acmrealtyteam.com">View Demo</a>
   </p>
@@ -66,13 +66,18 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://res.cloudinary.com/dbnapmpvm/image/upload/v1644349964/Portfolio/BBF1A966-F0A9-41FF-9122-29B43C58841B_1_105_c_sdq7ou.jpg)
 
-ACM Realty Team is the business webpage of local real estate agents Chantz Morris and Ashlee Morris. It's main goals are to educate potential home sellers/buyers about the process as well as providing means of communicating with the team.
+ACM Realty Team is the business webpage of A local property management and real estate team. It's main goals are to educate potential home sellers/buyers about the process, as well as showcase the tools and rates available to property management clients. It also acts as an easy way to start up communication with the team. 
 <br/>
-To educate readers there is a "Buyers" page that explains step by step the process of purchasing a home and the roll of the agent in it. Similarly there is a "Sellers" page which does the same for sellers. Using the Sanity.io client, the team writes a blog about different subjects in the field of real estate which are displayed on the home page.  
-<br/>
-The "Contact" page of the site provides a form to directly message the team with any questions or potential business requests using EmailJS. There is also a questionaire located on the "Buyers" page which asks potential buyers about their home buying preferences and prerequisites. This is also emailed directly to the team so that they can created a
-catered experience to their potential clients and only show them homes that they will be interested in.
 
+To educate home buyers/sellers there is a "Buyers" page that explains step by step the process of purchasing a home and the roll of the agent in it. Similarly there is a "Sellers" page which does the same for sellers. Using the Sanity.io client, the team writes a blog about different subjects in the field of real estate which are displayed on the home page. The "local services" page gives home buyers/sellers resources for inspectors, lenders, electricians etc...  
+<br/>
+
+For potential property management clients/current clients, the property management page shows the ACM's rates as well as has instructional videos on how to use their 
+property management software. 
+<br/>
+
+The "Contact" page of the site provides a form to directly message the team with any questions or potential business requests using EmailJS. There is also a questionaire located on the "Buyers" page which asks potential buyers about their home buying preferences and prerequisites. This is also emailed directly to the team so that they can create acatered experience to their potential clients and only show them homes that they will be interested in.
+<br/>
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description` -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
