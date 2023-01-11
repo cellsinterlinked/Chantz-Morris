@@ -22,7 +22,7 @@ const Footer = (props) => {
           <div className="footer-Phone-Email">
             <p>+1 812 592 7785</p>
             <p>Chantz.Morris@talktotucker.com</p>
-            <p>+1 812 592 7784</p>
+            <p>+1 812 525 0028</p>
             <p>Ashlee.Morris@talktotucker.com</p>
           </div>
         </div>

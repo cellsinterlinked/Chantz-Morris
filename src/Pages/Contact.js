@@ -214,7 +214,7 @@ const Contact = (props) => {
             <div className="contactPersonal">
               <div className="iconInfo__Contact">
                 <FiPhone style={{ marginRight: '.5rem' }} />
-                <p>812.592.7784</p>
+                <p>812.525.0028</p>
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
