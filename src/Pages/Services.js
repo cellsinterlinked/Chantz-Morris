@@ -150,6 +150,7 @@ const Services = () => {
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>
+          <p>$45 minimum fee</p>
           <div></div>
           <p className="marginT">Management Fee</p>
         </div>
@@ -161,6 +162,7 @@ const Services = () => {
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>
+          <p>$45 minimum fee</p>
           <div></div>
           <p className="marginT">Management Fee</p>
         </div>
@@ -172,6 +174,7 @@ const Services = () => {
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>
+          <p>$45 minimum fee</p>
           <div></div>
           <p className="marginT">Management Fee</p>
         </div>
@@ -215,21 +218,21 @@ const Services = () => {
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Rent Initial Property Setup</p>
+          <p>Legal Compliance</p>
         </div>{' '}
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Rent Initial Property Setup</p>
+          <p>Legal Compliance</p>
         </div>{' '}
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Rent Initial Property Setup</p>
+          <p>Legal Compliance</p>
         </div>
-        <div className="grid-box-three blue bottom-round ">
+        {/* <div className="grid-box-three blue bottom-round ">
           <div>
             <h1>2</h1>
           </div>
@@ -246,26 +249,146 @@ const Services = () => {
             <FiCheck className="check-icon" />
           </div>
           <p>All Included</p>
-        </div>
-        <div className="grid-box-two ">
+        </div> */}
+        <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Easy Online Payment</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Easy Online Payment</p>
+          <p>Move In/Out Inspection</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Easy Online Payment</p>
+          <p>Move In/Out Inspection</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Move In/Out Inspection</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Financial Reporting</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Financial Reporting</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Financial Reporting</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Lease Renewal</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Lease Renewal</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Lease Renewal</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Digital Doc Signing</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Digital Doc Signing</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Digital Doc Signing</p>
         </div>
         <div className="grid-box-two ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Prepared Lease</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Prepared Lease</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Prepared Lease</p>
+        </div>
+        <div className="grid-box-two ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Vacancy Listing</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Vacancy Listing</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Vacancy Listing</p>
+        </div>
+        <div className="grid-box-two ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Tenant Screening</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Tenant Screening</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Tenant Screening</p>
+        </div>
+        <div className="grid-box-two ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Maintenance Management</p>
+        </div>
+        <div className="grid-box ">
+          <div>
+            <FiCheck className="check-icon" />
+          </div>
+          <p>Maintenance Management</p>
+        </div>
+        <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
@@ -275,195 +398,75 @@ const Services = () => {
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Maintenance Management</p>
+          <p>Lease Enforcement</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Maintenance Management</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Move in inspection</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Move in inspection</p>
+          <p>Lease Enforcement</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Move in inspection</p>
+          <p>Lease Enforcement</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Move out inspection</p>
+          <p>Periodic Inspections</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Move out inspection</p>
+          <p>Periodic Inspections</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Move out inspection</p>
+          <p>Periodic Inspections</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Digital Lease Signing</p>
+          <p>Utility Coordination</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Digital Lease Signing</p>
+          <p>Utility Coordination</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Digital Lease Signing</p>
+          <p>Utility Coordination</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Comprehensive Tenant Screening</p>
+          <p>Eviction Process</p>
         </div>
         <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Comprehensive Tenant Screening</p>
+          <p>Eviction Process</p>
         </div>
         <div className="grid-box ">
           <div>
             <FiCheck className="check-icon" />
           </div>
-          <p>Comprehensive Tenant Screening</p>
+          <p>Eviction Process</p>
         </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Prepared Lease upon request</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Prepared Lease upon request</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Prepared Lease upon request</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Vacancy Listings</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Vacancy Listings</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Vacancy Listings</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Lease Enforcement / Evictions</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Lease Enforcement / Evictions</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Lease Enforcement / Evictions</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>24/7 Emergency Hotline</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>24/7 Emergency Hotline</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>24/7 Emergency Hotline</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Monthly Financial Reports</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Monthly Financial Reports</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Monthly Financial Reports</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Year End Statement</p>
-        </div>
-        <div className="grid-box-two ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Year End Statement</p>
-        </div>
-        <div className="grid-box ">
-          <div>
-            <FiCheck className="check-icon" />
-          </div>
-          <p>Year End Statement</p>
-        </div>
-        <div className="grid-box-two ">
+        {/* <div className="grid-box-two ">
           <div>
             <FiCheck className="check-icon" />
           </div>
@@ -552,7 +555,7 @@ const Services = () => {
             <FiCheck className="check-icon" />
           </div>
           <p>Annual Property Check</p>
-        </div>
+        </div> */}
       </section>
 
       <Footer />
