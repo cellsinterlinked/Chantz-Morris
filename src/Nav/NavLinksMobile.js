@@ -21,7 +21,7 @@ const NavLinksMobile = (props) => {
         title="PROPERTY MANAGEMENT"
         child={[
           { title: 'SERVICES AND RATES', url: '/services' , redirect: false },
-          { title: 'TENANT/OWNER PORTAL', url: 'https://acmpropertymanagement.managebuilding.com/Resident/public/home', redirect: true },
+          { title: 'TENANT/OWNER PORTAL', url: 'https://acmpm.managebuilding.com/Resident/public/home', redirect: true },
         ]}
       />
       <SexyNavMobile link="/local" title="LOCAL SERVICES" />
