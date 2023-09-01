@@ -23,7 +23,7 @@ const NavLinks = (props) => {
         ]}
       />
       <SexyNav link="/local" title="LOCAL SERVICES" />
-      <SexyNav redirect="true"  link="https://www.talktotucker.com/chantz.morris" title="PROPERTY SEARCH" />
+      {/* <SexyNav redirect="true"  link="https://www.talktotucker.com/chantz.morris" title="PROPERTY SEARCH" /> */}
       <SexyNav link="/blog" title="BLOG" />
       <SexyNav link="/about" title="ABOUT US" />
       <SexyNav link="/contact" title="CONTACT" />

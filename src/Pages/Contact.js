@@ -173,11 +173,11 @@ const Contact = (props) => {
             <div className="contactPersonal">
               <div className="iconInfo__Contact">
                 <FiPhone style={{ marginRight: '.5rem' }} />
-                <p>812.592.7785</p>
+                <p>812.525.0325</p>
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
-                <p>Chantz.Morris@talktotucker.com</p>
+                <p>Chantz.morris@acmpropertymgnmt.com</p>
               </div>
               <div className="iconInfo__Contact">
                 <CgFileDocument style={{ marginRight: '.5rem' }} />
@@ -218,7 +218,7 @@ const Contact = (props) => {
               </div>
               <div className="iconInfo__Contact">
                 <AiOutlineMail style={{ marginRight: '.5rem' }} />
-                <p>Ashlee.Morris@talktotucker.com</p>
+                <p>Ashlee.morris@acmpropertymgnmt.com</p>
               </div>
               <div className="iconInfo__Contact">
                 <CgFileDocument style={{ marginRight: '.5rem' }} />

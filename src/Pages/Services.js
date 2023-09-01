@@ -146,7 +146,7 @@ const Services = () => {
           <h1>Basic</h1>
           <div></div>
           <section>
-            <h2>10</h2>
+            <h2>6</h2>
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>
@@ -158,7 +158,7 @@ const Services = () => {
           <h1>Standard</h1>
           <div></div>
           <section>
-            <h2>12</h2>
+            <h2>8</h2>
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>
@@ -170,7 +170,7 @@ const Services = () => {
           <h1>Premium</h1>
           <div></div>
           <section>
-            <h2>14</h2>
+            <h2>10</h2>
             <h3>%</h3>
           </section>
           <p>of monthly rent collected</p>

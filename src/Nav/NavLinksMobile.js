@@ -25,7 +25,7 @@ const NavLinksMobile = (props) => {
         ]}
       />
       <SexyNavMobile link="/local" title="LOCAL SERVICES" />
-      <SexyNavMobile redirect="true"  link="https://www.talktotucker.com/ashlee.morris" title="PROPERTY SEARCH" />
+      {/* <SexyNavMobile redirect="true"  link="https://www.talktotucker.com/ashlee.morris" title="PROPERTY SEARCH" /> */}
       <SexyNavMobile link="/blog" title="BLOG" />
       <SexyNavMobile link="/about" title="ABOUT US" />
       <SexyNavMobile link="/contact" title="CONTACT" />

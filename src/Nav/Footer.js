@@ -13,17 +13,17 @@ const Footer = (props) => {
     <div className="fullFooter">
       <div className="footer-top">
         <div className="footer-columnOne">
-          <p className="footer-name">ACM REALTY TEAM</p>
+          <p className="footer-name">ACM Property Management, LLC</p>
           <div className="footer-brokerAddress">
-            <p>F.C. Tucker Real Estate Experts</p>
-            <p>524 N. State Street </p>
-            <p>North Vernon, IN 47265</p>
+            <p>ACM Property Management, LLC</p>
+            <p>3221 17th Street </p>
+            <p>Columbus, IN 47201</p>
           </div>
           <div className="footer-Phone-Email">
-            <p>+1 812 592 7785</p>
-            <p>Chantz.Morris@talktotucker.com</p>
+            <p>+1 812 525 0325</p>
+            <p>Chantz.morris@acmpropertymgnmt.com</p>
             <p>+1 812 525 0028</p>
-            <p>Ashlee.Morris@talktotucker.com</p>
+            <p>Ashlee.morris@acmpropertymgnmt.com</p>
           </div>
         </div>
         <div className="footer-columnTwo">
@@ -50,14 +50,14 @@ const Footer = (props) => {
 
         <div className="footer-columnThree">
           <div className="broker-bit">
-            <a href="https://www.talktotucker.com/" target="_blank">
+            {/* <a href="https://www.talktotucker.com/" target="_blank">
             <img
               target="_blank"
               href="https://www.talktotucker.com/"
               src={brokerImg}
               alt="F.C. Tucker Real Estate Experts"
             />
-            </a>
+            </a> */}
 
           </div>
           <div className="footer-bottomLine" />
@@ -132,7 +132,7 @@ const Footer = (props) => {
       <div className="footer-bottom">
         <div className="copyright-Container">
           <p>© Copyright 2021</p>
-          <p>Ashlee & Chantz Morris, F.C. Tucker Real Estate Experts</p>
+          <p>ACM Property Management LLC</p>
         </div>
       </div>
     </div>

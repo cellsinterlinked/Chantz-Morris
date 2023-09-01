@@ -5,7 +5,7 @@ import SideDrawer from './SideDrawer';
 import Backdrop from './Backdrop';
 import NavLinks from './NavLinks';
 import NavLinksMobile from './NavLinksMobile';
-import Logo from '../Resources/ACMLogo.svg';
+import Logo from '../Resources/NEW LOGO (1).svg';
 
 const NavBar = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
